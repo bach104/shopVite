@@ -1,0 +1,3412 @@
+[
+  {
+    "id":90,
+    "name": "váy Thun Basic váy váy Basic váy váy",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "váy thun",
+    "material": "Vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": "/video.mp4",
+    "starRatings": {
+      "totalStars": 24,
+      "totalReviews": 10,
+      "averageRating": 4.8
+    }
+  },
+  {
+    "id":79,
+    "name": "quần Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "quần thun",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": "https://youtube.com/shorts/YiSnX57g-Zw?si=kJdhbtkplAktaMtm",
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":792,
+    "name": "quần Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "quần thun",
+    "material": "Vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":799,
+    "name": "Quần Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Quần thun",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": ["../data/video/video1.mp4"],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":78,
+    "name": "vest Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "vest thun",
+    "material": "Vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":7821,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+
+  {
+    "id":50,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":49,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":48,
+    "name": "quần Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "quần thun",
+    "material": "Vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":47,
+    "name": "vest Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "vest thun",
+    "material": "kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":46,
+    "name": "váy Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "váy thun",
+    "material": "kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":45,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":44,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":43,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":42,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":41,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":40,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":39,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":38,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":37,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":36,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":35,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":34,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":390928,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":32,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":31,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":30,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":29,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":28,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":27,
+    "name": "Áo vải Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":26,
+    "name": "Áo vest Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo vest",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":25,
+    "name": "Áo kaki Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "áo vest",
+    "material": "kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":2490,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":23,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":4,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":56738333332,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":6,
+    "name": "Áo bò Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo bò",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":7453678,
+    "name": "Áo vest Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo vest",
+    "material": "kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":8,
+    "name": "quần Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "quần thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":9,
+    "name": "quần Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "quần thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":10,
+    "name": "vest Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "vest thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":19,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":18,
+    "name": "váy Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "váy thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":17,
+    "name": "váy Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "váy thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":16,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":15,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":14,
+    "name": "quần bò Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": " quần bò",
+    "material": "bò",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":13,
+    "name": "Áo kaki",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo kaki",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":12,
+    "name": "Áo kaki Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo kaki",
+    "material": "Kaki",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":1901,
+    "name": "Áo thun",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "Áo thun",
+    "material": "vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":2,
+    "name": "Áo Sơ Mi Trắng",
+    "oldPrice": 400000,
+    "price": 350000,
+    "description": "Áo sơ mi cao cấp, dễ phối đồ, thích hợp cho cả đi làm và dạo phố.",
+    "category": "Áo sơ mi",
+    "material": "vải",
+    "quantity": 50,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 15,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg",
+      "https://dongphucphuongthao.vn/wp-content/uploads/2023/04/ao-kieu-cong-so-han-quoc-1.jpg"
+    ],
+    "video": [
+      "https://example.com/ao-so-mi1-video.mp4"
+    ],
+    "starRatings": {
+      "totalStars": 25,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":3,
+    "name": "quần Skinny",
+    "oldPrice": "",
+    "price": 450000,
+    "description": "jean co giãn tốt, thiết kế hiện đại phù hợp mọi dáng người.",
+    "category": "quần",
+    "material": "Vải",
+    "quantity": 70,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 25,
+    "size": ["28", "30", "32", "34"],
+    "images": [
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphucphuongthao.vn/wp-content/uploads/2023/04/ao-kieu-cong-so-han-quoc-1.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 40,
+      "totalReviews": 8,
+      "averageRating": 4.8
+    }
+  },
+  {
+    "id":39999999878888,
+    "name": "quần Skinny",
+    "oldPrice": "",
+    "price": 450000,
+    "description": "jean co giãn tốt, thiết kế hiện đại phù hợp mọi dáng người.",
+    "category": "quần",
+    "material": "bò",
+    "quantity": 70,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 25,
+    "size": ["28", "30", "32", "34"],
+    "images": [
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://dongphucphuongthao.vn/wp-content/uploads/2023/04/ao-kieu-cong-so-han-quoc-1.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 40,
+      "totalReviews": 8,
+      "averageRating": 4.8
+    }
+  },
+  {
+    "id":4900910,
+    "name": "Đầm Maxi Dạo Phố",
+    "oldPrice": 600000,
+    "price": 550000,
+    "description": "Đầm maxi vải voan mềm mịn, thoải mái cho ngày hè năng động.",
+    "category": "Đầm nữ,váy",
+    "material": "vải",
+    "quantity": 30,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 10,
+    "size": ["Free size"],
+    "images": [
+      "https://dongphucphuongthao.vn/wp-content/uploads/2023/04/ao-kieu-cong-so-han-quoc-1.jpg",
+      "https://dongphuchaianh.vn/wp-content/uploads/2022/03/trang-phuc-cong-so-nu-thuot-tha.jpg",
+      "https://file.hstatic.net/200000897657/file/42.png",
+      "https://cdn.alongwalk.info/info/wp-content/uploads/2022/10/28094025/image-11-mau-thoi-trang-cong-so-han-quoc-nu-dep-sang-chanh-166689962546719.jpg"
+    ],
+    "video": [
+      "https://example.com/dam-maxi1-video.mp4"
+    ],
+    "starRatings": {
+      "totalStars": 15,
+      "totalReviews": 3,
+      "averageRating": 3
+    }
+  },
+  {
+    "id":5,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": "",
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "Vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://cdn.baohatinh.vn/images/25cd495b5dd71afc38731b147e8995a1d091dc92b97613becc23c5ec3ecea09c42b1ecccdfe4ba68ac179bdd90dbcd58/108d2210308t2065l4.jpg",
+      "https://cdn.baohatinh.vn/images/a9c7a3628b892efaca78cfd684e15765f8b90165253c1125a328413afc73f2a0926fd19291165d69bd3373e638372aec/108d2210308t8936l14.jpg",
+      "https://afamilycdn.com/150157425591193600/2023/8/14/34858645813532040385930115133672194097500401n-16919018249102097278614-1691980629211-16919806292911241886662.jpg",
+      "https://afamilycdn.com/150157425591193600/2023/8/14/3626921179641443515113024530028440590150062n-16919018249191886749172-1691980630758-169198063086495534501.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.2
+    }
+  },
+  {
+    "id":5643783,
+    "name": "Áo Thun Basic",
+    "oldPrice": 250000,
+    "price": 200000,
+    "description": "Áo thun cotton 100%, mềm mịn, thoáng khí, thích hợp mặc hàng ngày.",
+    "category": "quần",
+    "material": "Vải",
+    "quantity": 100,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 20,
+    "size": ["S", "M", "L", "XL"],
+    "images": [
+      "https://cdn.baohatinh.vn/images/a9c7a3628b892efaca78cfd684e15765f8b90165253c1125a328413afc73f2a0926fd19291165d69bd3373e638372aec/108d2210308t8936l14.jpg",
+      "https://cdn.baohatinh.vn/images/25cd495b5dd71afc38731b147e8995a1d091dc92b97613becc23c5ec3ecea09c42b1ecccdfe4ba68ac179bdd90dbcd58/108d2210308t2065l4.jpg",
+      "https://afamilycdn.com/150157425591193600/2023/8/14/34858645813532040385930115133672194097500401n-16919018249102097278614-1691980629211-16919806292911241886662.jpg",
+      "https://afamilycdn.com/150157425591193600/2023/8/14/3626921179641443515113024530028440590150062n-16919018249191886749172-1691980630758-169198063086495534501.jpg"
+      ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 30,
+      "totalReviews": 10,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":7,
+    "name": "Áo Sơ Mi Trắng",
+    "oldPrice": "",
+    "price": 350000,
+    "description": "Áo sơ mi cao cấp, dễ phối đồ, thích hợp cho cả đi làm và dạo phố.",
+    "category": "quần",
+    "material": "Vải",
+    "quantity": 50,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 15,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://afamilycdn.com/150157425591193600/2023/8/14/34858645813532040385930115133672194097500401n-16919018249102097278614-1691980629211-16919806292911241886662.jpg",
+      "https://cdn.baohatinh.vn/images/25cd495b5dd71afc38731b147e8995a1d091dc92b97613becc23c5ec3ecea09c42b1ecccdfe4ba68ac179bdd90dbcd58/108d2210308t2065l4.jpg",
+      "https://cdn.baohatinh.vn/images/a9c7a3628b892efaca78cfd684e15765f8b90165253c1125a328413afc73f2a0926fd19291165d69bd3373e638372aec/108d2210308t8936l14.jpg",
+      "https://afamilycdn.com/150157425591193600/2023/8/14/3626921179641443515113024530028440590150062n-16919018249191886749172-1691980630758-169198063086495534501.jpg"
+    ],
+    "video": [
+      "https://example.com/ao-so-mi1-video.mp4"
+    ],
+    "starRatings": {
+      "totalStars": 25,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":22,
+    "name": "Jean Skinny",
+    "price": 450000,
+    "description": "jean co giãn tốt, thiết kế hiện đại phù hợp mọi dáng người.",
+    "category": "quần",
+    "material": "Vải",
+    "quantity": 70,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 25,
+    "size": ["28", "30", "32", "34"],
+    "images": [
+      "https://afamilycdn.com/150157425591193600/2023/8/14/3626921179641443515113024530028440590150062n-16919018249191886749172-1691980630758-169198063086495534501.jpg",
+        "https://cdn.baohatinh.vn/images/25cd495b5dd71afc38731b147e8995a1d091dc92b97613becc23c5ec3ecea09c42b1ecccdfe4ba68ac179bdd90dbcd58/108d2210308t2065l4.jpg",
+      "https://cdn.baohatinh.vn/images/a9c7a3628b892efaca78cfd684e15765f8b90165253c1125a328413afc73f2a0926fd19291165d69bd3373e638372aec/108d2210308t8936l14.jpg",
+      "https://afamilycdn.com/150157425591193600/2023/8/14/34858645813532040385930115133672194097500401n-16919018249102097278614-1691980629211-16919806292911241886662.jpg"
+      ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 40,
+      "totalReviews": 8,
+      "averageRating": 4.8
+    }
+  },
+  {
+    "id":24,
+    "name": "Đầm Maxi Dạo Phố",
+    "oldPrice":"",
+    "price": 550000,
+    "description": "Đầm maxi vải voan mềm mịn, thoải mái cho ngày hè năng động.",
+    "category": "quần",
+    "material": "Kaki",
+    "quantity": 30,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 10,
+    "size": ["Free size"],
+    "images": [
+        "https://cdn.baohatinh.vn/images/a9c7a3628b892efaca78cfd684e15765f8b90165253c1125a328413afc73f2a0926fd19291165d69bd3373e638372aec/108d2210308t8936l14.jpg",
+        "https://i-ngoisao.vnecdn.net/2019/09/18/thudong-6-1745-1568773754.jpg",
+        "https://pos.nvncdn.com/312d68-57499/art/artCT/20200903_2IgZO42TBDWwu1eqKpR6mH4x.png"  
+    ],
+    "video": [
+      "https://example.com/dam-maxi1-video.mp4"
+    ],
+    "starRatings": {
+      "totalStars": 15,
+      "totalReviews": 3,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":231,
+    "name": "quần Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://i-ngoisao.vnecdn.net/2019/09/18/thudong-6-1745-1568773754.jpg",
+      "https://cdn.baohatinh.vn/images/a9c7a3628b892efaca78cfd684e15765f8b90165253c1125a328413afc73f2a0926fd19291165d69bd3373e638372aec/108d2210308t8936l14.jpg",
+        "https://pos.nvncdn.com/312d68-57499/art/artCT/20200903_2IgZO42TBDWwu1eqKpR6mH4x.png"  
+     ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+
+
+  
+  {
+    "id":11,
+    "name": "quần Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://pos.nvncdn.com/312d68-57499/art/artCT/20200903_2IgZO42TBDWwu1eqKpR6mH4x.png" , 
+      "https://cdn.baohatinh.vn/images/a9c7a3628b892efaca78cfd684e15765f8b90165253c1125a328413afc73f2a0926fd19291165d69bd3373e638372aec/108d2210308t8936l14.jpg",
+        "https://i-ngoisao.vnecdn.net/2019/09/18/thudong-6-1745-1568773754.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":88,
+    "name": "quần Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://kenh14cdn.com/2019/10/6/photo-1-15703370192571243859247.jpg",
+      "https://shopping-square.com/wp-content/uploads/2021/10/blazer-phoi-vay-lien0.jpg",
+      "https://cdn.eva.vn/upload/4-2022/images/2022-11-21/blazer-ke-o-dang-hot-nhat-dot-nay-chi-em-mau-ghim-ngay-1001-cach-dien-chuan-sang-xin-3-1669018970-897-width600height772.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":3453678927,
+    "name": "quần jean Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "bò",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://shopping-square.com/wp-content/uploads/2021/10/blazer-phoi-vay-lien0.jpg",
+      "https://kenh14cdn.com/2019/10/6/photo-1-15703370192571243859247.jpg",
+      "https://cdn.eva.vn/upload/4-2022/images/2022-11-21/blazer-ke-o-dang-hot-nhat-dot-nay-chi-em-mau-ghim-ngay-1001-cach-dien-chuan-sang-xin-3-1669018970-897-width600height772.jpg",
+      "https://cdn.eva.vn/upload/4-2022/images/2022-11-21/blazer-ke-o-dang-hot-nhat-dot-nay-chi-em-mau-ghim-ngay-1001-cach-dien-chuan-sang-xin-3-1669018970-897-width600height772.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+
+
+  
+  {
+    "id":9090909,
+    "name": "Quần vải",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://cdn.eva.vn/upload/4-2022/images/2022-11-21/blazer-ke-o-dang-hot-nhat-dot-nay-chi-em-mau-ghim-ngay-1001-cach-dien-chuan-sang-xin-3-1669018970-897-width600height772.jpg",
+      "https://kenh14cdn.com/2019/10/6/photo-1-15703370192571243859247.jpg",
+      "https://shopping-square.com/wp-content/uploads/2021/10/blazer-phoi-vay-lien0.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":67,
+    "name": "quần vải Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":89,
+    "name": "quần vải Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":33,
+    "name": "quần bò Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "bò",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":190000,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "áo",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":190011,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "áo",
+    "material": "áo",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":190012,
+    "name": "Quần mặc",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":19009019,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "áo jeans",
+    "material": "Vải",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":295647389,
+    "name": "Áo cộc tay",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo cộc tay",
+    "material": "Vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg",
+     "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":27276,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "Vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":2721,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4
+    }
+  },
+  {
+    "id":27221,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "Bò",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 2
+    }
+  },
+  {
+    "id":27212,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "Bò",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 2
+    }
+  },
+  {
+    "id":279,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "bò",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":278,
+    "name": "Váy trắng",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "váy hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Váy",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.5
+    }
+  },
+  {
+    "id":273,
+    "name": "Vest nam",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "material":"vest",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.8
+    }
+  },
+  {
+    "id":271,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.1
+    }
+  },
+  {
+    "id":2722,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.1
+    }
+  },
+  {
+    "id":200,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "Kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL", "XXL"],
+    "images": [
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg"
+    
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":2223,
+    "name": "váy Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "material": "Kaki",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"
+      ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1122242,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "Kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":112212,
+    "name": "váy nữ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy nữ",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11322,
+    "name": "váy xinh đẹp",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy thun",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":1122,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "vải",
+
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":1122900,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11223,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11212212382,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11225,
+    "name": "quần Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "quần chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11222121,
+    "name": "quần Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11229,
+    "name": "Áo bò",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "bò",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11209012,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":11220,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":112267,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":1122456,
+    "name": "quần Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":1122345,
+    "name": "vest Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+
+
+
+  {
+    "id":1000001,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://cdn.eva.vn/upload/4-2022/images/2022-11-21/blazer-ke-o-dang-hot-nhat-dot-nay-chi-em-mau-ghim-ngay-1001-cach-dien-chuan-sang-xin-3-1669018970-897-width600height772.jpg",
+      "https://kenh14cdn.com/2019/10/6/photo-1-15703370192571243859247.jpg",
+      "https://shopping-square.com/wp-content/uploads/2021/10/blazer-phoi-vay-lien0.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000002,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000003,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Hạ",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000004,
+    "name": "váy Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000005,
+    "name": "váy Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "material": "kaki",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000006,
+    "name": "váy Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000007,
+    "name": "váy Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000008,
+    "name": "vest",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "material": "vest",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg",
+      "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg"
+      
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000009,
+    "name": "quần bò tây",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần bò",
+    "material": "bò",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://img2.dilyno.com/fiqL0j8aDmVAwo_CAkI4wiZLmQmUr4opA-teurDrnQY/rs:fill:600:880:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy85ZDE0MDQ1NTliMTY4OGU3MGEwZGE2YzUzYjYxYjA3Mi5qcGc.jpg",
+     "https://icdn.24h.com.vn/upload/4-2019/images/2019-10-05/1570265099-419-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-0-1569900215-width500height623.jpg",
+      "https://danviet.mediacdn.vn/upload/4-2019/images/2019-10-01/Nu-cong-so-nen-mac-blazer-the-nao-cho-sang-6-1569900215-width500height575.jpg",
+      "https://media.phunutoday.vn/files/content/2019/10/06/1570265100-369-nu-cong-so-nen-mac-blazer-the-nao-cho-sang-5-1569900215-width500height647-0813.jpg",
+      "https://img2.dilyno.com/60u67gTyDHvbjtFcZw1O2beazAG7AEvawnhsqaMYnws/rs:fill:600:587:0/aHR0cHM6Ly9zMy1kaWx5LXdlYi5kaWx5bm8uY29tL3dlYmVjb20vMjAyMy8wMy8wZDc3ZTFlMTIzYTk1ZjE5YmQ2ZjBjMWIyOWIyNTk2Ny5qcGc.jpg"
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000010,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "bò",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":1000011,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4
+    }
+  },
+  {
+    "id":1000012,
+    "name": "quần tây",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "quần tây dày dặn thoáng mát,thích hợp mặc đi tiệc tùng.",
+    "category": "quần Tây",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 2
+    }
+  },
+  {
+    "id":1000013,
+    "name": "Váy nữ đẹp",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 2
+    }
+  },
+  {
+    "id":1000014,
+    "name": "váy xinh dành cho nữ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy xinh",
+    "material": "vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 5
+    }
+  },
+  {
+    "id":1000015,
+    "name": "váy xinh nữ xinh đẹp trắng",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.5
+    }
+  },
+  {
+    "id":1000016,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.8
+    }
+  },
+  {
+    "id":100017,
+    "name": "váy Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.1
+    }
+  },
+  {
+    "id":100018,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg",
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg"
+  ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 3.1
+    }
+  },
+  {
+    "id":100019,
+    "name": "váy Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "váy hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL", "XXL"],
+    "images": [
+      "https://noidia.b-cdn.net/imgextra/i4/2813435190/O1CN01ENHePD1oD4SDsT8yh_!!2813435190.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-0_RYze9ed.jpg",
+      "https://noidia.b-cdn.net/products/736041268230/452012-thumbnail-2.jpg"
+    
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":100020,
+    "name": "vest Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "quantity": 60,
+    "season":"Thu",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"
+      ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":100021,
+    "name": "vest Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 4.5
+    }
+  },
+  {
+    "id":100022,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100023,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100024,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100025,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100026,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "vest hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100027,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100028,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "quần hoodie",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100029,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100030,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100031,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100032,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100033,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100034,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"kaki",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  },
+  {
+    "id":100035,
+    "name": "Áo Hoodie Nỉ",
+    "oldPrice": 450000,
+    "price": 400000,
+    "description": "Áo hoodie unisex, chất nỉ dày dặn, phù hợp cho mùa đông.",
+    "category": "Áo hoodie",
+    "material":"vải",
+    "quantity": 60,
+    "season":"Đông",
+    "color":["Xanh","Đỏ","Tím","Đen","Trắng"],
+    "sold": 18,
+    "size": ["M", "L", "XL"],
+    "images": [
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmhb8bgxsjbzc2_tn.webp",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lpsu4ow9od02a7_tn",
+      "https://cf.shopee.vn/file/vn-11134207-7r98o-lnwejcyn36jxd5"  
+    ],
+    "video": [],
+    "starRatings": {
+      "totalStars": 20,
+      "totalReviews": 5,
+      "averageRating": 1
+    }
+  }
+]

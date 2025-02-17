@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; 
 import { useRegisterUserMutation } from "../redux/features/auth/authApi";
-import { auth, googleProvider, signInWithPopup } from "../../firebase";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,7 +8,7 @@ const Register = () => {
   const [formData, setFormData] = useState({ username: "", email: "", password: "", rePassword: "" });
   const [errors, setErrors] = useState({});
   const [registerUser, { isLoading }] = useRegisterUserMutation();
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const validateForm = () => {
     let newErrors = {};
@@ -39,26 +38,9 @@ const Register = () => {
     try {
       await registerUser({ username: formData.username, email: formData.email, password: formData.password }).unwrap();
       alert("Đăng ký thành công!");
-      navigate("/login");
+      navigate("/login"); 
     } catch (error) {
       setErrors({ server: error.data?.message || "Có lỗi xảy ra, vui lòng thử lại!" });
-    }
-  };
-
-  const handleGoogleSignIn = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const user = result.user;
-      
-      // Gửi thông tin tài khoản Google lên server để đăng ký nếu chưa có
-      await registerUser({ username: user.displayName, email: user.email, password: user.uid }).unwrap();
-      
-      console.log("Google Login Success:", user);
-      alert("Đăng ký thành công bằng Google!");
-      navigate("/login");
-    } catch (error) {
-      console.error("Google Login Error:", error.message);
-      alert("Đăng ký bằng Google thất bại!");
     }
   };
 
@@ -69,14 +51,14 @@ const Register = () => {
         <form onSubmit={handleSubmit} className="p-3 mt-2">
           <div className="form-control mb-3">
             <label htmlFor="username">Tên đăng nhập:</label>
-            <input
-              className="p-2 rounded-md mt-2 w-full"
-              type="text"
-              name="username"
-              id="username"
-              value={formData.username}
-              placeholder="Tạo tên đăng nhập"
-              onChange={handleChange}
+            <input 
+              className="p-2 rounded-md mt-2 w-full" 
+              type="text" 
+              name="username" 
+              id="username" 
+              value={formData.username} 
+              placeholder="Tạo tên đăng nhập" 
+              onChange={handleChange} 
               autoComplete="username"
             />
             {errors.username && <p className="text-red-500 text-sm">{errors.username}</p>}
@@ -84,14 +66,14 @@ const Register = () => {
 
           <div className="form-control mb-3">
             <label htmlFor="email">Email:</label>
-            <input
-              className="p-2 rounded-md mt-2 w-full"
-              type="email"
-              name="email"
-              id="email"
-              value={formData.email}
-              placeholder="Nhập email"
-              onChange={handleChange}
+            <input 
+              className="p-2 rounded-md mt-2 w-full" 
+              type="email" 
+              name="email" 
+              id="email" 
+              value={formData.email} 
+              placeholder="Nhập email" 
+              onChange={handleChange} 
               autoComplete="email"
             />
             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -100,18 +82,18 @@ const Register = () => {
           <div className="form-control mb-3">
             <label htmlFor="password">Tạo mật khẩu:</label>
             <div className="relative w-full">
-              <input
-                className="p-2 w-full rounded-md mt-2 pr-10"
-                type={showPassword ? "text" : "password"}
-                name="password"
-                id="password"
-                value={formData.password}
-                placeholder="Tạo mật khẩu"
-                onChange={handleChange}
+              <input 
+                className="p-2 w-full rounded-md mt-2 pr-10" 
+                type={showPassword ? "text" : "password"} 
+                name="password" 
+                id="password" 
+                value={formData.password} 
+                placeholder="Tạo mật khẩu" 
+                onChange={handleChange} 
                 autoComplete="new-password"
               />
-              <i
-                className={`fa-regular absolute right-3 top-1/2 -translate-y-1/2 mt-1 cursor-pointer ${showPassword ? "fa-eye" : "fa-eye-slash"}`}
+              <i 
+                className={`fa-regular absolute right-3 top-1/2 -translate-y-1/2 mt-1 cursor-pointer ${showPassword ? "fa-eye" : "fa-eye-slash"}`} 
                 onClick={() => setShowPassword(!showPassword)}
               ></i>
             </div>
@@ -121,18 +103,18 @@ const Register = () => {
           <div className="form-control mb-3">
             <label htmlFor="rePassword">Nhập lại mật khẩu:</label>
             <div className="relative w-full">
-              <input
-                className="p-2 w-full rounded-md mt-2 pr-10"
-                type={showReEnter ? "text" : "password"}
-                name="rePassword"
-                id="rePassword"
-                value={formData.rePassword}
-                placeholder="Nhập lại mật khẩu"
-                onChange={handleChange}
+              <input 
+                className="p-2 w-full rounded-md mt-2 pr-10" 
+                type={showReEnter ? "text" : "password"} 
+                name="rePassword" 
+                id="rePassword" 
+                value={formData.rePassword} 
+                placeholder="Nhập lại mật khẩu" 
+                onChange={handleChange} 
                 autoComplete="new-password"
               />
-              <i
-                className={`fa-regular absolute right-3 top-1/2 -translate-y-1/2 mt-1 cursor-pointer ${showReEnter ? "fa-eye" : "fa-eye-slash"}`}
+              <i 
+                className={`fa-regular absolute right-3 top-1/2 -translate-y-1/2 mt-1 cursor-pointer ${showReEnter ? "fa-eye" : "fa-eye-slash"}`} 
                 onClick={() => setShowReEnter(!showReEnter)}
               ></i>
             </div>
@@ -141,22 +123,23 @@ const Register = () => {
 
           {errors.server && <p className="text-red-500 text-sm text-center">{errors.server}</p>}
 
-          <button type="submit" className="bg-black text-white px-3 py-2 rounded-md w-full mt-3" disabled={isLoading}>
+          <button 
+            type="submit" 
+            className="bg-black text-white px-3 py-2 rounded-md w-full mt-3" 
+            disabled={isLoading}
+          >
             {isLoading ? "Đang xử lý..." : "Đăng ký"}
           </button>
-          
           <button
             type="button"
             className="bg-black text-white px-3 py-2 rounded-md w-full mt-3 gap-2 flex items-center justify-center"
-            onClick={handleGoogleSignIn} 
           >
             <span>
               <i className="fa-brands fa-google"></i>
             </span>
-            Đăng ký bằng Google
+            Đăng nhập bằng Google
           </button>
         </form>
-
         <p className="p-3">Bạn đã có tài khoản? <Link className="font-bold" to="/login">Đăng nhập</Link> để vào shop</p>
       </div>
     </div>

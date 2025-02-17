@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useLoginUserMutation } from "../redux/features/auth/authApi";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch } from "react-redux";
+import { setUser } from "../redux/features/auth/authSlice";
 
 const Login = () => {
   const usernameOrEmailRef = useRef(null);
@@ -11,6 +13,7 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [loginUser, { isLoading }] = useLoginUserMutation();
   const navigate = useNavigate();
+  const dispatch = useDispatch(); 
 
   const validateInputs = () => {
     const errors = {};
@@ -31,6 +34,9 @@ const Login = () => {
       }).unwrap();
 
       if (response.token) {
+        // Lưu thông tin người dùng vào Redux state và localStorage
+        dispatch(setUser({ user: response.user }));
+
         toast.success("Đăng nhập thành công!");
         setTimeout(() => navigate("/"), 1000);
       }

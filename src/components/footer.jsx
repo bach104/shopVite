@@ -5,7 +5,6 @@ const Footer = () => {
     <footer className="w-full bg-gray-900 text-white py-10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Thông tin liên hệ */}
           <div>
             <h4 className="text-2xl font-bold mb-4">Thông tin liên hệ</h4>
             <p className="flex items-center pb-3">
@@ -19,7 +18,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Trang cá nhân shop */}
           <div>
             <h4 className="text-2xl font-bold mb-4">Trang cá nhân shop</h4>
             <p className="flex items-center pb-3">
@@ -33,7 +31,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Tìm hiểu thêm */}
           <div>
             <h4 className="text-2xl font-bold mb-4">Tìm hiểu thêm</h4>
             <p className="pb-3">
@@ -46,7 +43,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="text-center mt-10 border-t border-gray-700 pt-6">
           <p>&copy; 2025 ShopOnline. All rights reserved.</p>
         </div>
@@ -54,5 +50,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;

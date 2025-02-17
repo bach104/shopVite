@@ -3,3 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+img {
+    width: 100%;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+nav {
+    max-width: var(--max-width-1200);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 2px solid var(--border-bt);
+    padding: 0.5rem 0;
+}

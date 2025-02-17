@@ -23,9 +23,7 @@ const Banner = () => {
         Phong cách hiện đại trẻ trung
       </h4>
       <div className="flex justify-center sm:justify-start">
-        <button className="btn">
-          <Link to='/products'>Khám phá ngay</Link>
-        </button>
+          <Link className="btn" to='/products'>Khám phá ngay</Link>
       </div>
     </div>
       <div className="header__image w-full h-full">

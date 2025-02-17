@@ -1,0 +1,10 @@
+@use "../../variables/variables.scss" as *;
+@use "../../variables/mixins.scss" as *;
+@use "../../font/fonts.scss" as *;
+.max-width {
+    max-width: $max-width-1400;
+    margin: auto;
+    margin-top: 5rem;
+    background: $primary-color-gray;
+    margin-bottom: 2rem;
+}

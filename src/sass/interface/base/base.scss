@@ -8,3 +8,42 @@
     background: $primary-color-gray;
     margin-bottom: 2rem;
 }
+.introduce__grid,
+.product__grid {
+    max-width: $max-width-1400;
+    margin: 2rem auto;
+}
+.title {
+    font-family:$font-text3;
+    font-weight: 300;
+    line-height: 1.2;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 1);
+}
+.product__list>li:hover {
+    background-color: #949494;
+}
+
+.bg__header {
+    background: #999999;
+}
+
+.bg__filter {
+    background: #E2E1E1;
+}
+
+.bg__div {
+    background: #c2c0c0;
+}
+
+.product__list>div:nth-child(2),
+.product__list>li {
+    background: $bg-gray;
+}
+
+
+.font__text {
+    font-family: $font-text3;
+}
+.store__title {
+    background: rgba(59, 59, 59, 0.8);
+}

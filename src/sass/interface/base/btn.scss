@@ -43,24 +43,6 @@
 .btn__click {
     background: rgba(0, 0, 0, 0.1);
 }
-.product__list>li:hover {
-    background-color: #949494;
-}
-.bg__header {
-    background: #999999;
-}
-.bg__filter {
-    background: #E2E1E1;
-}
-.bg__div {
-    background: #c2c0c0;
-}
-.product__list>li {
-    background: #e2e2e2
-}
-.product__list>div:nth-child(2) {
-    background: #e2e2e2
-}
-.font__text {
-    font-family: $font-text3;
+.product__hv:hover {
+    transform: scale(1.1);
 }

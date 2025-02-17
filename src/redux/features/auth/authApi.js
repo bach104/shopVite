@@ -22,9 +22,23 @@ const authApi = createApi({
         method: 'POST',
         body: credentials,
       }),
+      transformResponse: (response) => {
+        if (response?.user) {
+          localStorage.setItem('user', JSON.stringify(response.user));
+        }
+        return response;
+      },
+    }),
+    updateUser: builder.mutation({
+      query: (userData) => ({
+        url: '/update-info',
+        method: 'PUT',
+        body: userData,
+      }),
+      invalidatesTags: ['Users'],
     }),
   }),
 });
 
-export const { useRegisterUserMutation, useLoginUserMutation } = authApi;
+export const { useRegisterUserMutation, useLoginUserMutation, useUpdateUserMutation } = authApi;
 export default authApi;

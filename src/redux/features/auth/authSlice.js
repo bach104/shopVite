@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const loadUserFromLocalStorage = () => {
   try {
     const serializedState = localStorage.getItem('user');
-    if (serializedState === null) return { user: null };
-    return { user: JSON.parse(serializedState) }; 
+    if (!serializedState) return { user: null };
+    return { user: JSON.parse(serializedState) };
   } catch (err) {
     console.error('Error deserializing user from localStorage:', err);
     return { user: null };
@@ -23,10 +23,16 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       state.user = null;
-      localStorage.removeItem('user'); 
+      localStorage.removeItem('user');
+    },
+    updateUserInfo: (state, action) => {
+      if (state.user) {
+        state.user = { ...state.user, ...action.payload };
+        localStorage.setItem('user', JSON.stringify(state.user));
+      }
     },
   },
 });
 
-export const { setUser, logout } = authSlice.actions;
+export const { setUser, logout, updateUserInfo } = authSlice.actions;
 export default authSlice.reducer;

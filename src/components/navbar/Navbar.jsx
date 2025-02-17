@@ -11,7 +11,7 @@ const Navbar = () => {
             Shoponline
           </Link>
         </nav>
-        <ul className="nav__links">
+        <ul className="nav__links md:flex-none">
           <li>
             <Link className="hover:text-gray-400 transition" to="/">
               Trang chủ

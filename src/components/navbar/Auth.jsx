@@ -9,36 +9,32 @@ const Auth = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  
   const handleDropdownToggle = () => {
     setIsDropDownOpen(!isDropDownOpen);
   };
-  
+
   const handleLogout = () => {
     dispatch(logout());
   };
-  
+
   const adminDropDownMenus = [
     { label: "Bảng điều khiển", path: "/dashboard/admin" },
     { label: "Quản lý mục", path: "/dashboard/manage-products" },
     { label: "Tất cả đơn hàng", path: "/dashboard/manage-orders" },
-    { label: "Thêm bài đăng mới", path: "/dashboard/add-new-post" },
   ];
-  
+
   const userDropDownMenus = [
-    { label: "Bảng điều khiển", path: "/dashboard/dashboard" },
-    { label: "Hồ sơ", path: "/dashboard/profile" },
-    { label: "Thanh toán", path: "/dashboard/payments" },
-    { label: "Đơn hàng", path: "/dashboard/orders" },
+    { label: "Thông tin cá nhân", path: "/informations" },
+    { label: "Giỏ hàng", path: "/dashboard/orders" },
   ];
-  
-  const dropDownMenus = user?.isAdmin ? adminDropDownMenus : userDropDownMenus;
+
+  const dropDownMenus = user?.role === "admin" ? adminDropDownMenus : userDropDownMenus;
 
   return (
     <>
       {user ? (
         <>
-         <img
+          <img
             onClick={handleDropdownToggle}
             className="size-7 rounded-full cursor-pointer"
             src={user?.avatar && user.avatar !== "" ? user.avatar : avatarImg}
@@ -46,7 +42,7 @@ const Auth = () => {
             alt="Avatar"
           />
           {isDropDownOpen && (
-            <div className="absolute w-48 top-10 right-0 bg-white p-4 mt-3 border-gray-200 rounded-lg shadow-lg z-50">
+            <div className="absolute w-48 border-black top-10 right-0 bg-white p-4  rounded-lg shadow-lg z-50">
               <ul className="font-medium space-y-4 p-2">
                 {dropDownMenus.map((menu, index) => (
                   <li key={index}>

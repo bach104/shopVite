@@ -12,7 +12,12 @@
     cursor: pointer;
     transform: translateY(-50%);
 }
-
+@mixin bg-img{
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 @mixin frame-width {
     width: 100%;
     max-width: $max-width-1400;

@@ -1,13 +1,13 @@
-import ViewProducts from "./viewProducts"
-const showProducts = () => {
-  return (
-      <>
-          <div className="grid max-width">
-        <h2 className="text-2xl text-center w-full font-bold bg-slate-200 p-4">Thông tin sản phẩm</h2>
-        <ViewProducts/>
-          </div>
-      </>
-  )
-}
+import ViewProducts from "./viewProducts";
 
-export default showProducts
+const ShowProducts = () => {
+  return (
+    <div className="grid max-width">
+      <h2 className="text-2xl text-center w-full font-bold bg-slate-200 p-4">
+        Thông tin sản phẩm
+      </h2>
+      <ViewProducts />
+    </div>
+  );
+};
+export default ShowProducts;

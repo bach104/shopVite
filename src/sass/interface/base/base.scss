@@ -8,10 +8,18 @@
     background: $primary-color-gray;
     margin-bottom: 2rem;
 }
+.container-width{
+    max-width: $max-width-1400;
+    margin:0 auto;
+}
+input[type="checkbox"] {
+    accent-color: black;
+}
 .introduce__grid,
 .product__grid {
     max-width: $max-width-1400;
     margin: 2rem auto;
+    background: $primary-color-gray;
 }
 .title {
     font-family:$font-text3;
@@ -24,7 +32,7 @@
 }
 
 .bg__header {
-    background: #999999;
+    background: #b5b5b5;
 }
 
 .bg__filter {
@@ -34,7 +42,9 @@
 .bg__div {
     background: #c2c0c0;
 }
-
+.bg__select{
+    background:$bg-cart-selected;
+}
 .product__list>div:nth-child(2),
 .product__list>li {
     background: $bg-gray;
@@ -44,6 +54,13 @@
 .font__text {
     font-family: $font-text3;
 }
+.bank-box,
 .store__title {
     background: rgba(59, 59, 59, 0.8);
+}
+
+@media screen and (width < 768px) {
+    .cart__wrap {
+           flex-wrap: wrap;
+        }
 }

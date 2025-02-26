@@ -2,8 +2,8 @@ import img1 from "../../assets/img/information3.jpg";
 
 const Introduce = () => {
     return (
-      <div className="section__container">
-        <div className="section__body">
+      <div className="my-8">
+        <div className="section__body product__list">
             <h2 className="w-full p-4 text-2xl font-bold text-center bg-gray-400">Giới thiệu</h2>
             
             <div className="grid p-4 rounded-md gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-3">

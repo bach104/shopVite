@@ -18,8 +18,7 @@ const information = () => {
         <Introduce/>
         <OtherInformation/>
         <ContactInformation/>
-        <div className="section__container">
-        </div>      
+     
     </>
   )
 }

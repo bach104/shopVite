@@ -13,7 +13,7 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [loginUser, { isLoading }] = useLoginUserMutation();
   const navigate = useNavigate();
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
 
   const validateInputs = () => {
     const errors = {};
@@ -34,8 +34,10 @@ const Login = () => {
       }).unwrap();
 
       if (response.token) {
-        // Lưu thông tin người dùng vào Redux state và localStorage
         dispatch(setUser({ user: response.user }));
+
+        localStorage.setItem("user", JSON.stringify(response.user));
+        localStorage.setItem("token", response.token);
 
         toast.success("Đăng nhập thành công!");
         setTimeout(() => navigate("/"), 1000);
@@ -90,7 +92,6 @@ const Login = () => {
             </div>
             {errors.password && <p className="text-red-500 mt-1">{errors.password}</p>}
           </div>
-
           <button
             type="submit"
             className="bg-black text-white px-3 py-2 rounded-md w-full mt-3 flex justify-center items-center"
@@ -122,4 +123,5 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login; 
+

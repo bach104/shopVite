@@ -2,8 +2,8 @@ import img2 from "../../assets/img/information2.jpg";
 
 const OtherInformation = () => {
     return (
-       <div className="section__container">
-            <div className="section__body">
+       <div className="my-8">
+            <div className="section__body product__list">
                 <h2 className="w-full p-4 font-bold text-2xl bg-gray-400">Thông tin khác về Shop Online</h2>
 
                 <div className="grid p-4 rounded-md gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-3">

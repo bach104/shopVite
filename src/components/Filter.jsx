@@ -46,7 +46,7 @@ const FilterComponent = ({ filters, setFilters }) => {
             <input
               className="mr-3"
               type="checkbox"
-              name={key} // ✅ Thêm name
+              name={key}
               checked={filters[key]?.has(normalizedValue)}
               onChange={() => handleFilterChange(key, normalizedValue)}
               id={`${key}-${value}`}
@@ -73,7 +73,7 @@ const FilterComponent = ({ filters, setFilters }) => {
         <div className="flex w-full justify-center items-center p-2 bg__div">
           <input
             type="text"
-            name="price-min" 
+            name="price-min"
             className="w-32 p-2"
             placeholder="giá từ"
             value={formatPrice(filters.priceRange.min)}
@@ -82,7 +82,7 @@ const FilterComponent = ({ filters, setFilters }) => {
           <i className="ri-arrow-right-fill pl-2 pr-2"></i>
           <input
             type="text"
-            name="price-max" 
+            name="price-max"
             className="w-32 p-2"
             placeholder="đến giá"
             value={formatPrice(filters.priceRange.max)}

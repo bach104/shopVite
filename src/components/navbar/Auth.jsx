@@ -1,33 +1,57 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { User } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../../redux/features/auth/authSlice";
+import { logout, setUser } from "../../redux/features/auth/authSlice"; 
+import { resetCart } from "../../redux/features/cart/cartSlice"; // Import resetCart
 import avatarImg from "../../assets/img/avatar.png";
+import { getBaseUrl } from "../../utils/baseURL"; 
 
 const Auth = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+
+  useEffect(() => {
+    if (!user) {
+      const storedUser = localStorage.getItem("user");
+      const storedToken = localStorage.getItem("token");
+      if (storedUser && storedToken) {
+        try {
+          dispatch(setUser({ user: JSON.parse(storedUser) }));
+        } catch (error) {
+          console.error("Error parsing user from localStorage", error);
+        }
+      }
+    }
+  }, [user, dispatch]);
+
+  const avatarUrl = user?.avatar
+    ? `${getBaseUrl()}/${user.avatar.replace(/\\/g, "/")}`
+    : avatarImg;
+
   const handleDropdownToggle = () => {
     setIsDropDownOpen(!isDropDownOpen);
   };
 
   const handleLogout = () => {
     dispatch(logout());
+    dispatch(resetCart());
+    localStorage.clear();
+    sessionStorage.clear();
+    navigate("/");
   };
 
   const adminDropDownMenus = [
-    { label: "Bảng điều khiển", path: "/dashboard/admin" },
     { label: "Quản lý mục", path: "/dashboard/manage-products" },
     { label: "Tất cả đơn hàng", path: "/dashboard/manage-orders" },
-  ];
-
+    { label: "Thông tin cá nhân", path: "/informations" },
+  ];    
   const userDropDownMenus = [
     { label: "Thông tin cá nhân", path: "/informations" },
-    { label: "Giỏ hàng", path: "/dashboard/orders" },
+    { label: "Giỏ hàng của bạn", path: "/cart-manager" },
   ];
-
   const dropDownMenus = user?.role === "admin" ? adminDropDownMenus : userDropDownMenus;
 
   return (
@@ -37,18 +61,18 @@ const Auth = () => {
           <img
             onClick={handleDropdownToggle}
             className="size-7 rounded-full cursor-pointer"
-            src={user?.avatar && user.avatar !== "" ? user.avatar : avatarImg}
-            onError={(e) => (e.target.src = avatarImg)} 
+            src={avatarUrl} 
+            onError={(e) => (e.target.src = avatarImg)}
             alt="Avatar"
           />
           {isDropDownOpen && (
-            <div className="absolute w-48 border-black top-10 right-0 bg-white p-4  rounded-lg shadow-lg z-50">
-              <ul className="font-medium space-y-4 p-2">
+            <div className="absolute w-48 border-black border-y border-x top-10 right-0 bg-white p-2 rounded-lg shadow-lg z-50">
+              <ul className="font-medium">
                 {dropDownMenus.map((menu, index) => (
-                  <li key={index}>
+                  <li key={index} className="border-b-2">
                     <Link
                       onClick={() => setIsDropDownOpen(false)}
-                      className="dropdown-items"
+                      className="dropdown-items px-2 hover:bg-gray-200 py-3 block"
                       to={menu.path}
                     >
                       {menu.label}
@@ -57,7 +81,7 @@ const Auth = () => {
                 ))}
                 <li>
                   <button
-                    className="dropdown-items w-full text-left"
+                    className="dropdown-items px-2 hover:bg-gray-200 py-3 w-full text-left"
                     onClick={handleLogout}
                   >
                     Đăng xuất

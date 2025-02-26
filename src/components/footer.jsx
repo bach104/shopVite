@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-900 text-white py-10">
+    <footer className="w-full bg-dark text-white py-10">
       <div className="container mx-auto px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-center mt-10 border-t border-gray-700 pt-6">
+        <div className="text-center mt-10 border-t border-gray-400 pt-6">
           <p>&copy; 2025 ShopOnline. All rights reserved.</p>
         </div>
       </div>

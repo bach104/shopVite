@@ -1,33 +1,49 @@
+import { useSelector } from "react-redux";
+import avatarImg from "../../assets/img/avatar.png";
+import { getBaseUrl } from "../../utils/baseURL";
+import { useEffect, useState } from "react";
 
-const showInformation = () => {
+const ShowInformation = () => {
+  const user = useSelector((state) => state.auth?.user);
+
+  const [userInfo, setUserInfo] = useState(user);
+
+  useEffect(() => {
+    setUserInfo(user);
+  }, [user]);
+
+  if (!userInfo) {
+    return <div>Loading...</div>; 
+  }
+
+  const { avatar, yourname, address, phoneNumber, email, role } = userInfo;
+  const avatarUrl = avatar ? `${getBaseUrl()}/${avatar.replace(/\\/g, "/")}` : avatarImg;
+
   return (
-      <>
-        <div className="bg-gray-200 boxContainer p-4 text-center font-bold">
-            <h2>Thông tin cá nhân</h2>
+    <>
+      <div className="bg-gray-200 boxContainer p-4 text-center font-bold">
+        <h2>Thông tin cá nhân</h2>
+      </div>
+      <div className="mt-5">
+        <div className="mt-4 boxContainer grid grid-cols-4 gap-4 mb-8">
+          <div className="flex flex-col items-center bg-gray-200 col-span-2">
+            <img
+              src={avatarUrl}
+              alt="Avatar"
+              className="w-56 mt-4 h-56 flex items-center justify-center rounded-full"
+            />
+            <p className="mt-2">{yourname || "Tên của bạn"}</p>
+          </div>
+          <div className="col-span-2">
+            <p><strong>{role === "admin" ? "Tên shop" : "Họ và tên"}:</strong> {yourname || "Xin cập nhật"}</p>
+            <p><strong>Địa chỉ:</strong> {address || "Xin cập nhật"}</p>
+            <p><strong>Số điện thoại:</strong> {phoneNumber || "Xin cập nhật"}</p>
+            <p><strong>Email:</strong> {email || "Xin cập nhật"}</p>
+          </div>
         </div>
-        <div className="mt-5">
-            <div className="mt-4 boxContainer grid grid-cols-3 gap-4 mb-8">
-                <div className="flex flex-col items-center bg-slate-200 col-span-1">
-                    <div className="w-40 mt-4 h-40 bg-gray-400 flex items-center justify-center rounded-full">
-                        <span className="text-4xl">+</span>
-                    </div>
-                    <p className="mt-2">Avatar</p>
-                </div>
-                <div className="col-span-2">
-                    <p><strong>Tên cá nhân:</strong> Hà Hưng</p>
-                    <p><strong>Địa chỉ:</strong> Nhà 53, Bãi Kình, Phú Lương, Thái Nguyên</p>
-                    <p><strong>Số điện thoại:</strong> 0334.990.877</p>
-                    <p><strong>Email:</strong> havanhung12a2@gmail.com</p>
-                </div>
-            </div>
-        </div>
-        <div className=" pt-5 boxContainer text-center font-bold">
-            <h2 className="bg-gray-200 p-4">
-                Cập nhật,sửa thông tin
-            </h2>
-        </div>
-      </>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default showInformation
+export default ShowInformation;

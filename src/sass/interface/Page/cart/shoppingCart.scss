@@ -1,0 +1,33 @@
+@use "../../../variables/variables.scss" as *;
+@use "../../../variables/mixins.scss" as *;
+@use "../../../font/fonts.scss" as *;
+
+.shoppingContainer{
+    max-height: 45rem;
+    min-height: 45rem;
+    overflow-y: scroll;
+    border:2px solid rgba($color: #000000, $alpha: 0.4);
+}
+ .shoppingItems{
+    .shoppingItems__click{
+
+        >button{
+            padding: 8px 16px;
+        }
+    }
+ }
+@media (max-width: 600px){
+    .shoppingItems{
+        height:5rem ;
+        >img{
+            height: 4rem;
+            width: 4rem;
+        }
+        .shoppingItems__click {
+
+            >button {
+                padding: 5px 10px;
+            }
+        }
+    }
+}

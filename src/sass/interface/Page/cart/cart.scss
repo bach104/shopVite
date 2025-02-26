@@ -1,7 +1,7 @@
 .shoppingBox {
     display: none;
     z-index: 100;
-    ::before{
+    >::before{
         content: "";
         position: absolute;
         width: 100%;
@@ -10,8 +10,8 @@
         left: 0;
         opacity: 0.5;
     }
-    ::after {
-        content: "";
+    >::after {
+        content: " ";
         position: absolute;
         border-width: 0.7rem;
         border-color: #000 transparent transparent #000;
@@ -22,8 +22,6 @@
         transform: rotate(45deg);
     }
 }
-
-
 .iconShopping:hover .shoppingBox {
     display: block;
 }

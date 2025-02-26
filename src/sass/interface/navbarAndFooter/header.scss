@@ -6,7 +6,6 @@
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 100;
     border-bottom: 1px solid $bg-gray;
     .nav__links{
         @include flexHeader();
@@ -16,7 +15,6 @@
         font-optical-sizing: auto;
         font-family:$font-text3 ;
         flex: 1;
-
     }
     .nav__logo {
         font-size: 2rem;

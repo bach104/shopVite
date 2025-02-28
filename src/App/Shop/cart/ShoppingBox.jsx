@@ -10,11 +10,8 @@ const ShoppingBox = ({ cartItems = [] }) => {
   const [removeFromCart] = useRemoveFromCartMutation();
   const [pendingUpdates, setPendingUpdates] = useState({});
 
-  // Lấy thông tin user từ Redux store
   const user = useSelector((state) => state.auth.user);
-  const isLoggedIn = !!user; // Kiểm tra user có đăng nhập không
-
-  // Nếu chưa đăng nhập, hiển thị thông báo
+  const isLoggedIn = !!user; 
   if (!isLoggedIn) {
     return (
       <div className="shoppingBox w-80 border bg-white p-2 absolute top-10 -right-5 rounded-lg shadow-lg">
@@ -24,10 +21,8 @@ const ShoppingBox = ({ cartItems = [] }) => {
     );
   }
 
-  // Giới hạn số lượng sản phẩm hiển thị
   const displayedItems = Array.isArray(cartItems) ? cartItems.slice(0, 20) : [];
 
-  // Hàm debounce để tránh gọi API quá nhiều lần
   const debouncedUpdate = debounce(async (updates) => {
     try {
       await Promise.all(updates.map(updateCartItem));

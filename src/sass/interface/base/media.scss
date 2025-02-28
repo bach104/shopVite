@@ -81,20 +81,18 @@
             .cart__wrap{
                 >img{
                     width: 100%;
-                    min-height: 340px;
+                    height: 16rem;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
                     object-fit: cover;
                 }
             }
         }
     }
+
+    .p-mobile {
+        padding: 0.2rem;
+    }
+
 }
-//  bg-primary-gray introduce__grid
-// Shoponline không chỉ mang đến trang phục mà còn là cách thể hiện cá tính,
-// phong cách và xu hướng của giới trẻ hiện đại. Với sự sáng tạo không ngừng,
-// thời trang dành cho giới trẻ luôn thay đổi theo từng mùa,
-// từ những thiết kế năng động,
-// cá tính đến phong cách thanh lịch,
-// tối giản. Các thương hiệu thời trang ngày càng chú trọng đến chất liệu,
-// kiểu dáng và màu sắc để đáp ứng nhu cầu đa dạng của giới trẻ. Bên cạnh đó,
-// xu hướng thời trang bền vững cũng ngày càng được quan tâm,
-// giúp các bạn trẻ không chỉ đẹp mà còn góp phần bảo vệ môi trường.

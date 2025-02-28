@@ -5,6 +5,7 @@
 .shoppingContainer{
     max-height: 45rem;
     min-height: 45rem;
+    min-width: 20rem;
     overflow-y: scroll;
     border:2px solid rgba($color: #000000, $alpha: 0.4);
 }
@@ -17,16 +18,30 @@
     }
  }
 @media (max-width: 600px){
-    .shoppingItems{
-        height:5rem ;
-        >img{
-            height: 4rem;
-            width: 4rem;
-        }
-        .shoppingItems__click {
-
-            >button {
-                padding: 5px 10px;
+    .shoppingContainer{
+        max-height: 25rem;
+        min-height: 25rem;
+        .shoppingItems{
+            height:6rem ;
+            >img{
+                height: 5rem;
+                width: 5rem;
+            }
+            .shoppingItems__click {
+    
+                >button {
+                    padding: 5px 10px;
+                }
+            }
+            .shoppingItems__technology{
+                >h3{
+                    font-size: 1rem;
+                    line-height: 1.2;
+                }
+                >p{
+                    font-size: 0.8rem;
+                    line-height: 1.2;
+                }
             }
         }
     }

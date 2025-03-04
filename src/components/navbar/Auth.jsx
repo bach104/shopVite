@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { User } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { logout, setUser } from "../../redux/features/auth/authSlice"; 
-import { resetCart } from "../../redux/features/cart/cartSlice"; // Import resetCart
+import { logout, setUser } from "../../redux/features/auth/authSlice";
+import { resetCart } from "../../redux/features/cart/cartSlice";
 import avatarImg from "../../assets/img/avatar.png";
-import { getBaseUrl } from "../../utils/baseURL"; 
+import { getBaseUrl } from "../../utils/baseURL";
 
 const Auth = () => {
   const dispatch = useDispatch();
@@ -13,11 +13,36 @@ const Auth = () => {
   const user = useSelector((state) => state.auth.user);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
+  const handleLogout = useCallback(() => {
+    dispatch(logout());
+    dispatch(resetCart());
+    localStorage.clear();
+    sessionStorage.clear();
+    navigate("/");
+  }, [dispatch, navigate]);
+
+  const checkTokenExpiration = useCallback(() => {
+    const expirationTime = localStorage.getItem("expirationTime");
+    if (expirationTime) {
+      const currentTime = new Date().getTime();
+      if (currentTime > parseInt(expirationTime, 10)) {
+        handleLogout();
+      }
+    }
+  }, [handleLogout]);
+
+  useEffect(() => {
+    const interval = setInterval(checkTokenExpiration, 60000);
+    return () => clearInterval(interval);
+  }, [checkTokenExpiration]);
+
   useEffect(() => {
     if (!user) {
       const storedUser = localStorage.getItem("user");
       const storedToken = localStorage.getItem("token");
-      if (storedUser && storedToken) {
+      const storedExpirationTime = localStorage.getItem("expirationTime");
+
+      if (storedUser && storedToken && storedExpirationTime) {
         try {
           dispatch(setUser({ user: JSON.parse(storedUser) }));
         } catch (error) {
@@ -27,27 +52,19 @@ const Auth = () => {
     }
   }, [user, dispatch]);
 
-  const avatarUrl = user?.avatar
-    ? `${getBaseUrl()}/${user.avatar.replace(/\\/g, "/")}`
-    : avatarImg;
-
   const handleDropdownToggle = () => {
     setIsDropDownOpen(!isDropDownOpen);
   };
 
-  const handleLogout = () => {
-    dispatch(logout());
-    dispatch(resetCart());
-    localStorage.clear();
-    sessionStorage.clear();
-    navigate("/");
-  };
+  const avatarUrl = user?.avatar
+    ? `${getBaseUrl()}/${user.avatar.replace(/\\/g, "/")}`
+    : avatarImg;
 
   const adminDropDownMenus = [
     { label: "Quản lý mục", path: "/dashboard/manage-products" },
     { label: "Tất cả đơn hàng", path: "/dashboard/manage-orders" },
     { label: "Thông tin cá nhân", path: "/informations" },
-  ];    
+  ];
   const userDropDownMenus = [
     { label: "Thông tin cá nhân", path: "/informations" },
     { label: "Giỏ hàng của bạn", path: "/cart-manager" },
@@ -61,7 +78,7 @@ const Auth = () => {
           <img
             onClick={handleDropdownToggle}
             className="size-7 rounded-full cursor-pointer"
-            src={avatarUrl} 
+            src={avatarUrl}
             onError={(e) => (e.target.src = avatarImg)}
             alt="Avatar"
           />

@@ -23,6 +23,30 @@ const cartSlice = createSlice({
       state.totalPages = 1;
       state.totalItems = 0;
     },
+    increaseQuantity: (state, action) => {
+      const { cartItemId } = action.payload;
+      const item = state.entities[cartItemId];
+      if (item) {
+        item.quantity += 1;
+        state.totalQuantity += 1;
+      }
+    },
+    decreaseQuantity: (state, action) => {
+      const { cartItemId } = action.payload;
+      const item = state.entities[cartItemId];
+      if (item && item.quantity > 1) {
+        item.quantity -= 1;
+        state.totalQuantity -= 1;
+      }
+    },
+    removeItem: (state, action) => {
+      const { cartItemId } = action.payload;
+      const item = state.entities[cartItemId];
+      if (item) {
+        state.totalQuantity -= item.quantity;
+        cartAdapter.removeOne(state, cartItemId);
+      }
+    },
   },
   extraReducers: (builder) => {
     builder.addMatcher(cartApi.endpoints.fetchCart.matchFulfilled, (state, { payload }) => {
@@ -36,7 +60,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const { resetCart } = cartSlice.actions;
+export const { resetCart, increaseQuantity, decreaseQuantity, removeItem } = cartSlice.actions;
 export const { selectAll: selectAllCartItems } = cartAdapter.getSelectors((state) => state.cart);
 
 export default cartSlice.reducer;

@@ -11,7 +11,8 @@ const ShoppingBox = ({ cartItems = [] }) => {
   const [pendingUpdates, setPendingUpdates] = useState({});
 
   const user = useSelector((state) => state.auth.user);
-  const isLoggedIn = !!user; 
+  const isLoggedIn = !!user;
+
   if (!isLoggedIn) {
     return (
       <div className="shoppingBox w-80 border bg-white p-2 absolute top-10 -right-5 rounded-lg shadow-lg">
@@ -47,7 +48,8 @@ const ShoppingBox = ({ cartItems = [] }) => {
   const handleRemoveItem = async (cartItemId, event) => {
     event.stopPropagation();
     try {
-      await removeFromCart(cartItemId);
+      // Sửa lại cách gọi removeFromCart: truyền object chứa cartItemId
+      await removeFromCart({ cartItemId });
     } catch (error) {
       console.error("Lỗi khi xóa sản phẩm:", error);
     }

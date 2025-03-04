@@ -20,11 +20,11 @@ export const productApi = createApi({
       query: (id) => `/${id}`,
       providesTags: (result, error, id) => [{ type: "Product", id }],
       transformResponse: (response) => {
-        console.log("API Response:", response); // Kiểm tra dữ liệu trả về
+        // console.log("API Response:", response); 
         return {
           ...response,
-          size: response.size || [], // Đảm bảo size là mảng
-          color: response.color || [], // Đảm bảo color là mảng
+          size: response.size || [], 
+          color: response.color || [],
         };
       },
     }),

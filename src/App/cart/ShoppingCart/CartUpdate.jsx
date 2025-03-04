@@ -5,11 +5,10 @@ import { useUpdateCartItemMutation } from "../../../redux/features/cart/cartApi"
 import { useGetProductByIdQuery } from "../../../redux/features/shop/productsApi";
 
 const CartUpdate = ({ onClose, product }) => {
-  const [size, setSize] = useState(product.size); // Kích thước hiện tại
-  const [color, setColor] = useState(product.color); // Màu sắc hiện tại
-  const [quantity, setQuantity] = useState(product.quantity); // Số lượng hiện tại
+  const [size, setSize] = useState(product.size);
+  const [color, setColor] = useState(product.color);
+  const [quantity, setQuantity] = useState(product.quantity);
 
-  // Lấy thông tin chi tiết sản phẩm từ API
   const { data: productDetails, isLoading: isProductLoading } = useGetProductByIdQuery(product.productId);
 
   const [updateCartItem] = useUpdateCartItemMutation();
@@ -22,21 +21,20 @@ const CartUpdate = ({ onClose, product }) => {
         color,
         quantity,
       }).unwrap();
-      onClose(); // Đóng modal sau khi cập nhật thành công
+      onClose();
     } catch (error) {
       console.error("Lỗi khi cập nhật giỏ hàng:", error);
     }
   };
-
-  // Hiển thị loading nếu đang tải dữ liệu
   if (isProductLoading) {
     return <div className="text-center py-4 text-lg text-gray-500">Đang tải thông tin sản phẩm...</div>;
   }
 
-  // Hiển thị thông báo lỗi nếu không tìm thấy sản phẩm
-  if (!productDetails) {
+  if (!productDetails || !productDetails.product) {
     return <div className="text-center py-4 text-lg text-red-500">Không tìm thấy thông tin sản phẩm</div>;
   }
+
+  const { color: colors, size: sizes } = productDetails.product;
 
   return (
     <div className="cart__container p-2">
@@ -56,11 +54,10 @@ const CartUpdate = ({ onClose, product }) => {
           <div className="flex flex-col flex-1 gap-3">
             <p className="text-lg font-medium">Tên sản phẩm: {product.name}</p>
 
-            {/* Kích thước */}
             <div className="flex items-center flex-wrap gap-2">
               <span className="font-medium">Kích thước:</span>
-              {productDetails.size?.length > 0 ? (
-                productDetails.size.map((sz) => (
+              {sizes?.length > 0 ? (
+                sizes.map((sz) => (
                   <button
                     key={sz}
                     className={`px-3 py-1 border rounded ${
@@ -76,11 +73,10 @@ const CartUpdate = ({ onClose, product }) => {
               )}
             </div>
 
-            {/* Màu sắc */}
             <div className="flex items-center flex-wrap gap-2">
               <span className="font-medium">Màu sắc:</span>
-              {productDetails.color?.length > 0 ? (
-                productDetails.color.map((clr) => (
+              {colors?.length > 0 ? (
+                colors.map((clr) => (
                   <button
                     key={clr}
                     className={`px-3 py-1 border rounded ${
@@ -114,7 +110,6 @@ const CartUpdate = ({ onClose, product }) => {
               </button>
             </div>
 
-            {/* Nút cập nhật */}
             <div className="flex w-full justify-end">
               <button
                 className="mt-4 px-6 transition py-2 hover:opacity-80 bg-black text-white rounded"

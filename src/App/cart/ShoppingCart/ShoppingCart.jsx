@@ -11,13 +11,12 @@ const ShoppingCart = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
-  const [selectedItemId, setSelectedItemId] = useState(null); // Lưu ID sản phẩm được chọn để cập nhật
+  const [selectedItemId, setSelectedItemId] = useState(null);
   const itemsPerPage = 20;
 
   const { user } = useSelector((state) => state.auth);
   const isLoggedIn = !!user;
 
-  // Lấy dữ liệu giỏ hàng từ API
   const { data: cartData, isLoading, isError } = useFetchCartQuery(
     {
       page: currentPage,
@@ -27,12 +26,8 @@ const ShoppingCart = () => {
   );
 
   const [removeFromCart] = useRemoveFromCartMutation();
-
-  // Xử lý chuyển trang
   const handleNextPage = () => setCurrentPage(currentPage + 1);
   const handlePrevPage = () => setCurrentPage(currentPage - 1);
-
-  // Xử lý chọn sản phẩm
   const handleSelectItem = (itemId) => {
     setSelectedItems((prevSelected) =>
       prevSelected.includes(itemId)
@@ -40,11 +35,8 @@ const ShoppingCart = () => {
         : [...prevSelected, itemId]
     );
   };
-
-  // Xóa tất cả sản phẩm đã chọn
   const handleClearSelection = () => setSelectedItems([]);
 
-  // Xóa sản phẩm đã chọn khỏi giỏ hàng
   const handleRemoveSelected = async () => {
     try {
       await removeFromCart({ cartItemIds: selectedItems }).unwrap();
@@ -53,8 +45,6 @@ const ShoppingCart = () => {
       console.error("Failed to remove items:", error);
     }
   };
-
-  // Tính tổng số lượng và tổng giá của các sản phẩm đã chọn
   const selectedProducts = cartData?.cartItems?.filter((item) => selectedItems.includes(item._id)) || [];
   const totalQuantity = selectedProducts.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = selectedProducts.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -109,7 +99,7 @@ const ShoppingCart = () => {
                   <p className="text-sm">Màu sắc: {item.color}</p>
                   <p className="text-sm shoppingItems__technology--price gap-2 font-semibold">
                     {item.price}đ
-                    <s className="pl-2  opacity-50">{item.originalPrice}đ</s>
+                    <s className="pl-2  opacity-50">{item.oldPrice}đ</s>
                   </p>
                 </div>
                 <div className="flex flex-col shoppingItems__click items-end justify-between">
@@ -122,7 +112,7 @@ const ShoppingCart = () => {
                   <button
                     className="bg-black hover:opacity-70 opacity-80 transition text-white rounded-lg"
                     onClick={() => {
-                      setSelectedItemId(item._id); // Lưu ID sản phẩm được chọn
+                      setSelectedItemId(item._id); 
                       setShowUpdate(true);
                     }}
                   >

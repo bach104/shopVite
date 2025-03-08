@@ -168,7 +168,7 @@ const Comments = ({ productId }) => {
     setShowAddComments(false);
   };
 
-  const handleAddComment = async (comment, parentId = null) => {
+  const handleAddComment = async (comment) => {
     if (!user) {
       alert("Bạn cần đăng nhập để bình luận!");
       return;
@@ -179,7 +179,6 @@ const Comments = ({ productId }) => {
         content: comment,
         productId,
         userId: user._id,
-        parentId,
       }).unwrap();
 
       setLocalComments((prevComments) => [newComment, ...prevComments]);
@@ -219,12 +218,11 @@ const Comments = ({ productId }) => {
       return;
     }
 
-    // Tạo payload với các trường backend yêu cầu
     const payload = {
       content: replyContent,
-      commentId: String(commentId), // Đổi từ parentId sang commentId
-      images: [], // Nếu có ảnh, thay bằng mảng ảnh
-      videos: [], // Nếu có video, thay bằng mảng video
+      commentId: String(commentId), 
+      images: [], 
+      videos: [], 
     };
 
     console.log("Dữ liệu gửi lên server:", payload);
@@ -232,7 +230,6 @@ const Comments = ({ productId }) => {
     try {
       const newReply = await replyToComment(payload).unwrap();
 
-      // Cập nhật state để hiển thị bình luận trả lời ngay lập tức
       setLocalComments((prevComments) =>
         prevComments.map((comment) =>
           comment._id === commentId
@@ -276,7 +273,7 @@ const Comments = ({ productId }) => {
         ) : (
           localComments.map((comment, index) => (
             <Comment
-              key={comment._id || index} // Đảm bảo key hợp lệ
+              key={comment._id || index} 
               comment={comment}
               onDelete={handleDeleteComment}
               onEdit={handleEditComment}

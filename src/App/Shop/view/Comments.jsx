@@ -259,7 +259,7 @@ const Comments = ({ productId }) => {
           Bình luận
         </p>
       </div>
-      <div className="bg-white">
+      <div className="bg-white p-4">
         {showAddComments && (
           <AddComments
             onClose={handleCloseComments}

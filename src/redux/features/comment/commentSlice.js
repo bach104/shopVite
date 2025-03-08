@@ -16,6 +16,14 @@ const commentSlice = createSlice({
     addComment: (state, action) => {
       state.comments.unshift(action.payload);
     },
+    addReplyToComment: (state, action) => {
+      const { parentId, reply } = action.payload;
+      const parentComment = state.comments.find((comment) => comment._id === parentId);
+      if (parentComment) {
+        if (!parentComment.replies) parentComment.replies = [];
+        parentComment.replies.unshift(reply);
+      }
+    },
     updateComment: (state, action) => {
       const index = state.comments.findIndex((comment) => comment._id === action.payload._id);
       if (index !== -1) state.comments[index] = action.payload;
@@ -32,7 +40,14 @@ const commentSlice = createSlice({
   },
 });
 
-export const { setComments, addComment, updateComment, deleteComment, setLoading, setError } =
-  commentSlice.actions;
+export const {
+  setComments,
+  addComment,
+  addReplyToComment,
+  updateComment,
+  deleteComment,
+  setLoading,
+  setError,
+} = commentSlice.actions;
 
 export default commentSlice.reducer;

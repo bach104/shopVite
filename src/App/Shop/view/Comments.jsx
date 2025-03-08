@@ -1,25 +1,45 @@
 import { useState, useEffect } from "react";
-import avatarImg from "../../../assets/img/avatar.png";
 import AddComments from "./AddComments";
 import {
   useGetCommentsQuery,
   useAddCommentMutation,
   useDeleteCommentMutation,
   useEditCommentMutation,
+  useReplyToCommentMutation, // Sử dụng mutation này
 } from "../../../redux/features/comment/commentApi";
 import { useSelector } from "react-redux";
 import { getBaseUrl } from "../../../utils/baseURL";
+import avatarImg from "../../../assets/img/avatar.png";
 
-const Comment = ({ comment, isReply = false, onDelete, onEdit }) => {
+const Comment = ({ comment, isReply = false, onDelete, onEdit, onReply }) => {
   const { user } = useSelector((state) => state.auth);
   const [isEditing, setIsEditing] = useState(false);
+  const [isReplying, setIsReplying] = useState(false);
   const [editedContent, setEditedContent] = useState(comment.content);
+  const [replyContent, setReplyContent] = useState("");
 
-  const isCurrentUserComment = user && comment && user._id?.toString() === comment.userId?.toString();
+  const isCurrentUserComment =
+    user && comment && user._id?.toString() === comment.userId?.toString();
 
   const handleSaveEdit = () => {
     onEdit(comment._id, editedContent);
     setIsEditing(false);
+  };
+
+  const handleReply = () => {
+    if (!user) {
+      alert("Bạn cần đăng nhập để trả lời bình luận!");
+      return;
+    }
+    setIsReplying((prev) => !prev);
+  };
+
+  const handleSubmitReply = () => {
+    if (replyContent.trim()) {
+      onReply(comment._id, replyContent); // Gọi hàm onReply từ props
+      setReplyContent("");
+      setIsReplying(false);
+    }
   };
 
   const avatarUrl = comment.avatar
@@ -74,21 +94,44 @@ const Comment = ({ comment, isReply = false, onDelete, onEdit }) => {
                   )}
                 </>
               )}
-              <p className="hover:text-blue-500 font-bold cursor-pointer">Trả lời</p>
+              <p
+                className="hover:text-blue-500 font-bold cursor-pointer"
+                onClick={handleReply}
+              >
+                Trả lời
+              </p>
             </div>
           </div>
+
+          {isReplying && (
+            <div className="mt-2">
+              <textarea
+                value={replyContent}
+                onChange={(e) => setReplyContent(e.target.value)}
+                className="w-full p-2 border rounded-md"
+                placeholder="Viết bình luận của bạn..."
+              />
+              <button
+                className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md"
+                onClick={handleSubmitReply}
+              >
+                Gửi
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
-      {comment.replies && comment.replies.length > 0 && (
+      {Array.isArray(comment.replies) && comment.replies.length > 0 && (
         <div className="mt-2">
-          {comment.replies.map((reply) => (
+          {comment.replies.map((reply, index) => (
             <Comment
-              key={reply._id}
+              key={reply._id || index} // Đảm bảo key hợp lệ
               comment={reply}
               isReply={true}
               onDelete={onDelete}
               onEdit={onEdit}
+              onReply={onReply}
             />
           ))}
         </div>
@@ -103,6 +146,7 @@ const Comments = ({ productId }) => {
   const [addComment] = useAddCommentMutation();
   const [deleteComment] = useDeleteCommentMutation();
   const [editComment] = useEditCommentMutation();
+  const [replyToComment] = useReplyToCommentMutation(); // Sử dụng mutation này
   const { user } = useSelector((state) => state.auth);
   const [localComments, setLocalComments] = useState([]);
 
@@ -124,7 +168,7 @@ const Comments = ({ productId }) => {
     setShowAddComments(false);
   };
 
-  const handleAddComment = async (comment) => {
+  const handleAddComment = async (comment, parentId = null) => {
     if (!user) {
       alert("Bạn cần đăng nhập để bình luận!");
       return;
@@ -135,6 +179,7 @@ const Comments = ({ productId }) => {
         content: comment,
         productId,
         userId: user._id,
+        parentId,
       }).unwrap();
 
       setLocalComments((prevComments) => [newComment, ...prevComments]);
@@ -146,7 +191,7 @@ const Comments = ({ productId }) => {
 
   const handleDeleteComment = async (commentId) => {
     try {
-      await deleteComment(commentId).unwrap(); // Sửa lại ở đây
+      await deleteComment(commentId).unwrap();
       setLocalComments((prevComments) =>
         prevComments.filter((comment) => comment._id !== commentId)
       );
@@ -168,6 +213,41 @@ const Comments = ({ productId }) => {
     }
   };
 
+  const handleReplyComment = async (commentId, replyContent) => {
+    if (!user) {
+      alert("Bạn cần đăng nhập để trả lời bình luận!");
+      return;
+    }
+
+    // Tạo payload với các trường backend yêu cầu
+    const payload = {
+      content: replyContent,
+      commentId: String(commentId), // Đổi từ parentId sang commentId
+      images: [], // Nếu có ảnh, thay bằng mảng ảnh
+      videos: [], // Nếu có video, thay bằng mảng video
+    };
+
+    console.log("Dữ liệu gửi lên server:", payload);
+
+    try {
+      const newReply = await replyToComment(payload).unwrap();
+
+      // Cập nhật state để hiển thị bình luận trả lời ngay lập tức
+      setLocalComments((prevComments) =>
+        prevComments.map((comment) =>
+          comment._id === commentId
+            ? { ...comment, replies: [newReply.reply, ...(comment.replies || [])] }
+            : comment
+        )
+      );
+    } catch (error) {
+      console.error("Lỗi khi thêm trả lời:", error);
+      if (error.data) {
+        console.error("Chi tiết lỗi từ server:", error.data);
+      }
+    }
+  };
+
   return (
     <div className="max-width mx-auto bg-gray-200">
       <div className="flex p-4 justify-between items-center">
@@ -183,7 +263,7 @@ const Comments = ({ productId }) => {
         {showAddComments && (
           <AddComments
             onClose={handleCloseComments}
-            onSubmit={handleAddComment}
+            onSubmit={(comment) => handleAddComment(comment)}
             user={user}
           />
         )}
@@ -194,12 +274,13 @@ const Comments = ({ productId }) => {
         ) : localComments.length === 0 ? (
           <p>Chưa có bình luận nào.</p>
         ) : (
-          localComments.map((comment) => (
+          localComments.map((comment, index) => (
             <Comment
-              key={comment._id}
+              key={comment._id || index} // Đảm bảo key hợp lệ
               comment={comment}
               onDelete={handleDeleteComment}
               onEdit={handleEditComment}
+              onReply={handleReplyComment}
             />
           ))
         )}

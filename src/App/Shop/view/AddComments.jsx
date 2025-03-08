@@ -26,7 +26,7 @@ const AddComments = ({ onClose, onSubmit, user }) => {
       alert("Vui lòng nhập nội dung bình luận!");
       return;
     }
-    onSubmit(comment); 
+    onSubmit(comment);
     setComment("");
     setCharCount(0);
   };

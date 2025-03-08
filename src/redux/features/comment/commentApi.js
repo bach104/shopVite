@@ -22,6 +22,14 @@ export const commentApi = createApi({
       }),
       invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
     }),
+    replyToComment: builder.mutation({
+      query: (replyData) => ({
+        url: "/reply",
+        method: "POST",
+        body: replyData,
+      }),
+      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
+    }),
     addAdminComment: builder.mutation({
       query: (commentData) => ({
         url: "/admin",
@@ -36,14 +44,14 @@ export const commentApi = createApi({
         method: "PUT",
         body: { content },
       }),
-      invalidatesTags: (_, error, { id }) => [{ type: "Comments", id }],
+      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
     }),
     deleteComment: builder.mutation({
       query: (id) => ({
         url: `/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: (_, error, id) => [{ type: "Comments", id }], 
+      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
     }),
   }),
 });
@@ -51,6 +59,7 @@ export const commentApi = createApi({
 export const {
   useGetCommentsQuery,
   useAddCommentMutation,
+  useReplyToCommentMutation,
   useAddAdminCommentMutation,
   useEditCommentMutation,
   useDeleteCommentMutation,

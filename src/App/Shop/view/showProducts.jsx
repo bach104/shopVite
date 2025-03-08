@@ -1,13 +1,18 @@
 import ViewProducts from "./viewProducts";
+import SuggestedProducts from "./SuggestedProducts";
+import Comments from "./Comments";
+import { useParams } from "react-router-dom";
 
 const ShowProducts = () => {
+  const { id } = useParams(); 
+
   return (
-    <div className="grid max-width">
-      <h2 className="text-2xl text-center w-full font-bold bg-slate-200 p-4">
-        Thông tin sản phẩm
-      </h2>
+    <div>
       <ViewProducts />
+      <Comments productId={id} />
+      <SuggestedProducts />
     </div>
   );
 };
+
 export default ShowProducts;

@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const ShoppingBox = ({ cartItems = [] }) => {
   const [updateCartItem] = useUpdateCartItemMutation();
   const [removeFromCart] = useRemoveFromCartMutation();
-  const [pendingUpdates, setPendingUpdates] = useState({});
+  const [pendingUpdates, setPendingUpdates] = useState({}); 
 
   const user = useSelector((state) => state.auth.user);
   const isLoggedIn = !!user;
@@ -22,34 +22,35 @@ const ShoppingBox = ({ cartItems = [] }) => {
     );
   }
 
+  
   const displayedItems = Array.isArray(cartItems) ? cartItems.slice(0, 20) : [];
 
+  
   const debouncedUpdate = debounce(async (updates) => {
     try {
-      await Promise.all(updates.map(updateCartItem));
-      setPendingUpdates({});
+      await Promise.all(updates.map(updateCartItem)); 
+      setPendingUpdates({}); 
     } catch (error) {
       console.error("Lỗi khi cập nhật giỏ hàng:", error);
     }
-  }, 300);
+  }, 300); 
 
   const handleUpdateQuantity = (item, newQuantity) => {
-    if (newQuantity < 1) newQuantity = 1;
+    if (newQuantity < 1) newQuantity = 1; 
     const updatedItem = {
       cartItemId: item._id,
       size: item.size,
       color: item.color,
       quantity: newQuantity,
     };
-    setPendingUpdates((prev) => ({ ...prev, [item._id]: updatedItem }));
-    debouncedUpdate(Object.values({ ...pendingUpdates, [item._id]: updatedItem }));
+    setPendingUpdates((prev) => ({ ...prev, [item._id]: updatedItem })); 
+    debouncedUpdate(Object.values({ ...pendingUpdates, [item._id]: updatedItem })); 
   };
 
   const handleRemoveItem = async (cartItemId, event) => {
-    event.stopPropagation();
+    event.stopPropagation(); 
     try {
-      // Sửa lại cách gọi removeFromCart: truyền object chứa cartItemId
-      await removeFromCart({ cartItemId });
+      await removeFromCart({ cartItemId }); 
     } catch (error) {
       console.error("Lỗi khi xóa sản phẩm:", error);
     }

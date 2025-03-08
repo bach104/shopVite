@@ -7,19 +7,25 @@ import { useEffect, useState } from "react";
 
 const Shoppingcart = () => {
   const user = useSelector((state) => state.auth.user);
+  const token = useSelector((state) => state.auth.token); 
   const isLoggedIn = !!user;
-  const userId = user?._id; 
+  const userId = user?._id;
+
   const {
     data,
     error,
     refetch,
     isSuccess,
   } = useFetchCartQuery(
-    { userId }, 
-    { skip: !isLoggedIn } 
+    { userId },
+    {
+      skip: !isLoggedIn,
+      headers: token ? { Authorization: `Bearer ${token}` } : {}, 
+    }
   );
 
   const [localCart, setLocalCart] = useState([]);
+  
   useEffect(() => {
     if (!isLoggedIn) {
       const storedCart = JSON.parse(localStorage.getItem("localCart") || "[]");
@@ -27,23 +33,21 @@ const Shoppingcart = () => {
     }
   }, [isLoggedIn]);
 
-  if (error) {
-    console.error("Lỗi API giỏ hàng:", error);
-  }
-
   useEffect(() => {
     if (isLoggedIn && isSuccess) {
       refetch();
     }
   }, [userId, isLoggedIn, isSuccess, refetch]);
 
-  const totalItems = isLoggedIn
-    ? data?.totalItems ?? 0 
-    : localCart.length; 
+  if (error) {
+    console.error("Lỗi API giỏ hàng:", error);
+    if (error?.status === 401) {
+      console.warn("Người dùng chưa đăng nhập hoặc token hết hạn.");
+    }
+  }
 
-  const cartItems = isLoggedIn
-    ? data?.cartItems ?? [] 
-    : localCart; 
+  const totalItems = isLoggedIn ? data?.totalItems ?? 0 : localCart.length;
+  const cartItems = isLoggedIn ? data?.cartItems ?? [] : localCart;
 
   return (
     <div className="relative iconShopping">

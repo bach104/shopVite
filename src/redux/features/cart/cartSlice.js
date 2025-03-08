@@ -1,10 +1,8 @@
 import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
 import { cartApi } from "./cartApi";
-
 const cartAdapter = createEntityAdapter({
   selectId: (item) => item._id,
 });
-
 const initialState = cartAdapter.getInitialState({
   totalQuantity: 0,
   currentPage: 1,
@@ -23,28 +21,11 @@ const cartSlice = createSlice({
       state.totalPages = 1;
       state.totalItems = 0;
     },
-    increaseQuantity: (state, action) => {
-      const { cartItemId } = action.payload;
+    updateQuantity: (state, action) => {
+      const { cartItemId, newQuantity } = action.payload;
       const item = state.entities[cartItemId];
-      if (item) {
-        item.quantity += 1;
-        state.totalQuantity += 1;
-      }
-    },
-    decreaseQuantity: (state, action) => {
-      const { cartItemId } = action.payload;
-      const item = state.entities[cartItemId];
-      if (item && item.quantity > 1) {
-        item.quantity -= 1;
-        state.totalQuantity -= 1;
-      }
-    },
-    removeItem: (state, action) => {
-      const { cartItemId } = action.payload;
-      const item = state.entities[cartItemId];
-      if (item) {
-        state.totalQuantity -= item.quantity;
-        cartAdapter.removeOne(state, cartItemId);
+      if (item && newQuantity > 0) {
+        item.quantity = newQuantity;
       }
     },
   },
@@ -60,7 +41,7 @@ const cartSlice = createSlice({
   },
 });
 
-export const { resetCart, increaseQuantity, decreaseQuantity, removeItem } = cartSlice.actions;
+export const { resetCart, updateQuantity } = cartSlice.actions;
 export const { selectAll: selectAllCartItems } = cartAdapter.getSelectors((state) => state.cart);
 
 export default cartSlice.reducer;

@@ -19,14 +19,11 @@ export const productApi = createApi({
     getProductById: builder.query({
       query: (id) => `/${id}`,
       providesTags: (result, error, id) => [{ type: "Product", id }],
-      transformResponse: (response) => {
-        // console.log("API Response:", response); 
-        return {
-          ...response,
-          size: response.size || [], 
-          color: response.color || [],
-        };
-      },
+      transformResponse: (response) => ({
+        ...response,
+        size: response.size || [], 
+        color: response.color || [],
+      }),
     }),
     rateProduct: builder.mutation({
       query: ({ productId, star }) => ({
@@ -64,8 +61,14 @@ export const productApi = createApi({
         totalProducts: response.totalProducts,
       }),
     }),
+    getRandomProducts: builder.query({
+      query: () => "/random",
+      providesTags: [{ type: "Product", id: "RANDOM" }],
+    }),
   }),
 });
+
+
 export const {
   useGetProductsQuery,
   useGetProductByIdQuery,
@@ -75,4 +78,5 @@ export const {
   useGetProductsBySeasonQuery,
   useGetProductsBySearchQuery,
   useLazyGetProductsBySearchQuery,
+  useGetRandomProductsQuery, 
 } = productApi;

@@ -4,7 +4,7 @@ import Shoppingcart from "./Shoppingcart";
 import Auth from "./Auth";
 const Navbar = () => {
   return (
-    <header className="header z-10 bg-white">
+    <header className="header z-20 bg-white">
       <nav className="max-w-screen-2xl mx-auto px-4 flex items-center justify-between">
         <nav className="nav__logo">
           <Link className="transition" to="/">

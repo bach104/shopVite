@@ -7,7 +7,18 @@
         gap: 10px;
     } */
 }
-
+.comment-root {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-reply {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px; /* Thụt lề nhẹ nếu cần */
+  }
 .nav__icons span a.dropdown-items {
     font-size: 16px;
 }

@@ -9,49 +9,45 @@ export const commentApi = createApi({
   }),
   tagTypes: ["Comments"],
   endpoints: (builder) => ({
+    // Lấy danh sách bình luận theo productId
     getComments: builder.query({
-      query: (productId) => `/commentAll/${productId}`,
+      query: (productId) => `/product/${productId}`,
       providesTags: (result, error, productId) =>
-        result ? [{ type: "Comments", id: productId }] : [],
+        result
+          ? [...result.map(({ _id }) => ({ type: "Comments", id: _id })), { type: "Comments", id: productId }]
+          : [{ type: "Comments", id: productId }],
     }),
+
+    // Thêm bình luận
     addComment: builder.mutation({
       query: (commentData) => ({
         url: "/",
         method: "POST",
         body: commentData,
+        credentials: "include",
       }),
-      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
+      invalidatesTags: [{ type: "Comments" }],
     }),
-    replyToComment: builder.mutation({
-      query: (replyData) => ({
-        url: "/reply",
-        method: "POST",
-        body: replyData,
-      }),
-      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
-    }),
-    addAdminComment: builder.mutation({
-      query: (commentData) => ({
-        url: "/admin",
-        method: "POST",
-        body: commentData,
-      }),
-      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
-    }),
+
+    // Cập nhật bình luận
     editComment: builder.mutation({
-      query: ({ id, content }) => ({
-        url: `/${id}`,
+      query: ({ commentId, content }) => ({
+        url: `/${commentId}`,
         method: "PUT",
         body: { content },
+        credentials: "include",
       }),
-      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
+      invalidatesTags: (result, error, { commentId }) => [{ type: "Comments", id: commentId }],
     }),
+
+    // Xóa bình luận
     deleteComment: builder.mutation({
-      query: (id) => ({
-        url: `/${id}`,
+      query: (commentId) => ({
+        url: `/${commentId}`,
         method: "DELETE",
+        credentials: "include",
       }),
-      invalidatesTags: (_, error, { productId }) => [{ type: "Comments", id: productId }],
+      invalidatesTags: [{ type: "Comments" }],
     }),
   }),
 });
@@ -59,8 +55,6 @@ export const commentApi = createApi({
 export const {
   useGetCommentsQuery,
   useAddCommentMutation,
-  useReplyToCommentMutation,
-  useAddAdminCommentMutation,
   useEditCommentMutation,
   useDeleteCommentMutation,
 } = commentApi;

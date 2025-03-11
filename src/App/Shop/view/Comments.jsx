@@ -18,7 +18,6 @@ const Comments = ({ productId }) => {
   const { user } = useSelector((state) => state.auth);
   const [localComments, setLocalComments] = useState([]);
 
-
   useEffect(() => {
     if (!isLoading && !isError && comments) {
       setLocalComments(comments);
@@ -33,12 +32,10 @@ const Comments = ({ productId }) => {
     setShowAddComments((prev) => !prev);
   };
 
-  // Xử lý đóng form thêm bình luận
   const handleCloseComments = () => {
     setShowAddComments(false);
   };
 
-  // Xử lý thêm bình luận mới
   const handleAddComment = async (comment) => {
     if (!user) {
       alert("Bạn cần đăng nhập để bình luận!");
@@ -66,7 +63,6 @@ const Comments = ({ productId }) => {
     }
   };
 
-  // Xử lý xoá bình luận
   const handleDeleteComment = async (commentId) => {
     try {
       await deleteComment(commentId).unwrap();
@@ -77,11 +73,18 @@ const Comments = ({ productId }) => {
       console.error("Lỗi khi xoá bình luận:", error);
     }
   };
-
-  // Xử lý chỉnh sửa bình luận
   const handleEditComment = async (commentId, newContent) => {
+    if (!commentId || !newContent.trim()) {
+      console.error("ID bình luận hoặc nội dung không hợp lệ!");
+      return;
+    }
     try {
-      await editComment({ id: commentId, content: newContent }).unwrap();
+      await editComment({
+        commentId,
+        content: newContent,
+        userId: user._id,
+        productId,
+      }).unwrap();
       setLocalComments((prevComments) =>
         prevComments.map((comment) =>
           comment._id === commentId ? { ...comment, content: newContent } : comment
@@ -92,7 +95,6 @@ const Comments = ({ productId }) => {
     }
   };
 
-  // Xử lý trả lời bình luận
   const handleReplyComment = async (parentId, content) => {
     if (!user) {
       alert("Bạn cần đăng nhập để trả lời bình luận!");
@@ -148,7 +150,7 @@ const Comments = ({ productId }) => {
           Bình luận
         </p>
       </div>
-      <div className="bg-white">
+      <div className="bg-white p-3">
         {showAddComments && (
           <AddComments
             onClose={handleCloseComments}
@@ -174,11 +176,12 @@ const Comments = ({ productId }) => {
           ))
         )}
       </div>
-      <button className="text-sm text-black font-semibold py-3 block text-right w-full">
-        Xem thêm bình luận &gt;
-      </button>
+      <div className="text-sm  text-black font-semibold p-3 block text-right w-full">
+        <p className=" hover:text-blue-500 cursor-pointer transition">
+          Xem thêm bình luận &gt;
+        </p>
+      </div>
     </div>
   );
 };
-
 export default Comments;

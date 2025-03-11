@@ -17,8 +17,6 @@ export const commentApi = createApi({
           ? [...result.map(({ _id }) => ({ type: "Comments", id: _id })), { type: "Comments", id: productId }]
           : [{ type: "Comments", id: productId }],
     }),
-
-    // Thêm bình luận
     addComment: builder.mutation({
       query: (commentData) => ({
         url: "/",
@@ -28,19 +26,15 @@ export const commentApi = createApi({
       }),
       invalidatesTags: [{ type: "Comments" }],
     }),
-
-    // Cập nhật bình luận
     editComment: builder.mutation({
-      query: ({ commentId, content }) => ({
+      query: ({ commentId, content, userId, productId }) => ({
         url: `/${commentId}`,
         method: "PUT",
-        body: { content },
+        body: { content, userId, productId }, // Thêm các trường cần thiết
         credentials: "include",
       }),
       invalidatesTags: (result, error, { commentId }) => [{ type: "Comments", id: commentId }],
     }),
-
-    // Xóa bình luận
     deleteComment: builder.mutation({
       query: (commentId) => ({
         url: `/${commentId}`,

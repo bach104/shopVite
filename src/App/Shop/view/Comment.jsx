@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import avatarImg from "../../../assets/img/avatar.png";
 import { useSelector } from "react-redux";
@@ -12,18 +10,14 @@ const Comment = ({ comment, onDelete, onEdit, onReply, isReply = false }) => {
   const [isReplying, setIsReplying] = useState(false);
   const [replyContent, setReplyContent] = useState("");
   const [showAllReplies, setShowAllReplies] = useState(false);
-
-  // Kiểm tra xem người dùng hiện tại có phải là chủ sở hữu bình luận không
   const isCurrentUserComment =
     user && comment && user._id?.toString() === comment.userId?._id?.toString();
 
-  // Xử lý lưu chỉnh sửa bình luận
   const handleSaveEdit = () => {
     onEdit(comment._id, editedContent);
     setIsEditing(false);
   };
 
-  // Xử lý hiển thị form trả lời bình luận
   const handleReply = () => {
     if (!user) {
       alert("Bạn cần đăng nhập để trả lời bình luận!");
@@ -32,7 +26,6 @@ const Comment = ({ comment, onDelete, onEdit, onReply, isReply = false }) => {
     setIsReplying((prev) => !prev);
   };
 
-  // Xử lý gửi trả lời bình luận
   const handleSubmitReply = () => {
     if (replyContent.trim() === "") {
       alert("Vui lòng nhập nội dung trả lời!");
@@ -43,12 +36,10 @@ const Comment = ({ comment, onDelete, onEdit, onReply, isReply = false }) => {
     setReplyContent("");
   };
 
-  // Xử lý hiển thị avatar
   const avatarUrl = comment.avatar
     ? `${getBaseUrl()}/${comment.avatar.replace(/\\/g, "/")}`
     : avatarImg;
 
-  // Xử lý hiển thị các phản hồi
   const initialRepliesToShow = 2;
   const repliesToShow = showAllReplies
     ? comment.replies
@@ -77,7 +68,6 @@ const Comment = ({ comment, onDelete, onEdit, onReply, isReply = false }) => {
           <div className="flex justify-between text-xs text-gray-500 mt-1">
             <span>{new Date(comment.createdAt).toLocaleString()}</span>
             <div className="flex space-x-2">
-              {/* Hiển thị nút "Xoá" và "Sửa" nếu người dùng là chủ sở hữu */}
               {isCurrentUserComment && (
                 <>
                   <p
@@ -103,7 +93,6 @@ const Comment = ({ comment, onDelete, onEdit, onReply, isReply = false }) => {
                   )}
                 </>
               )}
-              {/* Nút "Trả lời" luôn hiển thị */}
               <p
                 className="hover:text-blue-500 font-bold cursor-pointer"
                 onClick={handleReply}
@@ -112,7 +101,6 @@ const Comment = ({ comment, onDelete, onEdit, onReply, isReply = false }) => {
               </p>
             </div>
           </div>
-          {/* Form trả lời bình luận */}
           {isReplying && (
             <div className="mt-2">
               <textarea
@@ -131,9 +119,8 @@ const Comment = ({ comment, onDelete, onEdit, onReply, isReply = false }) => {
           )}
         </div>
       </div>
-      {/* Hiển thị các phản hồi */}
       {comment.replies && comment.replies.length > 0 && (
-        <div className="ml-6 mt-2">
+        <div className="mt-2">
           {repliesToShow.map((reply) => (
             <Comment
               key={reply._id || `temp-reply-${Date.now()}`}

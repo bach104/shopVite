@@ -9,12 +9,11 @@ export const commentApi = createApi({
   }),
   tagTypes: ["Comments"],
   endpoints: (builder) => ({
-    // Lấy danh sách bình luận theo productId
     getComments: builder.query({
-      query: (productId) => `/product/${productId}`,
-      providesTags: (result, error, productId) =>
+      query: ({ productId, page = 1, limit = 20 }) => `/product/${productId}?page=${page}&limit=${limit}`,
+      providesTags: (result, error, { productId }) =>
         result
-          ? [...result.map(({ _id }) => ({ type: "Comments", id: _id })), { type: "Comments", id: productId }]
+          ? [...result.comments.map(({ _id }) => ({ type: "Comments", id: _id })), { type: "Comments", id: productId }]
           : [{ type: "Comments", id: productId }],
     }),
     addComment: builder.mutation({
@@ -30,7 +29,7 @@ export const commentApi = createApi({
       query: ({ commentId, content, userId, productId }) => ({
         url: `/${commentId}`,
         method: "PUT",
-        body: { content, userId, productId }, // Thêm các trường cần thiết
+        body: { content, userId, productId },
         credentials: "include",
       }),
       invalidatesTags: (result, error, { commentId }) => [{ type: "Comments", id: commentId }],

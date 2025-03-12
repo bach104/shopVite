@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const commentSlice = createSlice({
   name: "comments",
   initialState: {
-    selectedComment: null, // Lưu trữ bình luận đang được chọn để chỉnh sửa
+    selectedComment: null,
   },
   reducers: {
     setSelectedComment: (state, action) => {

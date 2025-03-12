@@ -50,7 +50,11 @@ input[type="checkbox"] {
     background: $bg-gray;
 }
 
-
+.scroll__container{
+    overflow-y: scroll;
+    max-height: 500px;
+    min-height: 5rem;
+}
 .font__text {
     font-family: $font-text3;
 }

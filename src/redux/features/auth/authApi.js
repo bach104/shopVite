@@ -15,6 +15,21 @@ const authApi = createApi({
         method: 'POST',
         body: newUser,
       }),
+      transformResponse: (response) => {
+        if (response?.user && response?.token) {
+          localStorage.setItem('user', JSON.stringify(response.user));
+          localStorage.setItem('token', response.token);
+        }
+        return response;
+      },
+      transformErrorResponse: (response) => {
+        // Xử lý lỗi từ server
+        const errorMessage = response.data?.message || 'Đăng ký thất bại. Vui lòng thử lại!';
+        return {
+          status: response.status,
+          data: errorMessage,
+        };
+      },
     }),
     loginUser: builder.mutation({
       query: (credentials) => ({
@@ -28,6 +43,14 @@ const authApi = createApi({
           localStorage.setItem('token', response.token);
         }
         return response;
+      },
+      transformErrorResponse: (response) => {
+        // Xử lý lỗi từ server
+        const errorMessage = response.data?.message || 'Đăng nhập thất bại. Vui lòng thử lại!';
+        return {
+          status: response.status,
+          data: errorMessage,
+        };
       },
     }),
     updateUser: builder.mutation({
@@ -62,12 +85,11 @@ const authApi = createApi({
         }
         return response;
       },
-      // Xử lý lỗi từ phía server
       transformErrorResponse: (response) => {
-        // Trả về một đối tượng lỗi có cấu trúc rõ ràng
+        const errorMessage = response.data?.message || 'Cập nhật thông tin thất bại. Vui lòng thử lại!';
         return {
           status: response.status,
-          data: response.data, // Giữ nguyên dữ liệu lỗi từ server
+          data: errorMessage,
         };
       },
       invalidatesTags: ['Users'],

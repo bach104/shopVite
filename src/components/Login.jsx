@@ -10,28 +10,22 @@ const Login = () => {
   const usernameOrEmailRef = useRef(null);
   const passwordRef = useRef(null);
   const [showPassword, setShowPassword] = useState(false);
-  const [errors, setErrors] = useState({}); // State để lưu thông báo lỗi
+  const [errors, setErrors] = useState({});
   const [loginUser, { isLoading }] = useLoginUserMutation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // Hàm kiểm tra dữ liệu đầu vào
   const validateInputs = () => {
     const errors = {};
-    if (!usernameOrEmailRef.current.value) {
-      errors.usernameOrEmail = "Vui lòng nhập tên đăng nhập hoặc email.";
-    }
-    if (!passwordRef.current.value) {
-      errors.password = "Vui lòng nhập mật khẩu.";
-    }
+    if (!usernameOrEmailRef.current.value) errors.usernameOrEmail = "Vui lòng nhập tên đăng nhập hoặc email.";
+    if (!passwordRef.current.value) errors.password = "Vui lòng nhập mật khẩu.";
     setErrors(errors);
-    return Object.keys(errors).length === 0; // Trả về true nếu không có lỗi
+    return Object.keys(errors).length === 0;
   };
 
-  // Hàm xử lý đăng nhập
   const handleLogin = async (e) => {
     e.preventDefault();
-    if (!validateInputs()) return; // Dừng nếu có lỗi
+    if (!validateInputs()) return;
 
     try {
       const response = await loginUser({
@@ -40,18 +34,20 @@ const Login = () => {
       }).unwrap();
 
       if (response.token) {
-        dispatch(setUser({ user: response.user })); // Cập nhật state Redux
-        localStorage.setItem("user", JSON.stringify(response.user)); // Lưu vào localStorage
+        dispatch(setUser({ user: response.user }));
+
+        localStorage.setItem("user", JSON.stringify(response.user));
         localStorage.setItem("token", response.token);
 
-        toast.success("Đăng nhập thành công!"); // Hiển thị thông báo thành công
-        setTimeout(() => navigate("/"), 1000); // Chuyển hướng sau 1 giây
+        toast.success("Đăng nhập thành công!");
+        setTimeout(() => navigate("/"), 1000);
       }
-    } catch {
-      // Hiển thị thông báo lỗi chữ đỏ khi tên đăng nhập hoặc email không đúng
+    } catch (err) {
+      const errorMsg = err?.data?.message || "Đăng nhập thất bại. Vui lòng thử lại.";
       setErrors((prev) => ({
         ...prev,
-        usernameOrEmail: "Tên đăng nhập hoặc email không đúng.", // Hiển thị lỗi chữ đỏ
+        usernameOrEmail: errorMsg.includes("Không tìm thấy") ? "Tên đăng nhập hoặc email không đúng." : prev.usernameOrEmail,
+        password: errorMsg.includes("Mật khẩu không đúng") ? "Mật khẩu không đúng." : prev.password,
       }));
     }
   };
@@ -61,7 +57,6 @@ const Login = () => {
       <div className="boxLog shadow-black m-3 pb-3 rounded-md">
         <h1 className="font-bold px-3 py-2 rounded-t-md">Đăng nhập</h1>
         <form onSubmit={handleLogin} className="p-3 mt-2">
-          {/* Trường nhập tên đăng nhập hoặc email */}
           <div className="form-control mb-3">
             <label htmlFor="usernameOrEmail">Tên đăng nhập hoặc email:</label>
             <input
@@ -70,14 +65,11 @@ const Login = () => {
               type="text"
               id="usernameOrEmail"
               placeholder="Nhập email hoặc tên đăng nhập"
-              onBlur={() => validateInputs()} // Kiểm tra khi rời khỏi trường
+              onBlur={() => validateInputs()}
             />
-            {errors.usernameOrEmail && (
-              <p className="text-red-500 mt-1">{errors.usernameOrEmail}</p> // Hiển thị lỗi chữ đỏ
-            )}
+            {errors.usernameOrEmail && <p className="text-red-500 mt-1">{errors.usernameOrEmail}</p>}
           </div>
 
-          {/* Trường nhập mật khẩu */}
           <div className="form-control mb-3">
             <label htmlFor="password">Mật khẩu:</label>
             <div className="relative w-full">
@@ -87,36 +79,27 @@ const Login = () => {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 placeholder="Nhập mật khẩu"
-                onBlur={() => validateInputs()} // Kiểm tra khi rời khỏi trường
+                onBlur={() => validateInputs()}
               />
               <button
                 type="button"
                 className="absolute top-3 right-3 text-gray-500 cursor-pointer"
-                onClick={() => setShowPassword(!showPassword)} // Toggle hiển thị mật khẩu
+                onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? "Ẩn mật khẩu" : "Hiện mật khẩu"}
               >
                 <i className={`fa-regular mt-2 ${showPassword ? "fa-eye" : "fa-eye-slash"}`}></i>
               </button>
             </div>
-            {errors.password && (
-              <p className="text-red-500 mt-1">{errors.password}</p> // Hiển thị lỗi chữ đỏ
-            )}
+            {errors.password && <p className="text-red-500 mt-1">{errors.password}</p>}
           </div>
-
-          {/* Nút đăng nhập */}
           <button
             type="submit"
             className="bg-black text-white px-3 py-2 rounded-md w-full mt-3 flex justify-center items-center"
             disabled={isLoading}
           >
-            {isLoading ? (
-              <span className="animate-spin border-t-2 border-white w-5 h-5 rounded-full"></span> // Hiển thị spinner khi loading
-            ) : (
-              "Đăng nhập"
-            )}
+            {isLoading ? <span className="animate-spin border-t-2 border-white w-5 h-5 rounded-full"></span> : "Đăng nhập"}
           </button>
 
-          {/* Nút đăng nhập bằng Google */}
           <button
             type="button"
             className="bg-black text-white px-3 py-2 rounded-md w-full mt-3 gap-2 flex items-center justify-center"
@@ -128,7 +111,6 @@ const Login = () => {
           </button>
         </form>
 
-        {/* Liên kết đăng ký */}
         <p className="p-3">
           Bạn chưa có tài khoản? Ấn{" "}
           <Link className="font-bold" to="/register">
@@ -141,4 +123,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login; 

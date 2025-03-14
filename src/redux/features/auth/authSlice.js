@@ -7,10 +7,11 @@ const loadUserFromLocalStorage = () => {
     return {
       user: user ? JSON.parse(user) : null,
       token: token || null,
+      error: null, // Thêm trạng thái lỗi
     };
   } catch (err) {
     console.error('Error deserializing user from localStorage:', err);
-    return { user: null, token: null };
+    return { user: null, token: null, error: null };
   }
 };
 
@@ -23,14 +24,16 @@ const authSlice = createSlice({
     setUser: (state, action) => {
       state.user = action.payload.user;
       if (action.payload.token) {
-        state.token = action.payload.token; 
+        state.token = action.payload.token;
         localStorage.setItem('token', action.payload.token);
       }
+      state.error = null;
       localStorage.setItem('user', JSON.stringify(state.user));
     },
     logout: (state) => {
       state.user = null;
       state.token = null;
+      state.error = null; 
       localStorage.removeItem('user');
       localStorage.removeItem('token');
     },
@@ -43,9 +46,16 @@ const authSlice = createSlice({
         state.token = action.payload.token;
         localStorage.setItem('token', action.payload.token);
       }
+      state.error = null;
+    },
+    setError: (state, action) => {
+      state.error = action.payload; 
+    },
+    clearError: (state) => {
+      state.error = null; 
     },
   },
 });
 
-export const { setUser, logout, updateUserInfo } = authSlice.actions;
+export const { setUser, logout, updateUserInfo, setError, clearError } = authSlice.actions;
 export default authSlice.reducer;

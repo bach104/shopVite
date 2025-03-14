@@ -23,7 +23,6 @@ const Shoppingcart = () => {
       headers: token ? { Authorization: `Bearer ${token}` } : {}, 
     }
   );
-
   const [localCart, setLocalCart] = useState([]);
   
   useEffect(() => {

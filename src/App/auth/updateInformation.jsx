@@ -14,12 +14,22 @@ const UpdateInformation = () => {
     avatar: null,
   });
 
+  const [emailError, setEmailError] = useState(''); // State để lưu thông báo lỗi email
+  const [phoneNumberError, setPhoneNumberError] = useState(''); // State để lưu thông báo lỗi số điện thoại
   const [updateUser] = useUpdateUserMutation();
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
+
+    // Reset thông báo lỗi khi người dùng thay đổi email hoặc số điện thoại
+    if (name === 'email') {
+      setEmailError('');
+    }
+    if (name === 'phoneNumber') {
+      setPhoneNumberError('');
+    }
   };
 
   const handleFileChange = (e) => {
@@ -30,8 +40,23 @@ const UpdateInformation = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Kiểm tra định dạng số điện thoại trước khi gửi yêu cầu cập nhật
+    const phoneNumberRegex = /^[0-9]{10}$/; // Định dạng số điện thoại 10 chữ số
+    if (userData.phoneNumber && !phoneNumberRegex.test(userData.phoneNumber)) {
+      setPhoneNumberError('Số điện thoại không hợp lệ. Vui lòng nhập số điện thoại gồm 10 chữ số.');
+      return;
+    }
+
     try {
       const response = await updateUser({ userData }).unwrap();
+
+      // Kiểm tra cờ emailExists từ phản hồi
+      if (response.emailExists) {
+        setEmailError('Email đã được sử dụng. Vui lòng chọn email khác.');
+        return;
+      }
+
+      // Nếu cập nhật thành công
       const updatedUser = { ...JSON.parse(localStorage.getItem('user')), ...response.user };
 
       if (response.token) {
@@ -41,9 +66,10 @@ const UpdateInformation = () => {
       localStorage.setItem('user', JSON.stringify(updatedUser));
       dispatch(setUser({ user: updatedUser, token: response.token || localStorage.getItem('token') }));
 
-      toast.success('Cập nhật thông tin thành công!', {  position: 'top-center' });
-    } catch  {
-      toast.error('Thông báo đăng nhập lại để cập nhật!', { position: 'top-center' });
+      toast.success('Cập nhật thông tin thành công!', { position: 'top-center' });
+    } catch (error) {
+      console.error('Lỗi khi cập nhật thông tin:', error);
+      toast.error('Có lỗi xảy ra khi cập nhật thông tin.', { position: 'top-center' });
     }
   };
 
@@ -81,23 +107,30 @@ const UpdateInformation = () => {
         </div>
         <div className="flex items-center">
           <label className="w-1/6">Số điện thoại:</label>
-          <input
-            type="text"
-            name="phoneNumber"
-            value={userData.phoneNumber}
-            onChange={handleChange}
-            className="w-2/6 bg-gray-100 p-2"
-          />
+          <div className="w-2/6">
+            <input
+              type="text"
+              name="phoneNumber"
+              value={userData.phoneNumber}
+              onChange={handleChange}
+              className="w-full bg-gray-100 p-2"
+            />
+            {phoneNumberError && <p className="text-red-500 text-sm mt-1">{phoneNumberError}</p>}
+          </div>
         </div>
         <div className="flex items-center">
           <label className="w-1/6">Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={userData.email}
-            onChange={handleChange}
-            className="w-2/6 bg-gray-100 p-2"
-          />
+          <div className="w-2/6">
+
+            <input
+              type="email"
+              name="email"
+              value={userData.email}
+              onChange={handleChange}
+              className="w-full bg-gray-100 p-2"
+            />
+            {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
+          </div>
         </div>
         <div className="w-full flex justify-end">
           <button type="submit" className="btn__seemore transition text-white px-4 py-2 mt-3">
@@ -108,4 +141,5 @@ const UpdateInformation = () => {
     </div>
   );
 };
+
 export default UpdateInformation;

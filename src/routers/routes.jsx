@@ -14,6 +14,12 @@ import ShoppingCart from "../App/cart/ShoppingCart/ShoppingCart";
 import Confirmation from "../App/cart/confirmation/Confirmation";
 import Delivery from "../App/cart/delivery/Delivery";
 import Delivered from "../App/cart/delivered/Delivered";
+import AdminManager from "../App/auth/admin/AdminManager";
+import ManagerProducts from "../App/manager/products/managerProducts";
+import ManagerAuths from "../App/manager/auth/managerAuths";
+import ManagerCart from "../App/manager/cart/managerCart";
+import ManagerTransport from "../App/manager/transport/managerTransport";
+import ManagerStatistical from "../App/manager/statistical/managerStatistical";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -71,6 +77,17 @@ const router = createBrowserRouter([
       { path: "delivery", element: <Delivery /> },
       { path: "delivered", element: <Delivered /> },
     ],
-  },
+    },
+    {
+        path:"/admin-manager",
+        element:<AdminManager/>,
+        children:[
+            {path:"", element:<ManagerProducts/>},
+            {path:"managerAuths", element:<ManagerAuths/>},
+            {path:"managerCart", element:<ManagerCart/>},
+            {path:"managerTransport", element:<ManagerTransport/>},
+            {path:"managerStatistical", element:<ManagerStatistical/>},
+        ]
+    }
 ]);
 export default router;

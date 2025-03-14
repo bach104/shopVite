@@ -5,7 +5,6 @@ import { useRef, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useAddToCartMutation } from "../../../redux/features/cart/cartApi";
 import { selectAllCartItems } from "../../../redux/features/cart/cartSlice";
-
 const ViewProducts = () => {
   const { id } = useParams();
   const [addToCart] = useAddToCartMutation();
@@ -54,7 +53,7 @@ const ViewProducts = () => {
   const addToCartHandler = async () => {
     if (!user) {
       toast.warning("Bạn cần đăng nhập để thêm sản phẩm vào giỏ hàng!");
-      return; // Dừng hàm lại và không thực hiện thêm vào giỏ hàng
+      return; 
     }
 
     if (!selectedSize || !selectedColor) {

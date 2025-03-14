@@ -42,7 +42,7 @@ const Store = () => {
     <>
       <section className="store__container relative">
         <StoreBanner />
-        <div className="absolute p-3 store__title top-10 left-10 z-40 rounded-md">
+        <div className="absolute p-3 store__title top-10 left-10 z-10 rounded-md">
           <h4 className="text-5xl text-white">Cửa hàng</h4>
           <p className="text-white mt-3">Hãy lựa chọn theo phong cách của bạn</p>
         </div>

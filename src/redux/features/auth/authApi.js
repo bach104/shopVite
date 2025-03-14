@@ -4,23 +4,23 @@ import { getBaseUrl } from '../../../utils/baseURL';
 const authApi = createApi({
   reducerPath: 'authApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: `${getBaseUrl()}/api/auth`, 
-    credentials: 'include', 
+    baseUrl: `${getBaseUrl()}/api/auth`,
+    credentials: 'include',
   }),
-  tagTypes: ['Users'], 
+  tagTypes: ['Users'],
   endpoints: (builder) => ({
     registerUser: builder.mutation({
       query: (newUser) => ({
         url: '/register',
         method: 'POST',
-        body: newUser,  
+        body: newUser,
       }),
     }),
     loginUser: builder.mutation({
       query: (credentials) => ({
         url: '/login',
         method: 'POST',
-        body: credentials,  
+        body: credentials,
       }),
       transformResponse: (response) => {
         if (response?.user && response?.token) {
@@ -32,7 +32,7 @@ const authApi = createApi({
     }),
     updateUser: builder.mutation({
       query: ({ userData }) => {
-        const token = localStorage.getItem('token'); 
+        const token = localStorage.getItem('token');
         if (!token) {
           throw new Error('Token không tồn tại. Vui lòng đăng nhập lại!');
         }
@@ -40,34 +40,45 @@ const authApi = createApi({
         const formData = new FormData();
         Object.keys(userData).forEach((key) => {
           if (userData[key]) {
-            formData.append(key, userData[key]);  
+            formData.append(key, userData[key]);
           }
         });
 
         return {
           url: '/update-info',
           method: 'PUT',
-          body: formData,  
+          body: formData,
           headers: {
-            Authorization: `Bearer ${token}`, 
+            Authorization: `Bearer ${token}`,
           },
         };
       },
       transformResponse: (response) => {
         if (response?.token) {
-          localStorage.setItem('token', response.token); 
+          localStorage.setItem('token', response.token);
+        }
+        if (response?.user) {
+          localStorage.setItem('user', JSON.stringify(response.user));
         }
         return response;
       },
-      invalidatesTags: ['Users'],  
+      // Xử lý lỗi từ phía server
+      transformErrorResponse: (response) => {
+        // Trả về một đối tượng lỗi có cấu trúc rõ ràng
+        return {
+          status: response.status,
+          data: response.data, // Giữ nguyên dữ liệu lỗi từ server
+        };
+      },
+      invalidatesTags: ['Users'],
     }),
   }),
 });
 
-export const { 
-  useRegisterUserMutation, 
-  useLoginUserMutation, 
-  useUpdateUserMutation 
+export const {
+  useRegisterUserMutation,
+  useLoginUserMutation,
+  useUpdateUserMutation,
 } = authApi;
 
 export default authApi;

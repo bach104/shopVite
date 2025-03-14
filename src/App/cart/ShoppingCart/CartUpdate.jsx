@@ -92,7 +92,6 @@ const CartUpdate = ({ onClose, product }) => {
               )}
             </div>
 
-            {/* Số lượng */}
             <div className="flex items-center gap-2">
               <span className="font-medium">Số lượng:</span>
               <button

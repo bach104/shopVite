@@ -3,12 +3,12 @@ import { getBaseUrl } from "../../../utils/baseURL";
 
 export const productApi = createApi({
   reducerPath: "productApi",
-  baseQuery: fetchBaseQuery({ baseUrl: getBaseUrl() + "/api/products" }),
+  baseQuery: fetchBaseQuery({ baseUrl: getBaseUrl() + "/api" }),
   tagTypes: ["Product"],
   endpoints: (builder) => ({
     getProducts: builder.query({
       query: ({ page, limit, material, category, season, minPrice, maxPrice }) =>
-        `?page=${page}&limit=${limit}&material=${material || ""}&category=${category || ""}&season=${season || ""}&minPrice=${minPrice || ""}&maxPrice=${maxPrice || ""}`,
+        `/products?page=${page}&limit=${limit}&material=${material || ""}&category=${category || ""}&season=${season || ""}&minPrice=${minPrice || ""}&maxPrice=${maxPrice || ""}`,
       providesTags: [{ type: "Product", id: "LIST" }],
       transformResponse: (response) => ({
         products: response.products,
@@ -17,17 +17,17 @@ export const productApi = createApi({
       }),
     }),
     getProductById: builder.query({
-      query: (id) => `/${id}`,
+      query: (id) => `/products/${id}`,
       providesTags: (result, error, id) => [{ type: "Product", id }],
       transformResponse: (response) => ({
         ...response,
-        size: response.size || [], 
+        size: response.size || [],
         color: response.color || [],
       }),
     }),
     rateProduct: builder.mutation({
       query: ({ productId, star }) => ({
-        url: "/rate",
+        url: "/products/rate",
         method: "POST",
         body: { productId, star },
         credentials: "include",
@@ -37,23 +37,23 @@ export const productApi = createApi({
       ],
     }),
     getProductRating: builder.query({
-      query: (productId) => `/${productId}/rating`,
+      query: (productId) => `/products/${productId}/rating`,
       providesTags: (result, error, productId) => [
         { type: "Product", id: productId },
       ],
     }),
     getTopFeaturedProducts: builder.query({
-      query: () => "/top-featured",
+      query: () => "/products/top-featured",
       providesTags: [{ type: "Product", id: "TOP" }],
     }),
     getProductsBySeason: builder.query({
       query: ({ season, page, limit }) =>
-        `/season/${season}?page=${page}&limit=${limit}`,
+        `/products/season/${season}?page=${page}&limit=${limit}`,
       providesTags: [{ type: "Product", id: "SEASON" }],
     }),
     getProductsBySearch: builder.query({
       query: ({ keyword, page = 1, limit = 20 }) =>
-        `/search/${encodeURIComponent(keyword)}?page=${page}&limit=${limit}`,
+        `/products/search/${encodeURIComponent(keyword)}?page=${page}&limit=${limit}`,
       providesTags: [{ type: "Product", id: "SEARCH" }],
       transformResponse: (response) => ({
         products: response.products,
@@ -62,12 +62,20 @@ export const productApi = createApi({
       }),
     }),
     getRandomProducts: builder.query({
-      query: () => "/random",
+      query: () => "/products/random",
       providesTags: [{ type: "Product", id: "RANDOM" }],
+    }),
+    addProduct: builder.mutation({
+      query: (productData) => ({
+        url: "/products/addProducts",
+        method: "POST",
+        body: productData,
+        credentials: "include",
+      }),
+      invalidatesTags: [{ type: "Product", id: "LIST" }],
     }),
   }),
 });
-
 
 export const {
   useGetProductsQuery,
@@ -78,5 +86,6 @@ export const {
   useGetProductsBySeasonQuery,
   useGetProductsBySearchQuery,
   useLazyGetProductsBySearchQuery,
-  useGetRandomProductsQuery, 
+  useGetRandomProductsQuery,
+  useAddProductMutation, 
 } = productApi;

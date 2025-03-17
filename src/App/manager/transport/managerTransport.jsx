@@ -2,7 +2,9 @@
 const managerTransport = () => {
   return (
     <>
-      <h2>Giao hàng</h2>
+    <div className="Manager__display--Title">
+      <h2 className="text-xl p-4">Giao hàng</h2>
+    </div>
     </>
   )
 }

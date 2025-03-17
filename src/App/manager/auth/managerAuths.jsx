@@ -3,7 +3,10 @@ import avatarTest from "../../../assets/img/testAvatar.jpg"
 const managerAuths = () => {
   return (
     <>
-      <h2>Quản lý tài khoản</h2>
+    <div className="Manager__display--Title flex justify-between">
+      <h2 className="text-xl p-4">Quản lý tài khoản</h2>
+      <input type="text" id="search" className="w-1/3 p-2 mx-4 my-2 rounded-md" placeholder="Tìm kiếm sản phẩm"/>
+    </div>
       <div className="Manager__display--Box gap-6 p-4">
             <nav className="Manager__display--product h-36 justify-between p-2">
                 <div className="flex gap-2">

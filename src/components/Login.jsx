@@ -26,29 +26,30 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     if (!validateInputs()) return;
-
+  
     try {
       const response = await loginUser({
         usernameOrEmail: usernameOrEmailRef.current.value,
         password: passwordRef.current.value,
       }).unwrap();
-
+  
       if (response.token) {
         dispatch(setUser({ user: response.user }));
-
         localStorage.setItem("user", JSON.stringify(response.user));
         localStorage.setItem("token", response.token);
-
         toast.success("Đăng nhập thành công!");
         setTimeout(() => navigate("/"), 1000);
       }
     } catch (err) {
-      const errorMsg = err?.data?.message || "Đăng nhập thất bại. Vui lòng thử lại.";
+      const errorMsg = err.data || "Đăng nhập thất bại. Vui lòng thử lại.";
       setErrors((prev) => ({
         ...prev,
         usernameOrEmail: errorMsg.includes("Không tìm thấy") ? "Tên đăng nhập hoặc email không đúng." : prev.usernameOrEmail,
         password: errorMsg.includes("Mật khẩu không đúng") ? "Mật khẩu không đúng." : prev.password,
       }));
+  
+      // Không log lỗi ra console
+      // console.error(err);
     }
   };
 

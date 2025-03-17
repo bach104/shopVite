@@ -96,14 +96,18 @@ input[type="checkbox"] {
     }
     .Manager__display {
         border-radius: 5px;
-        > h2 {
-            padding: 16px;
-            width: 100%;
-            background: $bg-black;
-            color: $text-white;
-            opacity: 0.8;
-            border-radius: 5px 5px 0 0;
+        &--Title{
+                width: 100%;
+                background: $bg-black;
+                color: $text-white;
+                opacity: 0.8;
+                border-radius: 5px 5px 0 0;
+                >input{
+                    outline: none;
+                    border:2px solid gray
+                }
         }
+
         &--Box {  
             background: #fff;
             overflow-y: scroll;

@@ -33,7 +33,7 @@ const authSlice = createSlice({
     logout: (state) => {
       state.user = null;
       state.token = null;
-      state.error = null; 
+      state.error = null; // Xóa lỗi khi đăng xuất
       localStorage.removeItem('user');
       localStorage.removeItem('token');
     },
@@ -46,13 +46,13 @@ const authSlice = createSlice({
         state.token = action.payload.token;
         localStorage.setItem('token', action.payload.token);
       }
-      state.error = null;
+      state.error = null; 
     },
     setError: (state, action) => {
       state.error = action.payload; 
     },
     clearError: (state) => {
-      state.error = null; 
+      state.error = null;
     },
   },
 });

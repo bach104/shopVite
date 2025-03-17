@@ -18,14 +18,17 @@ const productsSlice = createSlice({
       })
       .addMatcher(productApi.endpoints.getProducts.matchFulfilled, (state, action) => {
         state.loading = false;
-        state.products = action.payload;
+        state.products = action.payload.products;
       })
       .addMatcher(productApi.endpoints.getProducts.matchRejected, (state, action) => {
         state.loading = false;
-        state.error = action.error?.message || 'Lỗi không xác định'; 
+        state.error = action.error?.message || 'Lỗi không xác định';
       })
       .addMatcher(productApi.endpoints.getTopFeaturedProducts.matchFulfilled, (state, action) => {
         state.topProducts = action.payload.products;
+      })
+      .addMatcher(productApi.endpoints.addProduct.matchFulfilled, (state, action) => {
+        state.products.push(action.payload.product);
       });
   },
 });

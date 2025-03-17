@@ -23,7 +23,6 @@ const authApi = createApi({
         return response;
       },
       transformErrorResponse: (response) => {
-        // Xử lý lỗi từ server
         const errorMessage = response.data?.message || 'Đăng ký thất bại. Vui lòng thử lại!';
         return {
           status: response.status,
@@ -45,11 +44,9 @@ const authApi = createApi({
         return response;
       },
       transformErrorResponse: (response) => {
-        // Xử lý lỗi từ server
-        const errorMessage = response.data?.message || 'Đăng nhập thất bại. Vui lòng thử lại!';
         return {
           status: response.status,
-          data: errorMessage,
+          data: response.data?.message || 'Đăng nhập thất bại. Vui lòng thử lại!',
         };
       },
     }),

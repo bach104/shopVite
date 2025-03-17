@@ -14,8 +14,8 @@ const UpdateInformation = () => {
     avatar: null,
   });
 
-  const [emailError, setEmailError] = useState(''); // State để lưu thông báo lỗi email
-  const [phoneNumberError, setPhoneNumberError] = useState(''); // State để lưu thông báo lỗi số điện thoại
+  const [emailError, setEmailError] = useState(''); 
+  const [phoneNumberError, setPhoneNumberError] = useState(''); 
   const [updateUser] = useUpdateUserMutation();
   const dispatch = useDispatch();
 
@@ -23,7 +23,6 @@ const UpdateInformation = () => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
 
-    // Reset thông báo lỗi khi người dùng thay đổi email hoặc số điện thoại
     if (name === 'email') {
       setEmailError('');
     }
@@ -39,9 +38,7 @@ const UpdateInformation = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Kiểm tra định dạng số điện thoại trước khi gửi yêu cầu cập nhật
-    const phoneNumberRegex = /^[0-9]{10}$/; // Định dạng số điện thoại 10 chữ số
+    const phoneNumberRegex = /^[0-9]{10}$/; 
     if (userData.phoneNumber && !phoneNumberRegex.test(userData.phoneNumber)) {
       setPhoneNumberError('Số điện thoại không hợp lệ. Vui lòng nhập số điện thoại gồm 10 chữ số.');
       return;
@@ -49,14 +46,12 @@ const UpdateInformation = () => {
 
     try {
       const response = await updateUser({ userData }).unwrap();
-
-      // Kiểm tra cờ emailExists từ phản hồi
+      
       if (response.emailExists) {
         setEmailError('Email đã được sử dụng. Vui lòng chọn email khác.');
         return;
       }
-
-      // Nếu cập nhật thành công
+      
       const updatedUser = { ...JSON.parse(localStorage.getItem('user')), ...response.user };
 
       if (response.token) {

@@ -2,7 +2,9 @@
 const managerCart = () => {
   return (
     <>
-      <h2>Quản lý đơn hàng</h2>
+    <div className="Manager__display--Title">
+      <h2 className="text-xl p-4">Quản lý đơn hàng</h2>
+    </div>
       <div className="Manager__display--Box"></div>
     </>
   )

@@ -20,6 +20,7 @@ import ManagerAuths from "../App/manager/auth/managerAuths";
 import ManagerCart from "../App/manager/cart/managerCart";
 import ManagerTransport from "../App/manager/transport/managerTransport";
 import ManagerStatistical from "../App/manager/statistical/managerStatistical";
+import InformationProducts from "../App/manager/products/informationProducts";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -82,7 +83,16 @@ const router = createBrowserRouter([
         path:"/admin-manager",
         element:<AdminManager/>,
         children:[
-            {path:"", element:<ManagerProducts/>},
+            {
+                path:"", 
+                element:<ManagerProducts/>,
+                children:[
+                    {
+                        path: "products/:id",
+                        element: <InformationProducts/>,
+                    },
+                ]
+            },
             {path:"managerAuths", element:<ManagerAuths/>},
             {path:"managerCart", element:<ManagerCart/>},
             {path:"managerTransport", element:<ManagerTransport/>},

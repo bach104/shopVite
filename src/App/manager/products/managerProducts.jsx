@@ -1,38 +1,36 @@
 import { useState } from "react";
-import { useGetProductsQuery } from "../../../redux/features/shop/productsApi"; 
-import InformationProducts from "./informationProducts"; 
+import { useGetProductsQuery } from "../../../redux/features/shop/productsApi";
+import { Outlet, useNavigate } from "react-router-dom";
 import AddProducts from "./addProducts";
 import { getBaseUrl } from "../../../utils/baseURL";
 
 const ManagerProducts = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [showInformationProduct, setShowInformationProduct] = useState(false);
-  const [showAddProduct, setShowAddProduct] = useState(false); 
+  const [showAddProduct, setShowAddProduct] = useState(false);
+  const navigate = useNavigate();
   const { data, isLoading, isError } = useGetProductsQuery({
     page: currentPage,
     limit: 20,
   });
-  const handleCloseInformationProduct = () => {
-    setShowInformationProduct(false);
-  };
+
   const handleCloseAddProduct = () => {
     setShowAddProduct(false);
   };
 
   const handleNextPage = () => {
-    setCurrentPage((prevPage) => prevPage + 1); 
+    setCurrentPage((prevPage) => prevPage + 1);
   };
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
-      setCurrentPage((prevPage) => prevPage - 1); 
+      setCurrentPage((prevPage) => prevPage - 1);
     }
   };
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading products</div>;
 
-  const totalPages = data?.totalPages || 1; 
+  const totalPages = data?.totalPages || 1;
 
   return (
     <>
@@ -49,7 +47,7 @@ const ManagerProducts = () => {
         {data?.products.map((product, index) => {
           const imageUrl = product.images[0]
             ? `${getBaseUrl()}/${product.images[0].replace(/\\/g, "/")}`
-            : "https://via.placeholder.com/112"; 
+            : "https://via.placeholder.com/112";
 
           return (
             <nav key={index} className="Manager__display--product h-36 justify-between p-2">
@@ -78,7 +76,7 @@ const ManagerProducts = () => {
               <div className="flex items-end h-full">
                 <button
                   className="flex bg-black bg-opacity-70 hover:bg-opacity-90 transition h-12 items-center w-40 text-white px-4 py-2 rounded-sm"
-                  onClick={() => setShowInformationProduct(true)}
+                  onClick={() => navigate(`/admin-manager/products/${product._id}`)} // Sửa đường dẫn điều hướng
                 >
                   Chi tiết sản phẩm
                 </button>
@@ -87,7 +85,6 @@ const ManagerProducts = () => {
           );
         })}
       </div>
-    
       <div className="flex bg-black opacity-70 justify-between p-2 gap-2">
         <button
           className="text-white px-4 py-2 rounded-sm"
@@ -104,7 +101,6 @@ const ManagerProducts = () => {
               Quay lại trang trước
             </button>
           )}
-
           {currentPage < totalPages && (
             <button
               className="bg-white font-bold shadow-md px-4 py-2 rounded-md hover:opacity-90 transition text-black"
@@ -115,19 +111,14 @@ const ManagerProducts = () => {
           )}
         </div>
       </div>
-
-      {showInformationProduct && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <InformationProducts onClose={handleCloseInformationProduct} />
-        </div>
-      )}
-
       {showAddProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <AddProducts onClose={handleCloseAddProduct} />
         </div>
       )}
+      <Outlet />
     </>
   );
 };
+
 export default ManagerProducts;

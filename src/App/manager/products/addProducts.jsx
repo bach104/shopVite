@@ -97,7 +97,7 @@ const AddProducts = ({ onClose }) => {
     try {
       const response = await addProduct(formData).unwrap();
       console.log("Sản phẩm đã được thêm:", response);
-      onClose(); // Close the modal after successful addition
+      onClose(); 
     } catch (err) {
       console.error("Lỗi khi thêm sản phẩm:", err);
       setError(err.data?.message || "Lỗi khi thêm sản phẩm.");
@@ -242,7 +242,6 @@ const AddProducts = ({ onClose }) => {
           />
         </div>
 
-        {/* Ảnh sản phẩm */}
         <div className="mt-4">
           <label className="block font-semibold">Ảnh:</label>
           <div className="flex gap-4 flex-wrap">
@@ -278,7 +277,6 @@ const AddProducts = ({ onClose }) => {
           {error && <p className="text-red-500">{error}</p>}
         </div>
 
-        {/* Video sản phẩm */}
         <div className="mt-4">
           <label className="block font-semibold">Video:</label>
           {video ? (

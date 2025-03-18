@@ -3,6 +3,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useUpdateCartItemMutation } from "../../../redux/features/cart/cartApi";
 import { useGetProductByIdQuery } from "../../../redux/features/shop/productsApi";
+import { getBaseUrl } from "../../../utils/baseURL"; 
 
 const CartUpdate = ({ onClose, product }) => {
   const [size, setSize] = useState(product.size);
@@ -26,6 +27,7 @@ const CartUpdate = ({ onClose, product }) => {
       console.error("Lỗi khi cập nhật giỏ hàng:", error);
     }
   };
+
   if (isProductLoading) {
     return <div className="text-center py-4 text-lg text-gray-500">Đang tải thông tin sản phẩm...</div>;
   }
@@ -35,6 +37,10 @@ const CartUpdate = ({ onClose, product }) => {
   }
 
   const { color: colors, size: sizes } = productDetails.product;
+
+  const imageUrl = product.image
+    ? `${getBaseUrl()}/${product.image.replace(/\\/g, "/")}`
+    : "https://via.placeholder.com/240"; 
 
   return (
     <div className="cart__container p-2">
@@ -46,8 +52,9 @@ const CartUpdate = ({ onClose, product }) => {
         />
         <h2 className="text-xl font-semibold mb-4">Cập nhật</h2>
         <div className="flex cart__wrap gap-6">
+          {/* Hiển thị hình ảnh */}
           <img
-            src={product.image}
+            src={imageUrl}
             alt={product.name}
             className="w-60 h-60 block object-cover rounded-lg border"
           />

@@ -5,6 +5,7 @@ import { useFetchCartQuery, useRemoveFromCartMutation } from "../../../redux/fea
 import CartSummary from "./CartSummary";
 import CartUpdate from "./CartUpdate";
 import { useSelector } from "react-redux";
+import { getBaseUrl } from "../../../utils/baseURL"; 
 
 const ShoppingCart = () => {
   const [showUpdate, setShowUpdate] = useState(false);
@@ -82,45 +83,52 @@ const ShoppingCart = () => {
               Giỏ hàng trống
             </div>
           ) : (
-            cartData.cartItems.map((item) => (
-              <div
-                key={item._id}
-                className="flex shoppingItems gap-2 h-32 bg__select p-2 rounded-sm mb-3 shadow-sm"
-              >
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-28 border border-black h-full object-cover rounded-s"
-                />
-                <div className="flex-1 shoppingItems__technology">
-                  <h3 className="font-semibold">{item.name}</h3>
-                  <p className="text-sm">Số lượng: {item.quantity}</p>
-                  <p className="text-sm">Kích thước: {item.size}</p>
-                  <p className="text-sm">Màu sắc: {item.color}</p>
-                  <p className="text-sm shoppingItems__technology--price gap-2 font-semibold">
-                    {item.price}đ
-                    <s className="pl-2  opacity-50">{item.oldPrice}đ</s>
-                  </p>
-                </div>
-                <div className="flex flex-col shoppingItems__click items-end justify-between">
-                  <input
-                    type="checkbox"
-                    className="w-5 h-5 cursor-pointer bg-gray-300 checked:bg-black"
-                    checked={selectedItems.includes(item._id)}
-                    onChange={() => handleSelectItem(item._id)}
+            cartData.cartItems.map((item) => {
+              // Xử lý đường dẫn hình ảnh
+              const imageUrl = item.image
+                ? `${getBaseUrl()}/${item.image.replace(/\\/g, "/")}`
+                : "https://via.placeholder.com/112"; // Placeholder nếu không có hình ảnh
+
+              return (
+                <div
+                  key={item._id}
+                  className="flex shoppingItems gap-2 h-32 bg__select p-2 rounded-sm mb-3 shadow-sm"
+                >
+                  <img
+                    src={imageUrl}
+                    alt={item.name}
+                    className="w-28 border border-black h-full object-cover rounded-s"
                   />
-                  <button
-                    className="bg-black hover:opacity-70 opacity-80 transition text-white rounded-lg"
-                    onClick={() => {
-                      setSelectedItemId(item._id); 
-                      setShowUpdate(true);
-                    }}
-                  >
-                    Thay đổi
-                  </button>
+                  <div className="flex-1 shoppingItems__technology">
+                    <h3 className="font-semibold">{item.name}</h3>
+                    <p className="text-sm">Số lượng: {item.quantity}</p>
+                    <p className="text-sm">Kích thước: {item.size}</p>
+                    <p className="text-sm">Màu sắc: {item.color}</p>
+                    <p className="text-sm shoppingItems__technology--price gap-2 font-semibold">
+                      {item.price}đ
+                      <s className="pl-2  opacity-50">{item.oldPrice}đ</s>
+                    </p>
+                  </div>
+                  <div className="flex flex-col shoppingItems__click items-end justify-between">
+                    <input
+                      type="checkbox"
+                      className="w-5 h-5 cursor-pointer bg-gray-300 checked:bg-black"
+                      checked={selectedItems.includes(item._id)}
+                      onChange={() => handleSelectItem(item._id)}
+                    />
+                    <button
+                      className="bg-black hover:opacity-70 opacity-80 transition text-white rounded-lg"
+                      onClick={() => {
+                        setSelectedItemId(item._id); 
+                        setShowUpdate(true);
+                      }}
+                    >
+                      Thay đổi
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           )}
         </div>
 

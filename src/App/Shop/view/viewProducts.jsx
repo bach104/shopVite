@@ -5,6 +5,8 @@ import { useRef, useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useAddToCartMutation } from "../../../redux/features/cart/cartApi";
 import { selectAllCartItems } from "../../../redux/features/cart/cartSlice";
+import { getBaseUrl } from "../../../utils/baseURL"; // Import hàm getBaseUrl
+
 const ViewProducts = () => {
   const { id } = useParams();
   const [addToCart] = useAddToCartMutation();
@@ -87,6 +89,12 @@ const ViewProducts = () => {
     }
   };
 
+  const imageUrl = product?.images?.[0]
+    ? `${getBaseUrl()}/${product.images[0].replace(/\\/g, "/")}`
+    : null;
+  const videoUrl = product?.video?.[0]
+    ? `${getBaseUrl()}/${product.video[0].replace(/\\/g, "/")}`
+    : null;
   return (
     <div className="grid max-width">
       <h2 className="text-2xl text-center w-full font-bold bg__div p-4">
@@ -94,50 +102,70 @@ const ViewProducts = () => {
       </h2>
       <div className="p-4 grid grid-cols-4 gap-6">
         <div className="flex col-span-2 flex-col">
-          <div className="w-full h-96 bg-gray-100 flex items-center justify-center text-xl font-mono">
-            {product?.images?.length ? (
-              <img
-                src={product.images[0]}
-                alt={product.name}
-                className="h-full w-full object-cover"
-              />
-            ) : (
-              <div>Không có hình ảnh</div>
+        <div className="w-full h-96 bg-gray-100 flex items-center justify-center text-xl font-mono">
+          {videoUrl ? (
+            <video
+              src={videoUrl}
+              controls
+              className="h-full w-full object-cover"
+            />
+          ) : imageUrl ? (
+            <img
+              src={imageUrl}
+              alt={product?.name}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <div>Không có hình ảnh hoặc video</div>
+          )}
+        </div>
+        <div className="relative w-full mt-2">
+          {product?.images?.length > 4 && (
+            <>
+              <button
+                onClick={() => handleScroll(-1)}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-md z-10"
+              >
+                <i className="fa-solid fa-angle-left"></i>
+              </button>
+              <button
+                onClick={() => handleScroll(1)}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-md z-10"
+              >
+                <i className="fa-solid fa-angle-right"></i>
+              </button>
+            </>
+          )}
+          <div
+            ref={scrollRef}
+            className="flex gap-2 overflow-x-auto max-w-full whitespace-nowrap scroll-smooth no-scrollbar"
+          >
+            {/* Hiển thị video đầu tiên nếu có */}
+            {videoUrl && (
+              <div className="h-28 w-36 flex-shrink-0">
+                <video
+                  src={videoUrl}
+                  controls
+                  className="h-full w-full object-cover"
+                />
+              </div>
             )}
-          </div>
 
-          <div className="relative w-full mt-2">
-            {product?.images?.length > 4 && (
-              <>
-                <button
-                  onClick={() => handleScroll(-1)}
-                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-md z-10"
-                >
-                  <i className="fa-solid fa-angle-left"></i>
-                </button>
-                <button
-                  onClick={() => handleScroll(1)}
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-md z-10"
-                >
-                  <i className="fa-solid fa-angle-right"></i>
-                </button>
-              </>
-            )}
-            <div
-              ref={scrollRef}
-              className="flex gap-2 overflow-x-auto max-w-full whitespace-nowrap scroll-smooth no-scrollbar"
-            >
-              {product?.images?.map((img, index) => (
+            {/* Hiển thị các hình ảnh */}
+            {product?.images?.map((img, index) => {
+              const imgUrl = `${getBaseUrl()}/${img.replace(/\\/g, "/")}`;
+              return (
                 <div key={index} className="h-28 w-36 flex-shrink-0">
                   <img
-                    src={img}
+                    src={imgUrl}
                     alt={`Ảnh ${index + 1}`}
                     className="h-full w-full object-cover"
                   />
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
+        </div>
         </div>
 
         <div className="col-span-2">

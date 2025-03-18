@@ -47,7 +47,7 @@ const AddProducts = ({ onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     // Validate required fields
     if (!name || name.trim() === "") {
       setError("Vui lòng nhập Tên sản phẩm.");
@@ -75,12 +75,12 @@ const AddProducts = ({ onClose }) => {
       setError("Tối đa được phép có 8 hình ảnh.");
       return;
     }
-
+  
     // Prepare FormData
     const formData = new FormData();
     formData.append("name", name);
     formData.append("importPrice", parseFloat(importPrice));
-    formData.append("oldPrice", parseFloat(oldPrice));
+    if (oldPrice) formData.append("oldPrice", parseFloat(oldPrice)); // Chỉ thêm oldPrice nếu có giá trị
     formData.append("price", parseFloat(price));
     formData.append("description", description);
     formData.append("material", material);
@@ -93,9 +93,8 @@ const AddProducts = ({ onClose }) => {
       formData.append("images", image);
     });
     if (video) formData.append("video", video);
-
+  
     try {
-      // Call the API to add the product
       const response = await addProduct(formData).unwrap();
       console.log("Sản phẩm đã được thêm:", response);
       onClose(); // Close the modal after successful addition
@@ -139,6 +138,8 @@ const AddProducts = ({ onClose }) => {
               <option value="Váy">Váy</option>
               <option value="Áo">Áo</option>
               <option value="Quần">Quần</option>
+              <option value="Set đồ nữ">Set đồ nữ</option>
+              <option value="Set đồ nữ">Set đồ nam</option>
               <option value="Khác...">Khác...</option>
             </select>
           </div>
@@ -207,7 +208,6 @@ const AddProducts = ({ onClose }) => {
           />
         </div>
 
-        {/* Mô tả sản phẩm */}
         <div className="mt-4">
           <textarea
             className="w-full p-2 rounded"

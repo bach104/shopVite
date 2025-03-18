@@ -56,14 +56,12 @@ const authApi = createApi({
         if (!token) {
           throw new Error('Token không tồn tại. Vui lòng đăng nhập lại!');
         }
-
         const formData = new FormData();
         Object.keys(userData).forEach((key) => {
           if (userData[key]) {
             formData.append(key, userData[key]);
           }
         });
-
         return {
           url: '/update-info',
           method: 'PUT',

@@ -50,7 +50,6 @@ const ManagerProducts = () => {
           const imageUrl = product.images[0]
             ? `${getBaseUrl()}/${product.images[0].replace(/\\/g, "/")}`
             : null;
-
           return (
             <nav key={index} className="Manager__display--product h-36 justify-between p-2">
               <div className="flex gap-2">
@@ -127,7 +126,6 @@ const ManagerProducts = () => {
           <InformationProducts onClose={handleCloseInformationProduct} />
         </div>
       )}
-
       {showAddProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <AddProducts onClose={handleCloseAddProduct} />

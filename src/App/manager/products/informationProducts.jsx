@@ -8,7 +8,7 @@ const InformationProducts = ({ onClose }) => {
     name: "Áo màu đông",
     images: ["", "", "", "", ""],
     video: "",
-    type: "Váy thun",
+    category: "Váy thun",
     season: "Đông",
     material: "Vải",
     importPrice: "340.000đ",
@@ -54,7 +54,7 @@ const InformationProducts = ({ onClose }) => {
           <div className="w-40 h-32 bg-gray-300 flex items-center justify-center">+</div>
         </div>
         <div className="mt-4 grid grid-cols-3 gap-4">
-          <p><strong>Loại:</strong> {product.type}</p>
+          <p><strong>Loại:</strong> {product.category}</p>
           <p><strong>Mùa:</strong> {product.season}</p>
           <p><strong>Chất liệu:</strong> {product.material}</p>
         </div>

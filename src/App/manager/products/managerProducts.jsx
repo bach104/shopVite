@@ -49,21 +49,16 @@ const ManagerProducts = () => {
         {data?.products.map((product, index) => {
           const imageUrl = product.images[0]
             ? `${getBaseUrl()}/${product.images[0].replace(/\\/g, "/")}`
-            : null;
+            : "https://via.placeholder.com/112"; 
+
           return (
             <nav key={index} className="Manager__display--product h-36 justify-between p-2">
               <div className="flex gap-2">
-                {imageUrl ? (
-                  <img
-                    src={imageUrl}
-                    alt={product.name}
-                    className="h-32 w-32 object-cover"
-                  />
-                ) : (
-                  <div className="h-32 w-32 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">No Image</span>
-                  </div>
-                )}
+                <img
+                  src={imageUrl}
+                  alt={product.name}
+                  className="h-32 w-32 object-cover border border-black rounded-s"
+                />
                 <div className="flex justify-between flex-col">
                   <p><b>Tên sản phẩm:</b>{product.name}</p>
                   <div>
@@ -126,6 +121,7 @@ const ManagerProducts = () => {
           <InformationProducts onClose={handleCloseInformationProduct} />
         </div>
       )}
+
       {showAddProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <AddProducts onClose={handleCloseAddProduct} />
@@ -134,5 +130,4 @@ const ManagerProducts = () => {
     </>
   );
 };
-
 export default ManagerProducts;

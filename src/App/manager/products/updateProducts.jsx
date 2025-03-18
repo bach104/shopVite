@@ -24,6 +24,7 @@ const UpdateProducts = ({ onClose }) => {
             <option>Khác...</option>
           </select>
         </div>
+        
         <div className="">
           <label className="font-semibold">Chất Liệu:</label>
           <select className="p-2 rounded w-full">

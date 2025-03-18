@@ -16,9 +16,22 @@ input[type="checkbox"] {
     accent-color: black;
 }
 
-.scroll__listX{
-    overflow-x:scroll;
+.scroll__listX {
+    overflow-x: auto;
     width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.scroll__managerProduct{
+    overflow-y: scroll;
+    max-height:7rem;
+    min-height: 7rem;
+}
+.scroll__viewInformation{
+    overflow-y: scroll;
+    max-height:17rem;
+    text-align: justify;
+    min-height: 17rem;
 }
 .introduce__grid,
 .product__grid {

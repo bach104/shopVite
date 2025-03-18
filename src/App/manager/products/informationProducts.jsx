@@ -32,7 +32,7 @@ const InformationProducts = () => {
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div className="relative w-2/3 bg-gray-100 p-6 rounded-lg shadow-md">
+        <div className="relative w-2/3 bg-gray-100 px-6 py-8 rounded-lg shadow-md">
           <FontAwesomeIcon
             icon={faXmark}
             className="absolute top-4 right-4 cursor-pointer text-2xl hover:opacity-50 transition"
@@ -42,15 +42,15 @@ const InformationProducts = () => {
 
           <div className="mt-4">
             <p className="font-semibold">Ảnh</p>
-            <div className="flex scroll__listX ">
+            <div className="flex scroll__listX gap-2">
               {product.images.map((img, index) => {
                 const imageUrl = img ? `${getBaseUrl()}/${img.replace(/\\/g, "/")}` : "https://via.placeholder.com/112";
                 return (
-                  <div key={index} className="w-32 h-32 bg-gray-300 flex items-center justify-center">
+                  <div key={index} className="w-32 h-32 bg-gray-300 flex items-center justify-center flex-shrink-0">
                     <img
                       src={imageUrl}
-                      alt={`Ảnh ${index}`}
-                      className="w-32 h-32  object-cover"
+                      alt={`Ảnh ${index + 1} của sản phẩm`}
+                      className="w-32 h-32 object-cover block"
                     />
                   </div>
                 );
@@ -61,15 +61,15 @@ const InformationProducts = () => {
           <div className="mt-4">
             <p className="font-semibold">Video:</p>
             <div className="w-40 h-32 bg-gray-300 flex items-center justify-center">
-            {videoUrl && (
-              <div className="h-28 w-36 flex-shrink-0">
+              {videoUrl ? (
                 <video
                   src={videoUrl}
                   controls
                   className="h-full w-full object-cover"
                 />
-              </div>
-            )}
+              ) : (
+                <p>Không có video</p>
+              )}
             </div>
           </div>
           <div className="mt-4 grid grid-cols-3 gap-4">
@@ -84,7 +84,11 @@ const InformationProducts = () => {
           </div>
 
           <div className="mt-4">
-            <p><strong>Mô tả:</strong> {product.description}</p>
+           <strong>Mô tả:</strong>
+          <p className="scroll__managerProduct">
+            {product.description}
+          </p>
+
           </div>
 
           <div className="mt-4">

@@ -176,7 +176,7 @@ const ViewProducts = () => {
 
           <div className="p-4">
             <h4 className="font-bold">Mô tả sản phẩm</h4>
-            <div className="min-h-[140px] mx-2 mt-2 rounded">
+            <div className="scroll__viewInformation mx-2 mt-2 rounded">
               <p>{product?.description}</p>
             </div>
           </div>

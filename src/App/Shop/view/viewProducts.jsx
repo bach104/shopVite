@@ -140,7 +140,6 @@ const ViewProducts = () => {
             ref={scrollRef}
             className="flex gap-2 overflow-x-auto max-w-full whitespace-nowrap scroll-smooth no-scrollbar"
           >
-            {/* Hiển thị video đầu tiên nếu có */}
             {videoUrl && (
               <div className="h-28 w-36 flex-shrink-0">
                 <video
@@ -150,8 +149,6 @@ const ViewProducts = () => {
                 />
               </div>
             )}
-
-            {/* Hiển thị các hình ảnh */}
             {product?.images?.map((img, index) => {
               const imgUrl = `${getBaseUrl()}/${img.replace(/\\/g, "/")}`;
               return (

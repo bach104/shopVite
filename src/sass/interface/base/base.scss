@@ -15,6 +15,11 @@
 input[type="checkbox"] {
     accent-color: black;
 }
+
+.scroll__listX{
+    overflow-x:scroll;
+    width: 100%;
+}
 .introduce__grid,
 .product__grid {
     max-width: $max-width-1400;

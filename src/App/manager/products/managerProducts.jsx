@@ -76,7 +76,7 @@ const ManagerProducts = () => {
               <div className="flex items-end h-full">
                 <button
                   className="flex bg-black bg-opacity-70 hover:bg-opacity-90 transition h-12 items-center w-40 text-white px-4 py-2 rounded-sm"
-                  onClick={() => navigate(`/admin-manager/products/${product._id}`)} // Sửa đường dẫn điều hướng
+                  onClick={() => navigate(`products/${product._id}`)} 
                 >
                   Chi tiết sản phẩm
                 </button>

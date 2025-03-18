@@ -4,10 +4,11 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useGetProductByIdQuery } from "../../../redux/features/shop/productsApi";
 import UpdateProducts from "./updateProducts";
+import { getBaseUrl } from "../../../utils/baseURL";
 
 const InformationProducts = () => {
   const { id } = useParams();
-  const { data: product, isLoading, isError } = useGetProductByIdQuery(id);
+  const { data: productData, isLoading, isError } = useGetProductByIdQuery(id);
 
   const [showUpdateProducts, setShowUpdateProducts] = useState(false);
 
@@ -22,13 +23,12 @@ const InformationProducts = () => {
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading product details</div>;
-  if (!product) return <div>Không tìm thấy sản phẩm</div>;
+  if (!productData || !productData.product) return <div>Không tìm thấy sản phẩm</div>;
 
-  const images = product.images || [];
-  const colors = product.color || [];
-  const sizes = product.size || [];
-  const video = product.video?.[0] || null;
-
+  const product = productData.product; 
+  const videoUrl = product?.video?.[0]
+      ? `${getBaseUrl()}/${product.video[0].replace(/\\/g, "/")}`
+      : null;
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -38,41 +38,40 @@ const InformationProducts = () => {
             className="absolute top-4 right-4 cursor-pointer text-2xl hover:opacity-50 transition"
             onClick={() => window.history.back()}
           />
-          <h2 className="text-xl font-semibold">Tên sản phẩm: {product.name}</h2>
+          <h2 className="text-xl"><b>Tên sản phẩm:</b> {product.name}</h2>
 
           <div className="mt-4">
             <p className="font-semibold">Ảnh</p>
-            <div className="grid grid-cols-5 gap-2">
-              {images.map((img, index) => (
-                <div key={index} className="w-32 h-32 bg-gray-300 flex items-center justify-center">
-                  {img ? (
+            <div className="flex scroll__listX ">
+              {product.images.map((img, index) => {
+                const imageUrl = img ? `${getBaseUrl()}/${img.replace(/\\/g, "/")}` : "https://via.placeholder.com/112";
+                return (
+                  <div key={index} className="w-32 h-32 bg-gray-300 flex items-center justify-center">
                     <img
-                      src={img}
+                      src={imageUrl}
                       alt={`Ảnh ${index}`}
-                      className="w-full h-full object-cover"
+                      className="w-32 h-32  object-cover"
                     />
-                  ) : (
-                    "+"
-                  )}
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           <div className="mt-4">
             <p className="font-semibold">Video:</p>
             <div className="w-40 h-32 bg-gray-300 flex items-center justify-center">
-              {video ? (
-                <video controls className="w-full h-full object-cover">
-                  <source src={video} type="video/mp4" />
-                  Trình duyệt của bạn không hỗ trợ video.
-                </video>
-              ) : (
-                "+"
-              )}
+            {videoUrl && (
+              <div className="h-28 w-36 flex-shrink-0">
+                <video
+                  src={videoUrl}
+                  controls
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            )}
             </div>
           </div>
-
           <div className="mt-4 grid grid-cols-3 gap-4">
             <p><strong>Loại:</strong> {product.category}</p>
             <p><strong>Mùa:</strong> {product.season}</p>
@@ -94,11 +93,11 @@ const InformationProducts = () => {
           </div>
 
           <div className="mt-4">
-            <p><strong>Màu sắc:</strong> {colors.join(", ")}</p>
+            <p><strong>Màu sắc:</strong> {product.color.join(", ")}</p>
           </div>
 
           <div className="mt-4">
-            <p><strong>Kích thước:</strong> {sizes.join(", ")}</p>
+            <p><strong>Kích thước:</strong> {product.size.join(", ")}</p>
           </div>
 
           <div className="flex justify-end">

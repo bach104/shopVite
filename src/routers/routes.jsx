@@ -14,7 +14,7 @@ import ShoppingCart from "../App/cart/ShoppingCart/ShoppingCart";
 import Confirmation from "../App/cart/confirmation/Confirmation";
 import Delivery from "../App/cart/delivery/Delivery";
 import Delivered from "../App/cart/delivered/Delivered";
-import AdminManager from "../App/auth/admin/AdminManager";
+import AdminManager from "../App/auth/managerAdmin/AdminManager";
 import ManagerProducts from "../App/managerAdmin/products/managerProducts";
 import ManagerAuths from "../App/managerAdmin/auth/managerAuths";
 import ManagerCart from "../App/managerAdmin/cart/managerCart";

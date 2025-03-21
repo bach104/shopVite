@@ -16,19 +16,16 @@ const InformationProducts = () => {
     setShowUpdateProducts(true);
   };
 
-  const handleSave = (updatedProduct) => {
-    console.log("Thông tin sản phẩm đã cập nhật:", updatedProduct);
-    setShowUpdateProducts(false);
-  };
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading product details</div>;
   if (!productData || !productData.product) return <div>Không tìm thấy sản phẩm</div>;
 
-  const product = productData.product; 
+  const product = productData.product;
   const videoUrl = product?.video?.[0]
-      ? `${getBaseUrl()}/${product.video[0].replace(/\\/g, "/")}`
-      : null;
+    ? `${getBaseUrl()}/${product.video[0].replace(/\\/g, "/")}`
+    : null;
+
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -40,6 +37,7 @@ const InformationProducts = () => {
           />
           <h2 className="text-xl"><b>Tên sản phẩm:</b> {product.name}</h2>
 
+          {/* Hiển thị hình ảnh */}
           <div className="mt-4">
             <p className="font-semibold">Ảnh</p>
             <div className="flex scroll__listX gap-2">
@@ -50,7 +48,7 @@ const InformationProducts = () => {
                     <img
                       src={imageUrl}
                       alt={`Ảnh ${index + 1} của sản phẩm`}
-                      className="w-32 h-32 object-cover block"
+                      className="w-full h-full object-cover block"
                     />
                   </div>
                 );
@@ -58,6 +56,7 @@ const InformationProducts = () => {
             </div>
           </div>
 
+          {/* Hiển thị video */}
           <div className="mt-4">
             <p className="font-semibold">Video:</p>
             <div className="w-40 h-32 bg-gray-300 flex items-center justify-center">
@@ -72,11 +71,14 @@ const InformationProducts = () => {
               )}
             </div>
           </div>
+
+          {/* Hiển thị thông tin chi tiết */}
           <div className="mt-4 grid grid-cols-3 gap-4">
             <p><strong>Loại:</strong> {product.category}</p>
             <p><strong>Mùa:</strong> {product.season}</p>
             <p><strong>Chất liệu:</strong> {product.material}</p>
           </div>
+
           <div className="mt-4">
             <p><strong>Giá nhập:</strong> {product.importPrice}đ</p>
             <p><strong>Giá cũ:</strong> {product.oldPrice ? `${product.oldPrice}đ` : "Không có"}</p>
@@ -84,11 +86,10 @@ const InformationProducts = () => {
           </div>
 
           <div className="mt-4">
-           <strong>Mô tả:</strong>
-          <p className="scroll__managerProduct">
-            {product.description}
-          </p>
-
+            <strong>Mô tả:</strong>
+            <p className="scroll__managerProduct">
+              {product.description}
+            </p>
           </div>
 
           <div className="mt-4">
@@ -104,6 +105,7 @@ const InformationProducts = () => {
             <p><strong>Kích thước:</strong> {product.size.join(", ")}</p>
           </div>
 
+          {/* Nút chỉnh sửa */}
           <div className="flex justify-end">
             <button
               className="mt-6 px-4 py-2 bg-black text-white rounded"
@@ -115,12 +117,12 @@ const InformationProducts = () => {
         </div>
       </div>
 
+      {/* Hiển thị form chỉnh sửa */}
       {showUpdateProducts && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <UpdateProducts
             product={product}
             onClose={() => setShowUpdateProducts(false)}
-            onSave={handleSave}
           />
         </div>
       )}

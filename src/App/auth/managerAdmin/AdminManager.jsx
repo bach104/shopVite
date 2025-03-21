@@ -58,5 +58,4 @@ const AdminManager = () => {
     </div>
   )
 }
-
 export default AdminManager

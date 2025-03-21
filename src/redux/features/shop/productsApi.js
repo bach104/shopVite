@@ -74,8 +74,8 @@ export const productApi = createApi({
       }),
       invalidatesTags: [{ type: "Product", id: "LIST" }],
     }),
-    editProduct: builder.mutation({
-      query: ({ id, ...productData }) => ({
+    updateProduct: builder.mutation({
+      query: ({ id, productData }) => ({
         url: `/products/${id}`,
         method: "PUT",
         body: productData,
@@ -87,6 +87,7 @@ export const productApi = createApi({
       ],
     }),
   }),
+
 });
 
 export const {
@@ -100,5 +101,5 @@ export const {
   useLazyGetProductsBySearchQuery,
   useGetRandomProductsQuery,
   useAddProductMutation,
-  useEditProductMutation, 
+  useUpdateProductMutation,
 } = productApi;

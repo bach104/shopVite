@@ -15,12 +15,12 @@ import Confirmation from "../App/cart/confirmation/Confirmation";
 import Delivery from "../App/cart/delivery/Delivery";
 import Delivered from "../App/cart/delivered/Delivered";
 import AdminManager from "../App/auth/admin/AdminManager";
-import ManagerProducts from "../App/manager/products/managerProducts";
-import ManagerAuths from "../App/manager/auth/managerAuths";
-import ManagerCart from "../App/manager/cart/managerCart";
-import ManagerTransport from "../App/manager/transport/managerTransport";
-import ManagerStatistical from "../App/manager/statistical/managerStatistical";
-import InformationProducts from "../App/manager/products/informationProducts";
+import ManagerProducts from "../App/managerAdmin/products/managerProducts";
+import ManagerAuths from "../App/managerAdmin/auth/managerAuths";
+import ManagerCart from "../App/managerAdmin/cart/managerCart";
+import ManagerTransport from "../App/managerAdmin/transport/managerTransport";
+import ManagerStatistical from "../App/managerAdmin/statistical/managerStatistical";
+import InformationProducts from "../App/managerAdmin/products/informationProducts";
 const router = createBrowserRouter([
   {
     path: "/",

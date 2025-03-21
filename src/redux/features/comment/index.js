@@ -15,6 +15,27 @@ export const productApi = createApi({
         color: response.color || [],
       }),
     }),
+    addProduct: builder.mutation({
+      query: (productData) => ({
+        url: "/products/addProducts",
+        method: "POST",
+        body: productData,
+        credentials: "include",
+      }),
+      invalidatesTags: [{ type: "Product", id: "LIST" }],
+    }),
+    editProduct: builder.mutation({
+      query: ({ id, ...productData }) => ({
+        url: `/products/${id}`,
+        method: "PUT",
+        body: productData,
+        credentials: "include",
+      }),
+      invalidatesTags: (result, error, { id }) => [
+        { type: "Product", id },
+        { type: "Product", id: "LIST" },
+      ],
+    }),
   }),
 });
 

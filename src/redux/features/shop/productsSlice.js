@@ -29,6 +29,13 @@ const productsSlice = createSlice({
       })
       .addMatcher(productApi.endpoints.addProduct.matchFulfilled, (state, action) => {
         state.products.push(action.payload.product);
+      })
+      .addMatcher(productApi.endpoints.editProduct.matchFulfilled, (state, action) => {
+        const updatedProduct = action.payload.updatedProduct;
+        const index = state.products.findIndex(product => product._id === updatedProduct._id);
+        if (index !== -1) {
+          state.products[index] = updatedProduct;
+        }
       });
   },
 });

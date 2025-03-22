@@ -19,10 +19,13 @@ const UpdateProducts = ({ product, onClose }) => {
     color: product.color.join(", "),
     season: product.season,
     images: product.images,
-    video: product.video?.[0] || "", // Lấy phần tử đầu tiên của mảng video
+    video: product.video || "",
   });
   const [newImages, setNewImages] = useState([]);
   const [newVideo, setNewVideo] = useState(null);
+  const [error, setError] = useState("");
+  const [customCategory, setCustomCategory] = useState("");
+  const [customMaterial, setCustomMaterial] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,25 +33,53 @@ const UpdateProducts = ({ product, onClose }) => {
       ...formData,
       [name]: value,
     });
+
+    if (name === "category" && value !== "Khác...") {
+      setCustomCategory("");
+    } else if (name === "material" && value !== "Khác...") {
+      setCustomMaterial("");
+    }
   };
 
+ 
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
     const totalImages = formData.images.length + newImages.length + files.length;
 
+   
     if (totalImages > 8) {
-      alert("Bạn chỉ có thể tải lên tối đa 8 hình ảnh.");
+      setError("Bạn chỉ có thể tải lên tối đa 8 hình ảnh.");
       return;
     }
 
     setNewImages((prev) => [...prev, ...files]);
+    setError("");
   };
 
+ 
   const handleVideoChange = (e) => {
     const file = e.target.files[0];
     setNewVideo(file);
   };
 
+ 
+  const handleRemoveImage = (index, isNewImage) => {
+    if (isNewImage) {
+      const updatedNewImages = newImages.filter((_, i) => i !== index);
+      setNewImages(updatedNewImages);
+    } else {
+      const updatedImages = formData.images.filter((_, i) => i !== index);
+      setFormData({ ...formData, images: updatedImages });
+    }
+  };
+
+ 
+  const handleRemoveVideo = () => {
+    setNewVideo(null);
+    setFormData({ ...formData, video: "" });
+  };
+
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -58,17 +89,33 @@ const UpdateProducts = ({ product, onClose }) => {
         color: formData.color.split(",").map((c) => c.trim()),
       };
 
+     
+      if (formData.category === "Khác..." && customCategory) {
+        updatedData.category = customCategory;
+      }
+      if (formData.material === "Khác..." && customMaterial) {
+        updatedData.material = customMaterial;
+      }
+
       const formDataToSend = new FormData();
       Object.entries(updatedData).forEach(([key, value]) => {
         formDataToSend.append(key, value);
       });
 
+     
+      formDataToSend.append("existingImages", JSON.stringify(formData.images));
+     
       newImages.forEach((file) => {
         formDataToSend.append("images", file);
       });
 
+     
       if (newVideo) {
         formDataToSend.append("video", newVideo);
+      } else if (formData.video === "") {
+        formDataToSend.append("video", "");
+      } else {
+        formDataToSend.append("video", formData.video);
       }
 
       await updateProduct({ id: product._id, productData: formDataToSend });
@@ -78,37 +125,45 @@ const UpdateProducts = ({ product, onClose }) => {
     }
   };
 
+ 
   const displayImages = [
-    ...formData.images.map((img) => ({
+    ...formData.images.map((img, index) => ({
       url: `${getBaseUrl()}/${img.replace(/\\/g, "/")}`,
       isNew: false,
+      index,
     })),
-    ...newImages.map((file) => ({
+    ...newImages.map((file, index) => ({
       url: URL.createObjectURL(file),
       isNew: true,
+      index,
     })),
   ];
 
-  // Kiểm tra xem có video hiện tại hay không
+ 
   const hasExistingVideo = formData.video && typeof formData.video === "string" && formData.video.trim() !== "";
 
-  // Hiển thị video hiện tại hoặc video mới
+ 
   const displayVideo = newVideo
     ? URL.createObjectURL(newVideo)
     : hasExistingVideo
     ? `${getBaseUrl()}/${formData.video.replace(/\\/g, "/")}`
     : null;
 
+ 
   const isMaxImagesReached = displayImages.length >= 8;
 
   return (
     <div className="bg-gray-200 p-6 relative rounded-lg w-full max-w-4xl mx-auto">
+      {/* Nút đóng form */}
       <FontAwesomeIcon
         icon={faXmark}
         className="absolute text-2xl transition hover:opacity-60 top-4 right-4 cursor-pointer"
         onClick={onClose}
       />
+
+      {/* Form cập nhật sản phẩm */}
       <form onSubmit={handleSubmit}>
+        {/* Tên sản phẩm */}
         <label className="block font-semibold">Tên sản phẩm:</label>
         <input
           type="text"
@@ -119,6 +174,7 @@ const UpdateProducts = ({ product, onClose }) => {
           placeholder="Nhập tên cần thay đổi"
         />
 
+        {/* Loại, chất liệu, mùa */}
         <div className="flex gap-4 mt-4">
           <div className="flex-1">
             <label className="font-semibold">Loại:</label>
@@ -134,6 +190,15 @@ const UpdateProducts = ({ product, onClose }) => {
               <option value="Quần">Quần</option>
               <option value="Khác...">Khác...</option>
             </select>
+            {formData.category === "Khác..." && (
+              <input
+                type="text"
+                value={customCategory}
+                onChange={(e) => setCustomCategory(e.target.value)}
+                className="w-full p-2 rounded mt-2"
+                placeholder="Nhập loại sản phẩm"
+              />
+            )}
           </div>
 
           <div className="flex-1">
@@ -149,6 +214,15 @@ const UpdateProducts = ({ product, onClose }) => {
               <option value="Cotton">Cotton</option>
               <option value="Khác...">Khác...</option>
             </select>
+            {formData.material === "Khác..." && (
+              <input
+                type="text"
+                value={customMaterial}
+                onChange={(e) => setCustomMaterial(e.target.value)}
+                className="w-full p-2 rounded mt-2"
+                placeholder="Nhập chất liệu"
+              />
+            )}
           </div>
 
           <div className="flex-1">
@@ -167,6 +241,7 @@ const UpdateProducts = ({ product, onClose }) => {
           </div>
         </div>
 
+        {/* Giá nhập, giá cũ, giá hiện tại, số lượng */}
         <div className="grid grid-cols-2 gap-4 mt-4">
           <input
             type="number"
@@ -202,6 +277,7 @@ const UpdateProducts = ({ product, onClose }) => {
           />
         </div>
 
+        {/* Mô tả sản phẩm */}
         <div className="mt-4">
           <textarea
             name="description"
@@ -212,6 +288,7 @@ const UpdateProducts = ({ product, onClose }) => {
           />
         </div>
 
+        {/* Màu sắc */}
         <div className="mt-4">
           <label className="block font-semibold">Màu sắc:</label>
           <input
@@ -224,6 +301,7 @@ const UpdateProducts = ({ product, onClose }) => {
           />
         </div>
 
+        {/* Kích thước */}
         <div className="mt-4">
           <label className="block font-semibold">Kích thước:</label>
           <input
@@ -241,20 +319,19 @@ const UpdateProducts = ({ product, onClose }) => {
           <label className="block font-semibold">Ảnh:</label>
           <div className="flex gap-4 flex-wrap">
             {displayImages.map((img, index) => (
-              <div
-                key={index}
-                className="w-20 h-20 bg-gray-300 flex items-center justify-center rounded relative"
-              >
+              <div key={index} className="relative w-20 h-20 bg-gray-300 flex items-center justify-center rounded">
                 <img
                   src={img.url}
                   alt={`Ảnh ${index + 1}`}
                   className="w-full h-full object-cover rounded"
                 />
-                {img.isNew && (
-                  <span className="absolute top-1 right-1 bg-green-500 text-white text-xs px-1 rounded">
-                    Mới
-                  </span>
-                )}
+                <button
+                  type="button"
+                  className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center"
+                  onClick={() => handleRemoveImage(index, img.isNew)}
+                >
+                  &times;
+                </button>
               </div>
             ))}
             {!isMaxImagesReached && (
@@ -270,14 +347,9 @@ const UpdateProducts = ({ product, onClose }) => {
               </label>
             )}
           </div>
-          {isMaxImagesReached && (
-            <p className="text-sm text-red-500 mt-2">
-              Bạn đã đạt tối đa 8 hình ảnh.
-            </p>
-          )}
+          {error && <p className="text-red-500">{error}</p>}
         </div>
 
-        {/* Hiển thị video */}
         <div className="mt-4">
           <label className="block font-semibold">Video:</label>
           <div className="">
@@ -301,9 +373,19 @@ const UpdateProducts = ({ product, onClose }) => {
                 className="hidden"
               />
             </label>
+            {(hasExistingVideo || newVideo) && (
+              <button
+                type="button"
+                className="bg-red-500 text-white px-2 py-1 rounded mt-2"
+                onClick={handleRemoveVideo}
+              >
+                Xóa video
+              </button>
+            )}
           </div>
         </div>
 
+        {/* Nút cập nhật */}
         <div className="flex justify-end">
           <button
             type="submit"

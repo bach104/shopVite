@@ -16,7 +16,6 @@ const InformationProducts = () => {
     setShowUpdateProducts(true);
   };
 
-
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading product details</div>;
   if (!productData || !productData.product) return <div>Không tìm thấy sản phẩm</div>;
@@ -36,8 +35,6 @@ const InformationProducts = () => {
             onClick={() => window.history.back()}
           />
           <h2 className="text-xl"><b>Tên sản phẩm:</b> {product.name}</h2>
-
-          {/* Hiển thị hình ảnh */}
           <div className="mt-4">
             <p className="font-semibold">Ảnh</p>
             <div className="flex scroll__listX gap-2">
@@ -56,7 +53,6 @@ const InformationProducts = () => {
             </div>
           </div>
 
-          {/* Hiển thị video */}
           <div className="mt-4">
             <p className="font-semibold">Video:</p>
             <div className="w-40 h-32 bg-gray-300 flex items-center justify-center">
@@ -72,7 +68,6 @@ const InformationProducts = () => {
             </div>
           </div>
 
-          {/* Hiển thị thông tin chi tiết */}
           <div className="mt-4 grid grid-cols-3 gap-4">
             <p><strong>Loại:</strong> {product.category}</p>
             <p><strong>Mùa:</strong> {product.season}</p>
@@ -104,8 +99,6 @@ const InformationProducts = () => {
           <div className="mt-4">
             <p><strong>Kích thước:</strong> {product.size.join(", ")}</p>
           </div>
-
-          {/* Nút chỉnh sửa */}
           <div className="flex justify-end">
             <button
               className="mt-6 px-4 py-2 bg-black text-white rounded"
@@ -117,11 +110,13 @@ const InformationProducts = () => {
         </div>
       </div>
 
-      {/* Hiển thị form chỉnh sửa */}
       {showUpdateProducts && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <UpdateProducts
-            product={product}
+            product={{
+              ...product,
+              video: product?.video?.[0] || "", // Truyền video đúng cách
+            }}
             onClose={() => setShowUpdateProducts(false)}
           />
         </div>

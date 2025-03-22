@@ -18,6 +18,8 @@ const AddProducts = ({ onClose }) => {
   const [images, setImages] = useState([]);
   const [video, setVideo] = useState(null);
   const [error, setError] = useState("");
+  const [customCategory, setCustomCategory] = useState(""); // State cho loại tùy chỉnh
+  const [customMaterial, setCustomMaterial] = useState(""); // State cho chất liệu tùy chỉnh
 
   const [addProduct] = useAddProductMutation();
 
@@ -47,7 +49,7 @@ const AddProducts = ({ onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     // Validate required fields
     if (!name || name.trim() === "") {
       setError("Vui lòng nhập Tên sản phẩm.");
@@ -75,7 +77,11 @@ const AddProducts = ({ onClose }) => {
       setError("Tối đa được phép có 8 hình ảnh.");
       return;
     }
-  
+
+    // Sử dụng giá trị tùy chỉnh nếu có
+    const finalCategory = category === "Khác..." && customCategory ? customCategory : category;
+    const finalMaterial = material === "Khác..." && customMaterial ? customMaterial : material;
+
     // Prepare FormData
     const formData = new FormData();
     formData.append("name", name);
@@ -83,8 +89,8 @@ const AddProducts = ({ onClose }) => {
     if (oldPrice) formData.append("oldPrice", parseFloat(oldPrice)); // Chỉ thêm oldPrice nếu có giá trị
     formData.append("price", parseFloat(price));
     formData.append("description", description);
-    formData.append("material", material);
-    formData.append("category", category);
+    formData.append("material", finalMaterial);
+    formData.append("category", finalCategory);
     formData.append("quantity", parseInt(quantity));
     formData.append("size", size);
     formData.append("color", color);
@@ -93,17 +99,16 @@ const AddProducts = ({ onClose }) => {
       formData.append("images", image);
     });
     if (video) formData.append("video", video);
-  
+
     try {
       const response = await addProduct(formData).unwrap();
       console.log("Sản phẩm đã được thêm:", response);
-      onClose(); 
+      onClose();
     } catch (err) {
       console.error("Lỗi khi thêm sản phẩm:", err);
       setError(err.data?.message || "Lỗi khi thêm sản phẩm.");
     }
   };
-
 
   return (
     <div className="bg-gray-200 p-6 relative rounded-lg w-full max-w-4xl mx-auto">
@@ -125,7 +130,7 @@ const AddProducts = ({ onClose }) => {
         />
 
         <div className="flex gap-4 mt-4">
-          <div className="">
+          <div className="flex-1">
             <label className="font-semibold">Loại:</label>
             <select
               className="p-2 rounded w-full"
@@ -139,11 +144,21 @@ const AddProducts = ({ onClose }) => {
               <option value="Áo">Áo</option>
               <option value="Quần">Quần</option>
               <option value="Set đồ nữ">Set đồ nữ</option>
-              <option value="Set đồ nữ">Set đồ nam</option>
+              <option value="Set đồ nam">Set đồ nam</option>
               <option value="Khác...">Khác...</option>
             </select>
+            {category === "Khác..." && (
+              <input
+                type="text"
+                value={customCategory}
+                onChange={(e) => setCustomCategory(e.target.value)}
+                className="w-full p-2 rounded mt-2"
+                placeholder="Nhập loại sản phẩm"
+              />
+            )}
           </div>
-          <div className="">
+
+          <div className="flex-1">
             <label className="font-semibold">Chất Liệu:</label>
             <select
               className="p-2 rounded w-full"
@@ -157,8 +172,18 @@ const AddProducts = ({ onClose }) => {
               <option value="Cotton">Cotton</option>
               <option value="Khác...">Khác...</option>
             </select>
+            {material === "Khác..." && (
+              <input
+                type="text"
+                value={customMaterial}
+                onChange={(e) => setCustomMaterial(e.target.value)}
+                className="w-full p-2 rounded mt-2"
+                placeholder="Nhập chất liệu"
+              />
+            )}
           </div>
-          <div className="">
+
+          <div className="flex-1">
             <label className="font-semibold">Mùa:</label>
             <select
               className="p-2 rounded w-full"
@@ -174,6 +199,7 @@ const AddProducts = ({ onClose }) => {
             </select>
           </div>
         </div>
+
         <div className="grid grid-cols-2 gap-4 mt-4">
           <input
             type="number"

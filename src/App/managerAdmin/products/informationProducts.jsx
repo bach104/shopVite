@@ -5,11 +5,9 @@ import { useParams } from "react-router-dom";
 import { useGetProductByIdQuery } from "../../../redux/features/shop/productsApi";
 import UpdateProducts from "./updateProducts";
 import { getBaseUrl } from "../../../utils/baseURL";
-
 const InformationProducts = () => {
   const { id } = useParams();
   const { data: productData, isLoading, isError } = useGetProductByIdQuery(id);
-
   const [showUpdateProducts, setShowUpdateProducts] = useState(false);
 
   const handleEdit = () => {
@@ -115,7 +113,7 @@ const InformationProducts = () => {
           <UpdateProducts
             product={{
               ...product,
-              video: product?.video?.[0] || "", // Truyền video đúng cách
+              video: product?.video?.[0] || "",
             }}
             onClose={() => setShowUpdateProducts(false)}
           />
@@ -124,5 +122,4 @@ const InformationProducts = () => {
     </>
   );
 };
-
 export default InformationProducts;

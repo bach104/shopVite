@@ -47,8 +47,8 @@ const UpdateProducts = ({ product, onClose }) => {
     const totalImages = formData.images.length + newImages.length + files.length;
 
    
-    if (totalImages > 8) {
-      setError("Bạn chỉ có thể tải lên tối đa 8 hình ảnh.");
+    if (totalImages > 15) {
+      setError("Bạn chỉ có thể tải lên tối đa 15 hình ảnh.");
       return;
     }
 
@@ -101,15 +101,10 @@ const UpdateProducts = ({ product, onClose }) => {
       Object.entries(updatedData).forEach(([key, value]) => {
         formDataToSend.append(key, value);
       });
-
-     
       formDataToSend.append("existingImages", JSON.stringify(formData.images));
-     
       newImages.forEach((file) => {
         formDataToSend.append("images", file);
       });
-
-     
       if (newVideo) {
         formDataToSend.append("video", newVideo);
       } else if (formData.video === "") {
@@ -124,8 +119,6 @@ const UpdateProducts = ({ product, onClose }) => {
       console.error("Error updating product:", error);
     }
   };
-
- 
   const displayImages = [
     ...formData.images.map((img, index) => ({
       url: `${getBaseUrl()}/${img.replace(/\\/g, "/")}`,
@@ -138,32 +131,22 @@ const UpdateProducts = ({ product, onClose }) => {
       index,
     })),
   ];
-
- 
   const hasExistingVideo = formData.video && typeof formData.video === "string" && formData.video.trim() !== "";
-
- 
   const displayVideo = newVideo
     ? URL.createObjectURL(newVideo)
     : hasExistingVideo
     ? `${getBaseUrl()}/${formData.video.replace(/\\/g, "/")}`
     : null;
-
- 
-  const isMaxImagesReached = displayImages.length >= 8;
-
+  const isMaxImagesReached = displayImages.length >= 15;
   return (
     <div className="bg-gray-200 p-6 relative rounded-lg w-full max-w-4xl mx-auto">
-      {/* Nút đóng form */}
       <FontAwesomeIcon
         icon={faXmark}
         className="absolute text-2xl transition hover:opacity-60 top-4 right-4 cursor-pointer"
         onClick={onClose}
       />
 
-      {/* Form cập nhật sản phẩm */}
       <form onSubmit={handleSubmit}>
-        {/* Tên sản phẩm */}
         <label className="block font-semibold">Tên sản phẩm:</label>
         <input
           type="text"
@@ -174,7 +157,6 @@ const UpdateProducts = ({ product, onClose }) => {
           placeholder="Nhập tên cần thay đổi"
         />
 
-        {/* Loại, chất liệu, mùa */}
         <div className="flex gap-4 mt-4">
           <div className="flex-1">
             <label className="font-semibold">Loại:</label>
@@ -241,7 +223,6 @@ const UpdateProducts = ({ product, onClose }) => {
           </div>
         </div>
 
-        {/* Giá nhập, giá cũ, giá hiện tại, số lượng */}
         <div className="grid grid-cols-2 gap-4 mt-4">
           <input
             type="number"
@@ -277,7 +258,6 @@ const UpdateProducts = ({ product, onClose }) => {
           />
         </div>
 
-        {/* Mô tả sản phẩm */}
         <div className="mt-4">
           <textarea
             name="description"
@@ -288,7 +268,6 @@ const UpdateProducts = ({ product, onClose }) => {
           />
         </div>
 
-        {/* Màu sắc */}
         <div className="mt-4">
           <label className="block font-semibold">Màu sắc:</label>
           <input
@@ -314,7 +293,6 @@ const UpdateProducts = ({ product, onClose }) => {
           />
         </div>
 
-        {/* Hiển thị hình ảnh */}
         <div className="mt-4">
           <label className="block font-semibold">Ảnh:</label>
           <div className="flex gap-4 flex-wrap">
@@ -385,7 +363,6 @@ const UpdateProducts = ({ product, onClose }) => {
           </div>
         </div>
 
-        {/* Nút cập nhật */}
         <div className="flex justify-end">
           <button
             type="submit"

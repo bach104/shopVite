@@ -173,7 +173,6 @@ const ViewProducts = () => {
               {product?.oldPrice?.toLocaleString("vi-VN")}đ
             </span>
           </p>
-
           <div className="p-4">
             <h4 className="font-bold">Mô tả sản phẩm</h4>
             <div className="scroll__viewInformation mx-2 mt-2 rounded">
@@ -197,9 +196,9 @@ const ViewProducts = () => {
             </div>
           </div>
 
-          <div className="mt-2 flex items-end gap-4">
-            <p className="text-sm font-semibold">Màu sắc:</p>
-            <div className="flex gap-2 mt-1">
+          <div className="mt-2 gap-4">
+            <p className="text-sm w-36 font-semibold">Màu sắc:</p>
+            <div className="flex flex-wrap gap-2 mt-1">
               {product?.color?.map((color) => (
                 <button
                   key={color}
@@ -242,5 +241,4 @@ const ViewProducts = () => {
     </div>
   );
 };
-
 export default ViewProducts;

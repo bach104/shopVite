@@ -18,15 +18,15 @@ const AddProducts = ({ onClose }) => {
   const [images, setImages] = useState([]);
   const [video, setVideo] = useState(null);
   const [error, setError] = useState("");
-  const [customCategory, setCustomCategory] = useState(""); // State cho loại tùy chỉnh
-  const [customMaterial, setCustomMaterial] = useState(""); // State cho chất liệu tùy chỉnh
+  const [customCategory, setCustomCategory] = useState(""); 
+  const [customMaterial, setCustomMaterial] = useState(""); 
 
   const [addProduct] = useAddProductMutation();
 
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
-    if (files.length + images.length > 8) {
-      setError("Tối đa được phép có 8 hình ảnh.");
+    if (files.length + images.length > 15) {
+      setError("Tối đa được phép có 15 hình ảnh.");
       return;
     }
     setImages([...images, ...files]);
@@ -49,8 +49,6 @@ const AddProducts = ({ onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validate required fields
     if (!name || name.trim() === "") {
       setError("Vui lòng nhập Tên sản phẩm.");
       return;
@@ -73,20 +71,18 @@ const AddProducts = ({ onClose }) => {
       setError("Cần ít nhất 3 hình ảnh.");
       return;
     }
-    if (images.length > 8) {
-      setError("Tối đa được phép có 8 hình ảnh.");
+    if (images.length > 15) {
+      setError("Tối đa được phép có 15 hình ảnh.");
       return;
     }
 
-    // Sử dụng giá trị tùy chỉnh nếu có
     const finalCategory = category === "Khác..." && customCategory ? customCategory : category;
     const finalMaterial = material === "Khác..." && customMaterial ? customMaterial : material;
 
-    // Prepare FormData
     const formData = new FormData();
     formData.append("name", name);
     formData.append("importPrice", parseFloat(importPrice));
-    if (oldPrice) formData.append("oldPrice", parseFloat(oldPrice)); // Chỉ thêm oldPrice nếu có giá trị
+    if (oldPrice) formData.append("oldPrice", parseFloat(oldPrice)); 
     formData.append("price", parseFloat(price));
     formData.append("description", description);
     formData.append("material", finalMaterial);
@@ -102,7 +98,7 @@ const AddProducts = ({ onClose }) => {
 
     try {
       const response = await addProduct(formData).unwrap();
-      console.log("Sản phẩm đã được thêm:", response);
+      console.log("Sản phẩm đã được thêm:", response)
       onClose();
     } catch (err) {
       console.error("Lỗi khi thêm sản phẩm:", err);
@@ -117,7 +113,6 @@ const AddProducts = ({ onClose }) => {
         className="absolute text-2xl transition hover:opacity-60 top-4 right-4 cursor-pointer"
         onClick={onClose}
       />
-
       <form onSubmit={handleSubmit}>
         <label className="block font-semibold">Tên sản phẩm:</label>
         <input
@@ -128,7 +123,6 @@ const AddProducts = ({ onClose }) => {
           onChange={(e) => setName(e.target.value)}
           required
         />
-
         <div className="flex gap-4 mt-4">
           <div className="flex-1">
             <label className="font-semibold">Loại:</label>
@@ -196,6 +190,7 @@ const AddProducts = ({ onClose }) => {
               <option value="Thu">Thu</option>
               <option value="Hạ">Hạ</option>
               <option value="Xuân">Xuân</option>
+              <option value="Đông Thu Hạ Xuân">Tất cả</option>
             </select>
           </div>
         </div>
@@ -287,7 +282,7 @@ const AddProducts = ({ onClose }) => {
                 </button>
               </div>
             ))}
-            {images.length < 8 && (
+            {images.length < 15 && (
               <label className="w-20 h-20 bg-gray-500 flex items-center justify-center rounded cursor-pointer">
                 <span className="text-white text-2xl">+</span>
                 <input

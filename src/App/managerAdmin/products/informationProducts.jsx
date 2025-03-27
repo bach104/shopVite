@@ -13,7 +13,6 @@ const InformationProducts = () => {
   const handleEdit = () => {
     setShowUpdateProducts(true);
   };
-
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading product details</div>;
   if (!productData || !productData.product) return <div>Không tìm thấy sản phẩm</div>;

@@ -86,6 +86,19 @@ export const productApi = createApi({
         { type: "Product", id: "LIST" },
       ],
     }),
+    deleteProduct: builder.mutation({
+      query: (deleteData) => ({
+        url: '/products/delete',
+        method: 'DELETE',
+        body: deleteData,
+        credentials: 'include',
+      }),
+      invalidatesTags: (result, error, arg) => [
+        { type: 'Product', id: 'LIST' },
+        ...(arg.productId ? [{ type: 'Product', id: arg.productId }] : []),
+        ...(arg.productIds ? arg.productIds.map(id => ({ type: 'Product', id })) : []),
+      ],
+    }),
   }),
 
 });
@@ -102,4 +115,5 @@ export const {
   useGetRandomProductsQuery,
   useAddProductMutation,
   useUpdateProductMutation,
+  useDeleteProductMutation,
 } = productApi;

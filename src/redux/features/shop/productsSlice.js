@@ -36,6 +36,15 @@ const productsSlice = createSlice({
         if (index !== -1) {
           state.products[index] = updatedProduct; 
         }
+      })
+      .addMatcher(productApi.endpoints.deleteProduct.matchFulfilled, (state, action) => {
+        const { productId, productIds } = action.meta.arg.originalArgs;
+        
+        if (productId) {
+          state.products = state.products.filter(product => product._id !== productId);
+        } else if (productIds && Array.isArray(productIds)) {
+          state.products = state.products.filter(product => !productIds.includes(product._id));
+        }
       });
   },
 });

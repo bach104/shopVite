@@ -7,11 +7,19 @@ const loadUserFromLocalStorage = () => {
     return {
       user: user ? JSON.parse(user) : null,
       token: token || null,
-      error: null, // Thêm trạng thái lỗi
+      error: null,
+      usersList: null, 
+      pagination: null, 
     };
   } catch (err) {
     console.error('Error deserializing user from localStorage:', err);
-    return { user: null, token: null, error: null };
+    return { 
+      user: null, 
+      token: null, 
+      error: null,
+      usersList: null,
+      pagination: null,
+    };
   }
 };
 
@@ -33,7 +41,9 @@ const authSlice = createSlice({
     logout: (state) => {
       state.user = null;
       state.token = null;
-      state.error = null; // Xóa lỗi khi đăng xuất
+      state.error = null;
+      state.usersList = null;
+      state.pagination = null;
       localStorage.removeItem('user');
       localStorage.removeItem('token');
     },
@@ -46,10 +56,27 @@ const authSlice = createSlice({
         state.token = action.payload.token;
         localStorage.setItem('token', action.payload.token);
       }
-      state.error = null; 
+      state.error = null;
+    },
+    
+    setUsersList: (state, action) => {
+      state.usersList = action.payload.users;
+      state.pagination = {
+        totalPages: action.payload.totalPages,
+        totalUsers: action.payload.totalUsers,
+        currentPage: action.payload.currentPage,
+        usersPerPage: action.payload.usersPerPage,
+      };
+    },
+    removeUsersFromList: (state, action) => {
+      if (state.usersList && Array.isArray(action.payload)) {
+        state.usersList = state.usersList.filter(
+          user => !action.payload.includes(user._id)
+        );
+      }
     },
     setError: (state, action) => {
-      state.error = action.payload; 
+      state.error = action.payload;
     },
     clearError: (state) => {
       state.error = null;
@@ -57,5 +84,13 @@ const authSlice = createSlice({
   },
 });
 
-export const { setUser, logout, updateUserInfo, setError, clearError } = authSlice.actions;
+export const { 
+  setUser, 
+  logout, 
+  updateUserInfo, 
+  setUsersList,
+  setError, 
+  clearError,
+  removeUsersFromList,
+} = authSlice.actions;
 export default authSlice.reducer;

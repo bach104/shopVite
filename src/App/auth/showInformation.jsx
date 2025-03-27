@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import avatarImg from "../../assets/img/avatar.png";
 import { getBaseUrl } from "../../utils/baseURL";
 import { useEffect, useState } from "react";
-
 const ShowInformation = () => {
   const user = useSelector((state) => state.auth?.user);
 

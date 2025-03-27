@@ -89,6 +89,72 @@ const authApi = createApi({
       },
       invalidatesTags: ['Users'],
     }),
+    getUsers: builder.query({
+      query: ({ 
+        page = 1, 
+        limit = 20, 
+        username, 
+        email, 
+        sortBy = 'createdAt', 
+        sortOrder = -1 
+      }) => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          throw new Error('Token không tồn tại. Vui lòng đăng nhập lại!');
+        }
+        
+        const params = new URLSearchParams();
+        params.append('page', page);
+        params.append('limit', limit);
+        if (username) params.append('username', username);
+        if (email) params.append('email', email);
+        params.append('sortBy', sortBy);
+        params.append('sortOrder', sortOrder);
+        
+        return {
+          url: '/',
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          params,
+        };
+      },
+      transformResponse: (response) => response,
+      transformErrorResponse: (response) => {
+        const errorMessage = response.data?.message || 'Lỗi khi tải danh sách người dùng';
+        return {
+          status: response.status,
+          data: errorMessage,
+        };
+      },
+      providesTags: ['Users'],
+    }),
+    removeUser: builder.mutation({
+      query: (userData) => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          throw new Error('Token không tồn tại. Vui lòng đăng nhập lại!');
+        }
+        return {
+          url: '/remove-users',
+          method: 'DELETE',
+          body: userData,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        };
+      },
+      transformResponse: (response) => response,
+      transformErrorResponse: (response) => {
+        const errorMessage = response.data?.message || 'Xóa người dùng thất bại. Vui lòng thử lại!';
+        return {
+          status: response.status,
+          data: errorMessage,
+        };
+      },
+      invalidatesTags: ['Users'],
+    }),
   }),
 });
 
@@ -96,6 +162,8 @@ export const {
   useRegisterUserMutation,
   useLoginUserMutation,
   useUpdateUserMutation,
+  useGetUsersQuery,
+  useRemoveUserMutation
 } = authApi;
 
 export default authApi;

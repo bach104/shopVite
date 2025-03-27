@@ -7,7 +7,7 @@ const AdminManager = () => {
     <div>
         <header className="cartManager">
             <div className="bg-black opacity-80">
-            <div className="items-center flex container-width">
+            <div className="items-center px-4 flex container-width">
                 <Link to="/" className=" text-white flex mt-4 w-10 h-full items-center transition hover:opacity-80 btn-comeBack">
                 <FontAwesomeIcon icon={faHouse} />
                 </Link>

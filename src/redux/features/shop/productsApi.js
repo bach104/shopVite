@@ -51,16 +51,6 @@ export const productApi = createApi({
         `/products/season/${season}?page=${page}&limit=${limit}`,
       providesTags: [{ type: "Product", id: "SEASON" }],
     }),
-    getProductsBySearch: builder.query({
-      query: ({ keyword, page = 1, limit = 20 }) =>
-        `/products/search/${encodeURIComponent(keyword)}?page=${page}&limit=${limit}`,
-      providesTags: [{ type: "Product", id: "SEARCH" }],
-      transformResponse: (response) => ({
-        products: response.products,
-        totalPages: response.totalPages,
-        totalProducts: response.totalProducts,
-      }),
-    }),
     getRandomProducts: builder.query({
       query: () => "/products/random",
       providesTags: [{ type: "Product", id: "RANDOM" }],
@@ -110,7 +100,6 @@ export const {
   useGetProductRatingQuery,
   useGetTopFeaturedProductsQuery,
   useGetProductsBySeasonQuery,
-  useGetProductsBySearchQuery,
   useLazyGetProductsBySearchQuery,
   useGetRandomProductsQuery,
   useAddProductMutation,

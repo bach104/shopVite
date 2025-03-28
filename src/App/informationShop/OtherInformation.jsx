@@ -5,21 +5,17 @@ const OtherInformation = () => {
        <div className="my-8">
             <div className="section__body product__list">
                 <h2 className="w-full p-4 font-bold text-2xl bg-gray-400">Thông tin khác về Shop Online</h2>
-
                 <div className="grid p-4 rounded-md gap-5 grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
                     <div className="w-full h-90 order-1 md:order-1 lg:col-span-1 lg:order-none">
                     <img src={img2} alt="Thông tin khác" className="object-cover h-full w-full rounded-md" />
                     </div>
-
                     <div className="order-2 md:order-2 lg:order-none lg:col-span-2">
                     <h2 className="w-full font-bold text-xl mt-4 md:mt-0">Khám Phá Thêm Về Shop Online</h2>
-                    
                     <p className="text-justify mt-3">
                         Shop Online không chỉ cung cấp các sản phẩm chất lượng mà còn mang đến dịch vụ hỗ trợ tận tâm.
                         Chúng tôi cam kết mang lại trải nghiệm mua sắm tuyệt vời với chính sách bảo mật minh bạch,
                         phạm vi hoạt động rộng khắp và các chương trình ưu đãi hấp dẫn.
                     </p>
-
                     <div className="grid gap-5 mt-4 grid-cols-1">
                         <div className="bg-gray-100 p-4 rounded-md shadow-md">
                         <h3 className="text-purple-600 font-bold text-lg">🌍 Phạm vi hoạt động</h3>

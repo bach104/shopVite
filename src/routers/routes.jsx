@@ -3,7 +3,7 @@ import App from "../App"
 import Home from "../App/Home/Home";
 import StoreName from "../App/store/Season";
 import Store from "../App/store/Store";
-import Products from "../App/Shop/search/Products";
+import Products from "../App/Shop/search/ProductsSearch";
 import InformationShop from "../App/informationShop/information";
 import InformationAuth  from "../App/auth/Information"
 import ShowProducts from "../App/Shop/view/showProducts";

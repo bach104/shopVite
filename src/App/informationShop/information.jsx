@@ -8,7 +8,7 @@ const information = () => {
     <>
         <section className="store__container relative">
             <StoreBanner />
-            <div className="absolute p-3 store__title top-10 left-10 z-40 rounded-md">
+            <div className="absolute p-3 store__title top-10 left-10 z-10 rounded-md">
             <h4 className="text-5xl text-white">
                 Giới thiệu về shop
             </h4>
@@ -18,9 +18,8 @@ const information = () => {
         <Introduce/>
         <OtherInformation/>
         <ContactInformation/>
-     
     </>
   )
 }
-
 export default information
+// tài liệu ses

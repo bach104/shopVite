@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
-import { useGetProductsQuery } from "../../../redux/features/shop/productsApi";
+import { 
+  useGetProductsQuery,
+  useDeleteProductMutation 
+} from "../../../redux/features/shop/productsApi";
 import { Outlet, useNavigate } from "react-router-dom";
 import AddProducts from "./addProducts";
 import { getBaseUrl } from "../../../utils/baseURL";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const ManagerProducts = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -10,12 +15,17 @@ const ManagerProducts = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [deleteSuccess, setDeleteSuccess] = useState(false);
   const navigate = useNavigate();
   
-  const { data, isLoading, isError } = useGetProductsQuery({
+  const { data, isLoading, isError, refetch } = useGetProductsQuery({
     page: currentPage,
     limit: 20,
   });
+
+  const [deleteProduct] = useDeleteProductMutation();
 
   useEffect(() => {
     if (data?.products) {
@@ -50,6 +60,47 @@ const ManagerProducts = () => {
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
+  };
+
+  const toggleEditMode = () => {
+    if (isEditing) {
+      setSelectedProducts([]);
+    }
+    setIsEditing(!isEditing);
+  };
+
+  const handleCheckboxChange = (productId) => {
+    setSelectedProducts(prev => {
+      if (prev.includes(productId)) {
+        return prev.filter(id => id !== productId);
+      } else {
+        return [...prev, productId];
+      }
+    });
+  };
+
+  const handleDeleteProducts = async () => {
+    try {
+      const deleteData = selectedProducts.length === 1 
+        ? { productId: selectedProducts[0] }
+        : { productIds: selectedProducts };
+
+      await deleteProduct(deleteData).unwrap();
+      
+      // Show success button
+      setDeleteSuccess(true);
+      
+      // Hide after 1 second and reset
+      setTimeout(() => {
+        setDeleteSuccess(false);
+        setSelectedProducts([]);
+        setIsEditing(false);
+        refetch();
+      }, 1000);
+      
+    } catch (error) {
+      console.error("Lỗi khi xóa sản phẩm:", error);
+    }
   };
 
   if (isLoading) return <div>Loading...</div>;
@@ -109,28 +160,64 @@ const ManagerProducts = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-end h-full">
-                  <button
-                    className="flex bg-black bg-opacity-70 hover:bg-opacity-90 transition items-center text-white px-4 py-2 rounded-sm"
-                    onClick={() => navigate(`products/${product._id}`)} 
-                  >
-                    Chi tiết sản phẩm
-                  </button>
+                <div className="flex flex-col justify-between h-full items-end">
+                  <input 
+                    type="checkbox" 
+                    className="h-5 w-5"
+                    checked={isEditing && selectedProducts.includes(product._id)}
+                    onChange={() => handleCheckboxChange(product._id)}
+                    style={{ visibility: isEditing ? 'visible' : 'hidden' }}
+                  />
+                  <div className="flex items-end h-full">
+                    <button
+                      className="flex bg-black bg-opacity-70 hover:bg-opacity-90 transition items-center text-white px-4 py-2 rounded-sm"
+                      onClick={() => navigate(`products/${product._id}`)} 
+                    >
+                      Chi tiết sản phẩm
+                    </button>
+                  </div>
                 </div>
               </nav>
             );
           })
         )}
       </div>
-      
       <div className="flex bg-black opacity-70 justify-between p-2 gap-2">
-        <button
-          className="text-white px-4 py-2 rounded-sm"
-          onClick={() => setShowAddProduct(true)}
-        >
-          Thêm sản phẩm
-        </button>
-        
+        <div>
+          <button
+            className="text-white px-4 py-2 hover:opacity-50 rounded-sm"
+            onClick={() => setShowAddProduct(true)}
+          >
+            Thêm sản phẩm
+          </button>
+          <button
+            className="text-white hover:opacity-50 px-4 py-2 rounded-sm"
+            onClick={toggleEditMode}
+          >
+            {isEditing ? (selectedProducts.length > 0 ? "Huỷ" : "Xong") : "Sửa"}
+          </button>
+        </div>
+        {isEditing && selectedProducts.length > 0 && (
+          <>
+            {deleteSuccess ? (
+              <button 
+                className="text-white bg-green-700 gap-4 flex items-center hover:bg-green-800 px-4 py-2 rounded-sm"
+                disabled
+              >
+                <FontAwesomeIcon icon={faCheck} />
+                Xoá sản phẩm thành công
+              </button>
+            ) : (
+              <button 
+                className="text-white bg-red-600 transition gap-4 flex items-center hover:bg-red-700 px-4 py-2 rounded-sm"
+                onClick={handleDeleteProducts}
+              >
+                <FontAwesomeIcon icon={faTrashCan} />
+                Xóa sản phẩm
+              </button>
+            )}
+          </>
+        )}
         <div className="flex gap-2">
           {currentPage > 1 && (
             <button

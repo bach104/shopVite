@@ -11,45 +11,68 @@ const Login = () => {
   const passwordRef = useRef(null);
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
-  const [loginUser, { isLoading }] = useLoginUserMutation();
+  const [loginUser] = useLoginUserMutation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const validateInputs = () => {
-    const errors = {};
-    if (!usernameOrEmailRef.current.value) errors.usernameOrEmail = "Vui lòng nhập tên đăng nhập hoặc email.";
-    if (!passwordRef.current.value) errors.password = "Vui lòng nhập mật khẩu.";
-    setErrors(errors);
-    return Object.keys(errors).length === 0;
+    const newErrors = {};
+    if (!usernameOrEmailRef.current.value) {
+      newErrors.usernameOrEmail = "Vui lòng nhập tên đăng nhập hoặc email";
+    }
+    if (!passwordRef.current.value) {
+      newErrors.password = "Vui lòng nhập mật khẩu";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     if (!validateInputs()) return;
-  
+
+    // Tắt console.error tạm thời
+    const originalConsoleError = console.error;
+    console.error = () => {};
+
     try {
-      const response = await loginUser({
+      const result = await loginUser({
         usernameOrEmail: usernameOrEmailRef.current.value,
         password: passwordRef.current.value,
       }).unwrap();
-  
-      if (response.token) {
-        dispatch(setUser({ user: response.user }));
-        localStorage.setItem("user", JSON.stringify(response.user));
-        localStorage.setItem("token", response.token);
-        toast.success("Đăng nhập thành công!");
-        setTimeout(() => navigate("/"), 1000);
+
+      if (!result.success) {
+        // Xử lý các trường hợp lỗi
+        if (result.message.includes("Tên đăng nhập") || 
+            result.message.includes("Không tìm thấy")) {
+          setErrors({
+            usernameOrEmail: "Tên đăng nhập hoặc email không đúng",
+            password: ""
+          });
+        } else if (result.message.includes("Mật khẩu")) {
+          setErrors({
+            usernameOrEmail: "",
+            password: "Mật khẩu không đúng"
+          });
+        }
+        return;
       }
-    } catch (err) {
-      const errorMsg = err.data || "Đăng nhập thất bại. Vui lòng thử lại.";
-      setErrors((prev) => ({
-        ...prev,
-        usernameOrEmail: errorMsg.includes("Không tìm thấy") ? "Tên đăng nhập hoặc email không đúng." : prev.usernameOrEmail,
-        password: errorMsg.includes("Mật khẩu không đúng") ? "Mật khẩu không đúng." : prev.password,
-      }));
-  
-      // Không log lỗi ra console
-      // console.error(err);
+
+      // Xử lý đăng nhập thành công
+      dispatch(setUser({ user: result.user }));
+      localStorage.setItem("user", JSON.stringify(result.user));
+      localStorage.setItem("token", result.token);
+      toast.success("Đăng nhập thành công!");
+      setTimeout(() => navigate("/"), 1000);
+
+    } catch  {
+      setErrors({
+        usernameOrEmail: "Có lỗi xảy ra, vui lòng thử lại",
+        password: ""
+      });
+    } finally {
+      // Khôi phục console.error
+      console.error = originalConsoleError;
     }
   };
 
@@ -96,9 +119,8 @@ const Login = () => {
           <button
             type="submit"
             className="bg-black text-white px-3 py-2 rounded-md w-full mt-3 flex justify-center items-center"
-            disabled={isLoading}
           >
-            {isLoading ? <span className="animate-spin border-t-2 border-white w-5 h-5 rounded-full"></span> : "Đăng nhập"}
+            Đăng nhập
           </button>
 
           <button

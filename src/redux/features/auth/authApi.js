@@ -1,12 +1,22 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { getBaseUrl } from '../../../utils/baseURL';
 
-const authApi = createApi({
+// Tạo custom fetchBaseQuery
+const customFetchBaseQuery = fetchBaseQuery({
+  baseUrl: `${getBaseUrl()}/api/auth`,
+  credentials: 'include',
+});
+
+export const authApi = createApi({
   reducerPath: 'authApi',
-  baseQuery: fetchBaseQuery({
-    baseUrl: `${getBaseUrl()}/api/auth`,
-    credentials: 'include',
-  }),
+  baseQuery: async (args, api, extraOptions) => {
+    try {
+      const result = await customFetchBaseQuery(args, api, extraOptions);
+      return { data: result.data };
+    } catch {
+      return { data: { success: false, message: 'Lỗi kết nối' } };
+    }
+  },
   tagTypes: ['Users'],
   endpoints: (builder) => ({
     registerUser: builder.mutation({
@@ -34,21 +44,8 @@ const authApi = createApi({
       query: (credentials) => ({
         url: '/login',
         method: 'POST',
-        body: credentials,
+        body: credentials
       }),
-      transformResponse: (response) => {
-        if (response?.user && response?.token) {
-          localStorage.setItem('user', JSON.stringify(response.user));
-          localStorage.setItem('token', response.token);
-        }
-        return response;
-      },
-      transformErrorResponse: (response) => {
-        return {
-          status: response.status,
-          data: response.data?.message || 'Đăng nhập thất bại. Vui lòng thử lại!',
-        };
-      },
     }),
     updateUser: builder.mutation({
       query: ({ userData }) => {

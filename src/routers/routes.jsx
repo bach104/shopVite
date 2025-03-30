@@ -21,6 +21,7 @@ import ManagerCart from "../App/managerAdmin/cart/managerCart";
 import ManagerTransport from "../App/managerAdmin/transport/managerTransport";
 import ManagerStatistical from "../App/managerAdmin/statistical/managerStatistical";
 import InformationProducts from "../App/managerAdmin/products/informationProducts";
+import VnpayReturnHandler from "../App/cart/ShoppingCart/VnpayReturnHandler";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -58,6 +59,7 @@ const router = createBrowserRouter([
             path: "/informations",
             element: <InformationAuth />,
         },
+        
        
         ],
     },
@@ -68,6 +70,10 @@ const router = createBrowserRouter([
     {
         path: "/register",
         element: <Register />,
+    },
+    {
+        path: "payment/vnpay-return",
+        element: <VnpayReturnHandler />,
     },
     {
     path: "/cart-manager",

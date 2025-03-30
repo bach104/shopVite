@@ -17,7 +17,7 @@
     background-color: #e0e0e0;
     padding: 10px;
     margin-bottom: 10px;
-    margin-left: 20px; /* Thụt lề nhẹ nếu cần */
+    margin-left: 20px; 
   }
 .nav__icons span a.dropdown-items {
     font-size: 16px;
